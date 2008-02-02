@@ -1,0 +1,67 @@
+<h1>Editing search_alert</h1>
+
+<%= error_messages_for :search_alert %>
+
+<% form_for(:search_alert, :url => search_alert_path(@search_alert), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Location</b><br />
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <b>Neighborhood</b><br />
+    <%= f.text_field :neighborhood_id %>
+  </p>
+
+  <p>
+    <b>Price min</b><br />
+    <%= f.text_field :price_min %>
+  </p>
+
+  <p>
+    <b>Price max</b><br />
+    <%= f.text_field :price_max %>
+  </p>
+
+  <p>
+    <b>Property type</b><br />
+    <%= f.text_field :property_type_id %>
+  </p>
+
+  <p>
+    <b>Min bedroooms</b><br />
+    <%= f.text_field :min_bedroooms %>
+  </p>
+
+  <p>
+    <b>Min bathrooms</b><br />
+    <%= f.text_field :min_bathrooms %>
+  </p>
+
+  <p>
+    <b>Min sqft</b><br />
+    <%= f.text_field :min_sqft %>
+  </p>
+
+  <p>
+    <b>Email frequency</b><br />
+    <%= f.check_box :email_frequency %>
+  </p>
+
+  <p>
+    <b>Alert on</b><br />
+    <%= f.check_box :alert_on %>
+  </p>
+
+  <p>
+    <b>User</b><br />
+    <%= f.text_field :user_id %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', search_alert_path(@user,@search_alert) %> |
+<%= link_to 'Back', search_alerts_path %>

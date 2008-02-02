@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  name: Century212
+  phone: 1234567890
+  email: MyText@mytext.com
+  picture_url: MyText
+  habitat_id: 1
+
+two:
+  id: 2
+  name: MyString
+  phone: 1
+  email: MyText
+  picture_url: MyText

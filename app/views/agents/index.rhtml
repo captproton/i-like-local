@@ -1,0 +1,26 @@
+<h1>Listing agents</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Picture url</th>
+  </tr>
+  
+<% for agent in @agents %>
+  <tr>
+    <td><%=h agent.name %></td>
+    <td><%=h agent.phone %></td>
+    <td><%=h agent.email %></td>
+    <td><%=h agent.picture_url %></td>
+    <td><%= link_to 'Show', habitat_agent_path(agent) %></td>
+    <td><%= link_to 'Edit', habitat_edit_agent_path(agent) %></td>
+    <td><%= link_to 'Destroy', habitat_agent_path(agent), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New agent', habitat_new_agent_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @advertiser.name %>
+</p>
+
+<p>
+  <b>Addr1:</b>
+  <%=h @advertiser.addr1 %>
+</p>
+
+<p>
+  <b>Addr2:</b>
+  <%=h @advertiser.addr2 %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @advertiser.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_advertiser_path(@advertiser) %> |
+<%= link_to 'Back', advertisers_path %>

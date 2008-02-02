@@ -1,0 +1,1325 @@
+<!-- Old html <h1>Listing habitats</h1>
+
+<table>
+  <tr>
+    <th>Street</th>
+  </tr>
+  
+<% for habitat in @habitats %>
+  <tr>
+    <td><%#h habitat.street %></td>
+    <td><%# link_to 'Show', habitat_path(habitat) %></td>
+    <td><%# link_to 'Edit', edit_habitat_path(habitat) %></td>
+    <td><%# link_to 'Destroy', habitat_path(habitat), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>  --> 
+
+<br />
+
+<%# link_to 'New habitat', new_habitat_path %>
+
+<div id="srp_main">
+	<!-- START SRP CONTENT-->
+	<div id="srp_content">
+		<!-- DELETE: this is in results_navigation_row.tpl.html -->
+		<!--[ if !IE ]> START PAGE HEADER <![endif]-->
+		<div class="page_header clearfix">
+			<div class="fleft" style="width:600px;">
+				<h1 id="srp_main_location">
+						<%= h habitat.city.name %> Real Estate &amp; Homes For Sale
+				</h1><span class="extras">&nbsp;— <span id="total_properties_head"><%= @total_habitats %></span> homes found</span>
+			</div><!--[ if !IE ]>{VOICES_PROMO_BUTTON} <![endif]-->
+			<div class="module_header_link">
+				<a id="widen_map_ctrl" class="f11 bold padl5" style="" onclick="T_MAP.expandMapHoriz('widen');return false;" name="widen_map_ctrl"><span style="float:left;padding-top:4px;">Expand map</span></a> <a id="narrow_map_ctrl" class="f11 bold padl5" style="display:none;" onclick="T_MAP.expandMapHoriz('narrow');return false;" name="narrow_map_ctrl"> <span style="float:left;padding-top:4px;">Shrink map</span></a> <a id="heighten_map_ctrl" class="f11 bold padl5" style="display:none;" onclick="T_MAP.expandMap();return false;" name="heighten_map_ctrl"> <span style="float:left;padding-top:4px;">Expand map</span></a> <a id="shorten_map_ctrl" class="f11 bold padl5" style="display:none;" onclick="T_MAP.shrinkMap();return false;" name="shorten_map_ctrl"> <span style="float:left;padding-top:4px;">Contract map</span></a> <img class="btn_default padl10" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" /> <a id="map_search_button" class="btn_default" style="text-align:center;" href="" onclick="RFilters.toggleSearchMethod(event);return false;" name="map_search_button"></a>
+				<div class="refresh_icon"></div>
+				<div id="map_search_button_txt" class="padl3 fleft">
+					See all homes in map view
+				</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+			</div>
+		</div><!--[ if !IE ]> END PAGE HEADER <![endif]-->
+		<!-- START SRP COLUMN CONTAINER -->
+		<div id="left_column_container">
+			<div id="right_column_container" class="clearfix">
+				<!-- START LEFT CONTENT -->
+				<div id="left_content">
+					<!-- START FILTER RAIL CONTAINER -->
+					<div id="filter_rail">
+						<!-- START filter rail summary and new search box -->
+						<div id="filter_rail_summary" class="clearfix">
+							<a id="start_search_over" class="srp_filter_closed" onclick="RFilters.toggleFilterSection(this); return false;" href="" name="start_search_over">Start search over</a>
+							<div id="start_search_over_content" class="dash_on_bottom clearfix" style="display:none;">
+								<form name="start_search_over_form" class="trulia_frm" method="get" action="/validate.php" id="start_search_over_form">
+									<label class="bold f11">Location</label> 
+										<input type="text" style="width:160px;" 
+											name="search" 
+											onfocus="this.select();" 
+											value="<%= h habitat.city.name %>, 
+											 <%= h habitat.city.state.abbr %>" />
+									<div class="bold f11 padt10 padb5">
+										Price range
+									</div><label for="max_price" class="side_lbl">Min. price</label> <select name="min_price" class="tru_price">
+										<option value="" selected="selected">
+											Any
+										</option>
+										<option value="10000">
+											$10,000
+										</option>
+										<option value="20000">
+											$20,000
+										</option>
+										<option value="30000">
+											$30,000
+										</option>
+										<option value="50000">
+											$50,000
+										</option>
+										<option value="100000">
+											$100,000
+										</option>
+										<option value="130000">
+											$130,000
+										</option>
+										<option value="150000">
+											$150,000
+										</option>
+										<option value="200000">
+											$200,000
+										</option>
+										<option value="250000">
+											$250,000
+										</option>
+										<option value="300000">
+											$300,000
+										</option>
+										<option value="350000">
+											$350,000
+										</option>
+										<option value="400000">
+											$400,000
+										</option>
+										<option value="450000">
+											$450,000
+										</option>
+										<option value="500000">
+											$500,000
+										</option>
+										<option value="550000">
+											$550,000
+										</option>
+										<option value="600000">
+											$600,000
+										</option>
+										<option value="650000">
+											$650,000
+										</option>
+										<option value="700000">
+											$700,000
+										</option>
+										<option value="750000">
+											$750,000
+										</option>
+										<option value="800000">
+											$800,000
+										</option>
+										<option value="850000">
+											$850,000
+										</option>
+										<option value="900000">
+											$900,000
+										</option>
+										<option value="950000">
+											$950,000
+										</option>
+										<option value="1000000">
+											$1M
+										</option>
+										<option value="1100000">
+											$1.1M
+										</option>
+										<option value="1200000">
+											$1.2M
+										</option>
+										<option value="1250000">
+											$1.25M
+										</option>
+										<option value="1400000">
+											$1.4M
+										</option>
+										<option value="1500000">
+											$1.5M
+										</option>
+										<option value="1600000">
+											$1.6M
+										</option>
+										<option value="1700000">
+											$1.7M
+										</option>
+										<option value="1750000">
+											$1.75M
+										</option>
+										<option value="1800000">
+											$1.8M
+										</option>
+										<option value="1900000">
+											$1.9M
+										</option>
+										<option value="2000000">
+											$2M
+										</option>
+										<option value="2250000">
+											$2.25M
+										</option>
+										<option value="2500000">
+											$2.5M
+										</option>
+										<option value="2750000">
+											$2.75M
+										</option>
+										<option value="3000000">
+											$3M
+										</option>
+										<option value="3500000">
+											$3.5M
+										</option>
+										<option value="4000000">
+											$4M
+										</option>
+										<option value="5000000">
+											$5M
+										</option>
+										<option value="10000000">
+											$10M
+										</option>
+										<option value="20000000">
+											$20M
+										</option>
+									</select> &nbsp; to &nbsp; <label for="max_price" class="side_lbl">Max. price</label> <select name="max_price" class="tru_price">
+										<option value="" selected="selected">
+											Any
+										</option>
+										<option value="10000">
+											$10,000
+										</option>
+										<option value="20000">
+											$20,000
+										</option>
+										<option value="30000">
+											$30,000
+										</option>
+										<option value="50000">
+											$50,000
+										</option>
+										<option value="100000">
+											$100,000
+										</option>
+										<option value="130000">
+											$130,000
+										</option>
+										<option value="150000">
+											$150,000
+										</option>
+										<option value="200000">
+											$200,000
+										</option>
+										<option value="250000">
+											$250,000
+										</option>
+										<option value="300000">
+											$300,000
+										</option>
+										<option value="350000">
+											$350,000
+										</option>
+										<option value="400000">
+											$400,000
+										</option>
+										<option value="450000">
+											$450,000
+										</option>
+										<option value="500000">
+											$500,000
+										</option>
+										<option value="550000">
+											$550,000
+										</option>
+										<option value="600000">
+											$600,000
+										</option>
+										<option value="650000">
+											$650,000
+										</option>
+										<option value="700000">
+											$700,000
+										</option>
+										<option value="750000">
+											$750,000
+										</option>
+										<option value="800000">
+											$800,000
+										</option>
+										<option value="850000">
+											$850,000
+										</option>
+										<option value="900000">
+											$900,000
+										</option>
+										<option value="950000">
+											$950,000
+										</option>
+										<option value="1000000">
+											$1M
+										</option>
+										<option value="1100000">
+											$1.1M
+										</option>
+										<option value="1200000">
+											$1.2M
+										</option>
+										<option value="1250000">
+											$1.25M
+										</option>
+										<option value="1400000">
+											$1.4M
+										</option>
+										<option value="1500000">
+											$1.5M
+										</option>
+										<option value="1600000">
+											$1.6M
+										</option>
+										<option value="1700000">
+											$1.7M
+										</option>
+										<option value="1750000">
+											$1.75M
+										</option>
+										<option value="1800000">
+											$1.8M
+										</option>
+										<option value="1900000">
+											$1.9M
+										</option>
+										<option value="2000000">
+											$2M
+										</option>
+										<option value="2250000">
+											$2.25M
+										</option>
+										<option value="2500000">
+											$2.5M
+										</option>
+										<option value="2750000">
+											$2.75M
+										</option>
+										<option value="3000000">
+											$3M
+										</option>
+										<option value="3500000">
+											$3.5M
+										</option>
+										<option value="4000000">
+											$4M
+										</option>
+										<option value="5000000">
+											$5M
+										</option>
+										<option value="10000000">
+											$10M
+										</option>
+										<option value="20000000">
+											$20M
+										</option>
+										<option value="">
+											No max
+										</option>
+									</select> <label class="padt5 bold f11">Property type</label><br />
+									<select name="type" class="tru_type">
+										<option value="" selected="selected">
+											Any type
+										</option>
+										<option value="single-family">
+											Single-Family Home
+										</option>
+										<option value="condo">
+											Condo
+										</option>
+										<option value="townhouse">
+											Townhouse
+										</option>
+										<option value="coop">
+											Coop
+										</option>
+										<option value="apartment">
+											Apartment
+										</option>
+										<option value="loft">
+											Loft
+										</option>
+										<option value="tic">
+											TIC
+										</option>
+										<option value="apartment,condo,townhouse">
+											Apt/Condo/Twnhs
+										</option>
+										<option value="mobile">
+											Mobile/Manufactured
+										</option>
+										<option value="farm">
+											Farm/Ranch
+										</option>
+										<option value="lot">
+											Lot/Land
+										</option>
+										<option value="multifamily">
+											Multi-Family
+										</option>
+										<option value="investment">
+											Income/Investment
+										</option>
+										<option value="houseboat">
+											Houseboat
+										</option>
+									</select>
+									<div class="padt10 clearfix">
+										<div class="fleft padr25">
+											<label class="bold f11">Bedrooms</label> <select name="min_num_beds" class="tru_bed">
+												<option value="0">
+													Any
+												</option>
+												<option value="1-2">
+													1+
+												</option>
+												<option value="2-3">
+													2+
+												</option>
+												<option value="3-4">
+													3+
+												</option>
+												<option value="4-">
+													4+
+												</option>
+											</select>
+										</div>
+										<div class="fleft">
+											<label class="bold f11">Bathrooms</label> <select name="min_num_baths" class="tru_ba">
+												<option value="0">
+													Any
+												</option>
+												<option value="1-2">
+													1+
+												</option>
+												<option value="2-3">
+													2+
+												</option>
+												<option value="3-4">
+													3+
+												</option>
+												<option value="4-">
+													4+
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="bold f11 padt10">
+										Property size
+									</div><select name="min_size" class="tru_size">
+										<option value="0">
+											Any
+										</option>
+										<option value="250">
+											250+
+										</option>
+										<option value="500">
+											500+
+										</option>
+										<option value="1000">
+											1,000+
+										</option>
+										<option value="1250">
+											1,250+
+										</option>
+										<option value="1500">
+											1,500+
+										</option>
+										<option value="1750">
+											1,750+
+										</option>
+										<option value="2000">
+											2,000+
+										</option>
+										<option value="2250">
+											2,250+
+										</option>
+										<option value="2500">
+											2,500+
+										</option>
+										<option value="3750">
+											3,750+
+										</option>
+										<option value="4000">
+											4,000+
+										</option>
+										<option value="5000">
+											5,000+
+										</option>
+										<option value="10000">
+											10,000+
+										</option>
+									</select>
+									<div class="padt5 clear clearfix">
+										<div class="fright">
+											<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+											<div class="btn_default pg_btn" style="height:21px;line-height:20px;width:45px;height:21px;" onclick="document.start_search_over_form.submit();">
+												SEARCH
+											</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="lite_hilite_bkg">
+								<p class="filter_rail_title clearfix">
+									Your Search:
+								</p>
+								<div id="results_search_desc">
+									<%= h habitat.city.name %><br />
+									<span id="results_search_type">All homes for sale</span><br />
+									All prices<br />
+								</div>
+							</div><a id="save_search_link" rel="nofollow" class="action save" title="save search to My Trulia" onclick="capture_coords(event);subscribe(-1);return false;" name="save_search_link">Save this search</a> <a class="action rss" rel="nofollow" title="subscribe to rss for this search" onclick="show_pos_menu(event,'f_rss', 0, 10);">RSS</a>
+						</div><!-- END filter rail summary and new search box-->
+						<!-- START Location Filter -->
+						<div class="filter">
+							<div class="f16 bold padb10">
+								Refine your search
+							</div><a id="location_filter_section" class="srp_filter_open" onclick="RFilters.toggleFilterSection(this); return false" href="" name="location_filter_section">Location</a>
+							<div id="location_filter_section_content">
+								<!-- START Location Filters -->
+								<div id="location_filters" class="filter_content">
+									<div class="filter_title clearfix">
+										<a id="filter_city_section_Saratoga_Springs_UT" class="srp_filter_open filter_city fleft" href="" onclick="RFilters.toggleFilterSection(this); return false;" name="filter_city_section_Saratoga_Springs_UT">Saratoga Springs</a> <a class="filter_right" onclick="RFilters.toggleFilter('cities','Saratoga Springs,UT','',{'city':'Saratoga Springs','state':'UT'}); return false;" style="display:none;">remove</a>
+									</div>
+									<div class="filter_content" id="filter_city_section_Saratoga_Springs_UT_content">
+										<div class="white_border pointer bold" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+											<input id="clear_nhzip_Saratoga_Springs_UT_clear" type="checkbox" checked="checked" onclick="RFilters.toggleFilter('clear','nhzip','',{'city':'Saratoga Springs','state':'UT','id':'Saratoga_Springs_UT'});" /> <label for="clear_nhzip_Saratoga_Springs_UT_clear">All <%= h habitat.city.name %></label>
+										</div><a href="" class="popup_opener" style="display:none;" onclick="RFilters.displayFilterLinkBox('', this, 'nh', event); return false;">Search neighborhoods</a> <a href="" class="popup_opener" onclick="RFilters.displayFilterLinkBox('filters_more_Saratoga_Springs_UT_zip', this, 'zp', event); return false;">Search ZIPs</a>
+									</div>
+									<div id="filters_more_Saratoga_Springs_UT_nh" style="display:none;position:absolute;"></div>
+									<div id="filters_more_Saratoga_Springs_UT_zip" style="display:none;position:absolute;">
+										<div style="width:195px;height:275px;padding:20px;background-color:#ffffff;border:2px solid #000000;">
+											<div style="float:left;padding-bottom:10px;">
+												<div style="float:left;">
+													<b>ZIP Codes</b>
+												</div>
+												<div style="float:right;">
+													[<span class="pseudolink" onclick="xb_get_element('filters_more_Saratoga_Springs_UT_zip').style.display='none';">close</span>]
+												</div>
+											</div>
+											<div style="clear:both;width:180px;height:200px;overflow:auto;border:1px solid #cccccc;">
+												<div>
+													<label><input id="results_filters_more_zip_Saratoga_Springs_UT_84045" onclick="RFilters.toggleFilter('zip','84045','',{'city':'Saratoga Springs','state':'UT'}, false);" type="checkbox" /><%= h habitat.zip %></label>
+												</div>
+											</div>
+											<div style="padding-top:20px;">
+												<input value="SEARCH" onclick="xb_get_element('filters_more_Saratoga_Springs_UT_zip').style.display='none';RFilters.toggleFilter('all','refresh');" type="submit" />
+											</div>
+										</div>
+									</div>
+								</div><!-- END Location Filters -->
+								<!-- START Nearby City Filter  -->
+								<div id="nearby_city_filters">
+									<a class="popup_opener" onclick="RFilters.displayFilterLinkBox('filters_more_nearby_cities', this, 'mc', event);">Search nearby cities</a>
+									<div id="filters_more_nearby_cities" style="display:none;position:absolute;">
+										<div style="width:195px;height:275px;padding:20px;background-color:#ffffff;border:2px solid #000000;">
+											<div style="float:left;padding-bottom:10px;">
+												<div style="float:left;">
+													<b>Nearby Cities</b>
+												</div>
+												<div style="float:right;">
+													[<span class="pseudolink" onclick="xb_get_element('filters_more_nearby_cities').style.display='none';">close</span>]
+												</div>
+											</div>
+											<div style="clear:both;width:180px;height:200px;overflow:auto;border:1px solid #cccccc;">
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Alpine_UT" onclick="RFilters.toggleFilter('nearby_city','Alpine,UT','','',false);" type="checkbox" />Alpine,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_American_Fork_UT" onclick="RFilters.toggleFilter('nearby_city','American Fork,UT','','',false);" type="checkbox" />American Fork,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Bluffdale_UT" onclick="RFilters.toggleFilter('nearby_city','Bluffdale,UT','','',false);" type="checkbox" />Bluffdale,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Brighton_UT" onclick="RFilters.toggleFilter('nearby_city','Brighton,UT','','',false);" type="checkbox" />Brighton,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Cedar_Fort_UT" onclick="RFilters.toggleFilter('nearby_city','Cedar Fort,UT','','',false);" type="checkbox" />Cedar Fort,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Cedar_Hills_UT" onclick="RFilters.toggleFilter('nearby_city','Cedar Hills,UT','','',false);" type="checkbox" />Cedar Hills,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Cedar_Valley_UT" onclick="RFilters.toggleFilter('nearby_city','Cedar Valley,UT','','',false);" type="checkbox" />Cedar Valley,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Cottonwood_Heights_UT" onclick="RFilters.toggleFilter('nearby_city','Cottonwood Heights,UT','','',false);" type="checkbox" />Cottonwood Heights,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Cottonwood_UT" onclick="RFilters.toggleFilter('nearby_city','Cottonwood,UT','','',false);" type="checkbox" />Cottonwood,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Draper_UT" onclick="RFilters.toggleFilter('nearby_city','Draper,UT','','',false);" type="checkbox" />Draper,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Eagle_Mountain_UT" onclick="RFilters.toggleFilter('nearby_city','Eagle Mountain,UT','','',false);" type="checkbox" />Eagle Mountain,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Eagle_Mtn_UT" onclick="RFilters.toggleFilter('nearby_city','Eagle Mtn,UT','','',false);" type="checkbox" />Eagle Mtn,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Herriman_UT" onclick="RFilters.toggleFilter('nearby_city','Herriman,UT','','',false);" type="checkbox" />Herriman,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Highland_UT" onclick="RFilters.toggleFilter('nearby_city','Highland,UT','','',false);" type="checkbox" />Highland,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Lehi_UT" onclick="RFilters.toggleFilter('nearby_city','Lehi,UT','','',false);" type="checkbox" />Lehi,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Lindon_UT" onclick="RFilters.toggleFilter('nearby_city','Lindon,UT','','',false);" type="checkbox" />Lindon,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Midvale_UT" onclick="RFilters.toggleFilter('nearby_city','Midvale,UT','','',false);" type="checkbox" />Midvale,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Orem_UT" onclick="RFilters.toggleFilter('nearby_city','Orem,UT','','',false);" type="checkbox" />Orem,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Pleasant_Grove_UT" onclick="RFilters.toggleFilter('nearby_city','Pleasant Grove,UT','','',false);" type="checkbox" />Pleasant Grove,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Provo_UT" onclick="RFilters.toggleFilter('nearby_city','Provo,UT','','',false);" type="checkbox" />Provo,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Riverton_UT" onclick="RFilters.toggleFilter('nearby_city','Riverton,UT','','',false);" type="checkbox" />Riverton,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_Sandy_UT" onclick="RFilters.toggleFilter('nearby_city','Sandy,UT','','',false);" type="checkbox" />Sandy,UT</label>
+												</div>
+												<div>
+													<label><input id="results_filters_more_nearby_cities_South_Jordan_UT" onclick="RFilters.toggleFilter('nearby_city','South Jordan,UT','','',false);" type="checkbox" />South Jordan,UT</label>
+												</div>
+											</div>
+											<div style="padding-top:20px;">
+												<input value="SEARCH" onclick="xb_get_element('filters_more_nearby_cities').style.display='none';RFilters.toggleFilter('all','refresh');" type="submit" />
+											</div>
+										</div>
+									</div>
+								</div><!-- END Nearby City Filter  -->
+							</div>
+						</div><!-- END Location Filter -->
+						<!-- START Price Filter -->
+						<div class="filter">
+							<div class="filter_title clearfix">
+								<a id="filter_price_section" class="srp_filter_open fleft" href="" onclick="RFilters.toggleFilterSection(this); return false" name="filter_price_section">Price Range</a>
+								<div class="filter_right">
+									[<a onclick="RFilters.toggleFilter('clear','price'); return false;">all prices</a>]
+								</div>
+							</div>
+							<div id="filter_price_section_content" class="filter_content clearfix">
+								<form action="return%20false" id="price_form" name="price_form" onsubmit="do_price_submit();return false;" accept-charset="utf-8">
+									<label for="min_price">$</label> <input type="text" size="7" id="min_price" name="min_price" value="" /> to<br />
+									<label for="max_price">$</label> <input type="text" size="7" id="max_price" name="max_price" value="" /><br />
+									<div class="error" id="price_msg"></div><img class="btn_default" title="Submit price Range" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" /> <a class="btn_default" title="Submit price Range" onclick="do_price_submit();return false;">Update price</a> <img class="btn_default" title="Submit price Range" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+								</form>
+							</div>
+						</div><!-- END Price Filter -->
+						<!-- START Listing Type Filter -->
+						<div class="filter">
+							<div class="filter_title clearfix">
+								<a id="filter_lt_section" class="srp_filter_open fleft" href="" onclick="RFilters.toggleFilterSection(this); return false;" name="filter_lt_section">Listing Type</a>
+								<div class="fleft dark_hilite_bold">
+									&nbsp;&nbsp;&nbsp;NEW!
+								</div>
+							</div>
+							<div id="filter_lt_section_content" class="filter_content">
+								<div class="white_border pointer bold" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="lt_lt" type="checkbox" name="All homes for sale" checked="checked" onclick="RFilters.toggleFilter('lt','resale,new_homes,foreclosure');" /> <label for="lt_lt">All homes for sale</label>
+								</div>
+								<div class="white_border pointer filter_content" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="lt_0" type="checkbox" name="Resale" onclick="RFilters.toggleFilter('lt','resale');" /> <label for="lt_0">Resale</label>
+								</div>
+								<div class="white_border pointer filter_content" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="lt_1" type="checkbox" name="New Homes" onclick="RFilters.toggleFilter('lt','new_homes');" /> <label for="lt_1">New Homes</label>
+								</div>
+								<div class="white_border pointer filter_content" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="lt_2" type="checkbox" name="Foreclosure" onclick="RFilters.toggleFilter('lt','foreclosure');" /> <label for="lt_2">Foreclosure</label>
+								</div>
+								<div class="white_border pointer bold padt3" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="display_type_checkbox" type="checkbox" name="Recently sold homes" onclick="RFilters.toggleFilter('display_type','sold');" /> <label for="display_type_checkbox">Recently sold homes</label>
+								</div>
+							</div>
+						</div><!-- END Listing Type Filter -->
+						<!-- START Property Type Filter -->
+						<div class="filter">
+							<a id="filter_type_section" class="srp_filter_open" href="" onclick="RFilters.toggleFilterSection(this); return false;" name="filter_type_section">Property Type</a>
+							<div id="filter_type_section_content" class="filter_content">
+								<div class="white_border pointer bold" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="clear_type" type="checkbox" name="All Property Types" checked="checked" onclick="RFilters.toggleFilter('clear','type');" /> <label for="clear_type">All Property Types</label>
+								</div>
+								<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="type_0" type="checkbox" name="Single-Family Home" onclick="RFilters.toggleFilter('type','SINGLE-FAMILY_HOME');" /> <label for="type_0">Single-Family Home</label>
+								</div>
+								<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="type_1" type="checkbox" name="Condo" onclick="RFilters.toggleFilter('type','CONDO');" /> <label for="type_1">Condo</label>
+								</div>
+								<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="type_2" type="checkbox" name="Townhouse" onclick="RFilters.toggleFilter('type','TOWNHOUSE');" /> <label for="type_2">Townhouse</label>
+								</div>
+								<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="type_3" type="checkbox" name="Coop" onclick="RFilters.toggleFilter('type','COOP');" /> <label for="type_3">Coop</label>
+								</div><a id="type_filter_other" class="underline" href="" onclick="RFilters.toggle_property_filter('show'); return false;" name="type_filter_other">(See all property types)</a>
+								<div id="type_filter_div" class="hidden">
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_4" type="checkbox" name="Apartment" onclick="RFilters.toggleFilter('type','APARTMENT');" /> <label for="type_4">Apartment</label>
+									</div>
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_5" type="checkbox" name="Loft" onclick="RFilters.toggleFilter('type','LOFT');" /> <label for="type_5">Loft</label>
+									</div>
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_6" type="checkbox" name="TIC" onclick="RFilters.toggleFilter('type','TIC');" /> <label for="type_6">TIC</label>
+									</div>
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_7" type="checkbox" name="Apt/Condo/Twnhs" onclick="RFilters.toggleFilter('type','APARTMENT/CONDO/TOWNHOUSE');" /> <label for="type_7">Apt/Condo/Twnhs</label>
+									</div>
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_8" type="checkbox" name="Mobile/Manufactured" onclick="RFilters.toggleFilter('type','MOBILE/MANUFACTURED');" /> <label for="type_8">Mobile/Manufactured</label>
+									</div>
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_9" type="checkbox" name="Farm/Ranch" onclick="RFilters.toggleFilter('type','FARM/RANCH');" /> <label for="type_9">Farm/Ranch</label>
+									</div>
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_10" type="checkbox" name="Lot/Land" onclick="RFilters.toggleFilter('type','LOT/LAND');" /> <label for="type_10">Lot/Land</label>
+									</div>
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_11" type="checkbox" name="Multi-Family Home" onclick="RFilters.toggleFilter('type','MULTI-FAMILY');" /> <label for="type_11">Multi-Family Home</label>
+									</div>
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_12" type="checkbox" name="Income/Investment" onclick="RFilters.toggleFilter('type','INCOME/INVESTMENT');" /> <label for="type_12">Income/Investment</label>
+									</div>
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_13" type="checkbox" name="Houseboat" onclick="RFilters.toggleFilter('type','HOUSEBOAT');" /> <label for="type_13">Houseboat</label>
+									</div>
+									<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+										<input id="type_14" type="checkbox" name="Unspecified" onclick="RFilters.toggleFilter('type','UNKNOWN');" /> <label for="type_14">Unspecified</label>
+									</div><a id="type_filter_link_hide" href="" onclick="RFilters.toggle_property_filter('hide'); return false;" name="type_filter_link_hide">Show fewer property types</a>
+								</div>
+							</div>
+						</div><!-- END Property Type Filter -->
+						<!-- START Bedrooms Filter -->
+						<div class="filter">
+							<a id="filter_beds_section" class="srp_filter_open" href="" onclick="RFilters.toggleFilterSection(this); return false;" name="filter_beds_section">Bedrooms</a>
+							<div id="filter_beds_section_content" class="filter_content clearfix">
+								<div class="white_border pointer bold" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="clear_beds" type="checkbox" name="All bedrooms" checked="checked" onclick="RFilters.toggleFilter('clear','beds');" /> <label for="clear_beds">All bedrooms</label>
+								</div>
+								<div class="white_border pointer" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="beds_beds" type="checkbox" name="Studio/Loft" onclick="RFilters.toggleFilter('beds','0');" /> <label for="beds_beds">Studio/Loft</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="beds_0" type="checkbox" name="1" onclick="RFilters.toggleFilter('beds','1');" /> <label for="beds_0">1</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="beds_1" type="checkbox" name="2" onclick="RFilters.toggleFilter('beds','2');" /> <label for="beds_1">2</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="beds_2" type="checkbox" name="3" onclick="RFilters.toggleFilter('beds','3');" /> <label for="beds_2">3</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="beds_3" type="checkbox" name="4+" onclick="RFilters.toggleFilter('beds','4p');" /> <label for="beds_3">4+</label>
+								</div>
+							</div>
+						</div><!-- END Bedrooms Filter -->
+						<!-- START Bathrooms Filter -->
+						<div class="filter">
+							<a id="filter_baths_section" class="srp_filter_open" href="" onclick="RFilters.toggleFilterSection(this); return false;" name="filter_baths_section">Bathrooms</a>
+							<div id="filter_baths_section_content" class="filter_content clearfix">
+								<div class="white_border pointer bold" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="clear_baths" type="checkbox" name="All bathrooms" checked="checked" onclick="RFilters.toggleFilter('clear','baths');" /> <label for="clear_baths">All bathrooms</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="baths_0" type="checkbox" name="1" onclick="RFilters.toggleFilter('baths','1');" /> <label for="baths_0">1</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="baths_1" type="checkbox" name="1.5" onclick="RFilters.toggleFilter('baths','1.5');" /> <label for="baths_1">1.5</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="baths_2" type="checkbox" name="2" onclick="RFilters.toggleFilter('baths','2');" /> <label for="baths_2">2</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="baths_3" type="checkbox" name="2.5" onclick="RFilters.toggleFilter('baths','2.5');" /> <label for="baths_3">2.5</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="baths_4" type="checkbox" name="3" onclick="RFilters.toggleFilter('baths','3');" /> <label for="baths_4">3</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="baths_5" type="checkbox" name="3.5" onclick="RFilters.toggleFilter('baths','3.5');" /> <label for="baths_5">3.5</label>
+								</div>
+								<div class="checkbox_w white_border" onmouseover="toggle_class(this, 'hilite_border', 'white_border');" onmouseout="toggle_class(this, 'white_border', 'hilite_border');">
+									<input id="baths_6" type="checkbox" name="4+" onclick="RFilters.toggleFilter('baths','4p');" /> <label for="baths_6">4+</label>
+								</div>
+							</div>
+						</div><!-- END Bathrooms Filter -->
+						<!-- START Sqft Filter -->
+						<div class="filter">
+							<div class="filter_title clearfix">
+								<a id="filter_sqft_section" class="srp_filter_open fleft" href="" onclick="RFilters.toggleFilterSection(this); return false" name="filter_sqft_section">Square feet</a>
+								<div class="filter_right">
+									[<a onclick="RFilters.toggleFilter('clear','sqft'); return false;">all sizes</a>]
+								</div>
+							</div>
+							<div id="filter_sqft_section_content" class="filter_content clearfix">
+								<form action="return%20false" id="sqft_form" name="sqft_form" onsubmit="do_sqft_submit();return false;" accept-charset="utf-8">
+									<input type="text" size="7" id="min_sqft" name="min_sqft" value="" /> sqft to<br />
+									<input type="text" size="7" id="max_sqft" name="max_sqft" value="" /> sqft<br />
+									<div class="error" id="sqft_msg"></div><img class="btn_default" title="Submit sqft Range" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" /> <a class="btn_default" title="Submit sqft Range" onclick="do_sqft_submit();return false;">Update sqft</a> <img class="btn_default" title="Submit sqft Range" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+								</form>
+							</div>
+						</div><!-- END Sqft Filter -->
+					</div><!-- END FILTER RAIL CONTAINER -->
+					<!-- START LEFT SKY AD -->
+					<div id="ad_lside"></div><!-- END LEFT SKY AD -->
+				</div><!-- END LEFT CONTENT -->
+				<!-- START RIGHT CONTENT -->
+				<div id="right_content">
+					<!-- START MOVABLE MAP -->
+					<div id="moveable_map" class="clearfix shrunk">
+					</div><!-- END MOVABLE MAP -->
+					<!-- START CENTER RAIL -->
+					<div id="center_rail">
+						<!--[ if !IE ]> START Intro Msg <![endif]-->
+						<div id="intro_module" style="display:none;">
+							<div class="clearfix">
+								<div class="intro_title fleft">
+									2,500,000+ house hunters every month on Trulia
+								</div><a class="fright disabled_txt close_button" onclick="RFilters.toggleIntroModule();">Close</a>
+							</div><strong>It's free</strong>—no personal info or agent required<br />
+							<strong>It's comprehensive</strong>—listings, comps, stats, trends &amp; advice<br />
+							<strong>It's easy</strong>—so you can make sense of it all<br />
+						</div><!--[ if !IE ]> END Intro Msg <![endif]-->
+						<!--[ if !IE ]> START Top/Bottom Calls to Action <![endif]-->
+						<div class="action_module lite_hilite_bkg clearfix">
+							<a class="email_alerts" href="" onclick="show_pos_menu(event,'email_search_alert_form', 125, -10);return false;" rel="nofollow">Email me when new listings match my search criteria</a>
+						</div><!--[ if !IE ]> END Top/Bottom Calls to Action <![endif]-->
+						<!-- START Tabs Header Row -->
+						<div class="tab_set clearfix">
+							<div class="results_tab active hidden" id="results_tab_for_sale" href="">
+								Homes For Sale
+							</div>
+							<div class="results_tab hidden" id="results_tab_sold" href="">
+								Recently Sold Homes
+							</div>
+							<div class="results_tab hidden" id="results_tab_assessor" href="">
+								&nbsp;Property Records
+							</div>
+						</div><!-- START Tabs Header Row -->
+						<!-- START Row Sorting -->
+						<div class="srp_result_rows_header fleft">
+							<form name="sort_by_filter" onsubmit="return false;" style="margin:0px;padding:0px;" id="sort_by_filter">
+								<label for="sort_by" class="bold">Sort by: &nbsp;</label> <select id="sort_by" onchange="RFilters.toggleSortFilter()">
+									<option value="default">
+										Best match
+									</option>
+									<option value="date_d">
+										Newest
+									</option>
+									<option value="price_d">
+										Price (high to low)
+									</option>
+									<option value="price">
+										Price (low to high)
+									</option>
+									<option value="beds_d">
+										Bedrooms
+									</option>
+									<option value="baths_d">
+										Baths
+									</option>
+									<option value="type">
+										Property type
+									</option>
+									<option value="address">
+										Address
+									</option>
+									<option value="broker">
+										Broker
+									</option>
+								</select>
+							</form>
+						</div><!-- END Row Sorting  -->
+						<!--[ if !IE ]> START for_sale Results Rows <![endif]-->
+						<div id="results_tab_for_sale_rows" class="results_tab_rows">
+							<div class="srp_result_rows_header fright f11">
+								<span id="for_sale_top_paging" class="fleft">page 1 of 24&nbsp;&nbsp;&nbsp;</span>
+								<div class="btn_previous clearfix">
+									<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+									<div id="previous_btn0" class="btn_default pg_btn_disabled">
+										&lt;&nbsp;Prev
+									</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+								</div>
+								<div class="btn_next clearfix">
+									<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+									<div id="next_btn0" class="btn_default pg_btn" onclick="load_results(1);">
+										Next&nbsp;&gt;
+									</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+								</div>
+							</div>	
+							<% for habitat in @habitats %>
+							<!--[ if !IE ]> START results row 0 <![endif]-->
+							<div id="0row" class="srp_row clearfix" onclick="expHeight(event, 1040325182, '40.44558', '-111.8927', 'for_sale');" onmouseover="hilite_row(event, this, true, 1040325182, 'for_sale');" onmouseout="hilite_row(event, this, false, 1040325182, 'for_sale');">
+								<div id="1040325182" class="gone"></div><!--[ if !IE ]> START Row Left Content <![endif]-->
+								<div class="left_content">
+									<%= link_to (h habitat.street), habitat_path(habitat), { :class=> "address", :onclick => "doNothing(event);", :title => (h habitat.street) } %>
+									<div class="hilite_img mart5" onmouseover="add_class(this, 'hover');" onmouseout="remove_class(this, 'hover');" title="Click to preview listing">
+										<img width="70" height="50" border="0" alt="2682 West Shady Hollow Lane, <%= h habitat.city.name %> <%= h habitat.city.state.abbr %>" src="http://thumbs.trulia.com/pictures/thumbs/5182/1040325182_875438543.jpg" />
+									</div>
+									<div class="fleft mart5">
+										<p class="price">
+											<strong>$<%= h habitat.price %></strong>
+										</p>
+										<p class="">
+											<%= h habitat.no_bedrooms %> br <%= h habitat.no_bathrooms %> ba <%= h habitat.sq_feet %> sqft
+										</p>
+										<p class="">
+											<%= h habitat.property_type %>
+										</p>
+										<p class="gone">
+											&nbsp;
+										</p>
+									</div>
+								</div><!--[ if !IE ]> END Row Left Content <![endif]-->
+								<!--[ if !IE ]> START Row Right Content <![endif]-->
+								<div class="right_content">
+									<div class="dark_hilite">
+										FEATURED LISTING
+									</div><a target="_blank" rel="nofollow" class="dark_lolite" onclick="o_track_address_click('1040325182S','001.-1S','Pic','On Map','Not Branded','Sponsored','www.newhomesource.com','frpt1','ext');doNothing(event);" href="/transfer.php?s_id=10033973&amp;feat=1&amp;p_id=1040325182&amp;t_id=frpt1">newhomesource.com</a><br />
+								</div><!--[ if !IE ]> END Row Right Content <![endif]-->
+								<!--[ if !IE ]> START Row Calls to Action <![endif]-->
+								<div class="row_actions clearfix">
+									<div class="expand_row close" id="expand_row_link_1040325182" onclick="expHeight(event, 1040325182, '40.44558', '-111.8927', 'for_sale');">
+										<a href="" onclick="return false;" class="toggle_row">Listing preview</a>
+									</div><a rel="nofollow" class="action save" id="save_property_text_1040325182" href="" title="save to My Trulia" onclick="save_property(1040325182,1,event,3);return false;" name="save_property_text_1040325182">Save</a> <a rel="nofollow" class="action alerts" href="" title="Receive email alerts" onclick="show_email_property_alert_box(event, 1040325182, '2f3c32c471218c6232efa943ccea3d8e', 'UT', '339,990', 'For Sale');doNothing(event);return false;">Email Alerts</a>
+								</div><!--[ if !IE ]> End Row Calls to Action <![endif]-->
+								<!--[ if !IE ]> START Expanded Row <![endif]-->
+								<div id="expanding_row_1040325182" class="gone clearfix" title="2682 W Shady Hollow Ln, <%= h habitat.city.name %> <%= h habitat.city.name %> ">
+									<div class="left_expanded_row">
+										<p>
+											<strong>Source:</strong> <%= link_to (h habitat.parent_listing_link), (h habitat.parent_listing_link), { :class=> "dark_lolite", :target => "_blank", :rel => "nofollow" } %>
+											
+											
+										</p>
+										<p class="">
+											<strong>Listing Type:</strong> <%# habitat.listing_type goes here %>
+										</p>
+										<p class="gone">
+											<strong>Year Built:</strong> <%= h habitat.year_built %>
+										</p>
+										<p class="">
+											<strong>Price/sqft:</strong> $<%# habitat.sqft_price goes here %>
+										</p>
+										<p class="gone">
+											<strong>Neighborhood:</strong> <%# habitat.parent_community.name goes here %>
+										</p>
+										<p class="">
+											<strong>Zip:</strong> <%= h habitat.zip %>
+										</p><br />
+										<p class="description">
+											<%= h habitat.description %>
+										</p><br />
+										<%= link_to "See more details on " + (h habitat.street) + ", " + (h habitat.city.name) + ", " + (h habitat.state) + "  " + (h habitat.zip), habitat_path(habitat), { :class=> "more", :onclick => "doNothing(event);", :title => (h habitat.street) } %>
+										
+<!--									<a class="comps" href="/home_values/for_sale/UT/Saratoga_Springs/84043/1040325182/" title="Similar homes to 2682 W Shady Hollow Ln" onclick="doNothing(event);">Compare similar homes to 2682 W Shady Hollow Ln</a><br />  -->	
+									</div>
+									<div class="right_expanded_row" id="expand_content_map_1040325182" style="display:none;" onclick="doNothing(event);"></div><!--[ if !IE ]> START Expanded Row Calls to Action <![endif]-->
+									<div class="row_actions clearfix">
+										<a rel="nofollow" class="action save" id="save_property_text_exp_1040325182" href="" title="save to My Trulia" onclick="save_property(1040325182,1,event,3);doNothing(event);return false;" name="save_property_text_exp_1040325182">Save</a> <a rel="nofollow" class="action alerts" href="" title="Receive email alerts" onclick="show_email_property_alert_box(event, 1040325182, '2f3c32c471218c6232efa943ccea3d8e', 'UT', '339,990', 'For Sale');doNothing(event);return false;">Email Alerts</a> <a rel="nofollow" class="action share" style="" href="" title="send this property to your friends" onclick="build_email_property_div(event, 1040325182);doNothing(event);return false;">Share</a>
+									</div><!--[ if !IE ]> End Expanded Row Calls to Action <![endif]-->
+								</div><!--[ if !IE ]> END Expanded Row <![endif]-->
+							</div><!--[ if !IE ]> END results row 0 <![endif]-->
+<% end %>
+							<table class="paging lite_bkgrd" border="0" cellspacing="0" cellpadding="0" width="100%">
+								<tr>
+									<td width="10"></td>
+									<td valign="middle" align="right">
+										<div class="btn_previous clearfix">
+											<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+											<div id="previous_btn0" class="btn_default pg_btn_disabled">
+												&lt;&nbsp;Prev
+											</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+										</div>
+									</td>
+									<td valign="middle" align="center">
+										<div class="paging_string clearfix">
+											<span class="pg_link_cur">1</span> <a class="pg_link" href="/UT/Saratoga_Springs/p_2/">2</a> <a class="pg_link" href="/UT/Saratoga_Springs/p_3/">3</a> <a class="pg_link" href="/UT/Saratoga_Springs/p_4/">4</a> <a class="pg_link" href="/UT/Saratoga_Springs/p_5/">5</a> <a class="pg_link" href="/UT/Saratoga_Springs/p_6/">6</a> <a class="pg_link" href="/UT/Saratoga_Springs/p_7/">7</a> <span>...</span> <a class="pg_link" href="/UT/Saratoga_Springs/p_24/">24</a>
+										</div>
+									</td>
+									<td valign="middle" align="left">
+										<div class="btn_next clearfix">
+											<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+											<div id="next_btn0" class="btn_default pg_btn" onclick="load_results(1);">
+												Next&nbsp;&gt;
+											</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div><!--[ if !IE ]> END for_sale Results Rows <![endif]-->
+						<!--[ if !IE ]> START sold Results Rows <![endif]-->
+						<div id="results_tab_sold_rows" class="results_tab_rows gone">
+							<div class="srp_result_rows_header fright f11">
+								<span id="sold_top_paging" class="fleft">page 1 of 1&nbsp;&nbsp;&nbsp;</span>
+								<div class="btn_previous clearfix">
+									<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+									<div id="previous_btn1" class="btn_default pg_btn_disabled">
+										&lt;&nbsp;Prev
+									</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+								</div>
+								<div class="btn_next clearfix">
+									<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+									<div id="next_btn0" class="btn_default pg_btn_disabled">
+										Next&nbsp;&gt;
+									</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+								</div>
+							</div>
+							<table class="paging lite_bkgrd" border="0" cellspacing="0" cellpadding="0" width="100%">
+								<tr>
+									<td width="10"></td>
+									<td valign="middle" align="right">
+										<div class="btn_previous clearfix">
+											<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+											<div id="previous_btn1" class="btn_default pg_btn_disabled">
+												&lt;&nbsp;Prev
+											</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+										</div>
+									</td>
+									<td valign="middle" align="center"></td>
+									<td valign="middle" align="left">
+										<div class="btn_next clearfix">
+											<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+											<div id="next_btn0" class="btn_default pg_btn_disabled">
+												Next&nbsp;&gt;
+											</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div><!--[ if !IE ]> END sold Results Rows <![endif]-->
+						<!--[ if !IE ]> START assessor Results Rows <![endif]-->
+						<div id="results_tab_assessor_rows" class="results_tab_rows gone">
+							<div class="srp_result_rows_header fright f11">
+								<span id="assessor_top_paging" class="fleft">page 1 of 1&nbsp;&nbsp;&nbsp;</span>
+								<div class="btn_previous clearfix">
+									<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+									<div id="previous_btn2" class="btn_default pg_btn_disabled">
+										&lt;&nbsp;Prev
+									</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+								</div>
+								<div class="btn_next clearfix">
+									<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+									<div id="next_btn0" class="btn_default pg_btn_disabled">
+										Next&nbsp;&gt;
+									</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+								</div>
+							</div>
+							<table class="paging lite_bkgrd" border="0" cellspacing="0" cellpadding="0" width="100%">
+								<tr>
+									<td width="10"></td>
+									<td valign="middle" align="right">
+										<div class="btn_previous clearfix">
+											<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+											<div id="previous_btn2" class="btn_default pg_btn_disabled">
+												&lt;&nbsp;Prev
+											</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+										</div>
+									</td>
+									<td valign="middle" align="center"></td>
+									<td valign="middle" align="left">
+										<div class="btn_next clearfix">
+											<img class="btn_default" width="6" height="21" src="http://images.trulia.com/images/buttons/btn_blank_lft.gif" />
+											<div id="next_btn0" class="btn_default pg_btn_disabled">
+												Next&nbsp;&gt;
+											</div><img class="btn_default" width="8" height="21" src="http://images.trulia.com/images/buttons/btn_blank_rht.gif" />
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div><!--[ if !IE ]> END assessor Results Rows <![endif]-->
+						<!-- paging has been moved to the various control panels -->
+						<!-- START bottom ad -->
+						<div id="ad_bot"></div><!-- END bottom ad -->
+					</div><!-- END CENTER RAIL -->
+					<!-- START RIGHT RAIL -->
+					<div id="right_rail">
+						<!-- START right side sky ad -->
+						<div id="ad_rside"></div><!-- END right side sky ad -->
+						<div id="stats_community" class="clearfix">
+						</div>
+						<div id="voices">
+
+						</div>
+					</div><!-- START RIGHT RAIL -->
+				</div><!-- END RIGHT CONTENT -->
+			</div>
+		</div><!-- END SRP COLUMN CONTAINER-->
+	</div><!-- END SRP CONTENT-->
+	<div class="clearfix">
+		<div style="border:1px solid #CCCCCC;padding:1px; margin-top:20px; width:100%;">
+			<div style="padding: 0 15px 15px">
+				<table id="more_links_table" style="width:100%;" class="no_more_adv_search">
+					<tr>
+						<td colspan="15" class="srp_location_header"></td>
+					</tr>
+					<tr>
+						<!--[if !IE]>SEARCH_BOX_CONTAINER<![endif]-->
+						<td valign="top" style="padding-bottom:5px;padding-top:10px;">
+							<table>
+								<tr>
+									<td valign="top" align="left" style="text-align:left;">
+										<ul class="flist_small">
+											<li class="textarea bold"><%= h habitat.city.name %> &amp; nearby cities
+											</li>
+											<li>
+												<strong><a onclick="show_more_links('div_see_more_1', event)" style="text-decoration:underline;">See all nearby cities</a></strong>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="top" style="padding-bottom:5px;padding-top:10px;">
+							<table>
+								<tr>
+									<td valign="top" align="left" style="text-align:left;">
+										<ul class="flist_small">
+											<li class="textarea bold"><%= h habitat.city.name %> ZIPs
+											</li>
+											<li>
+												<a href="/UT/Saratoga_Springs/84045/">84045 real estate</a>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="top" style="padding-bottom:5px;padding-top:10px;">
+							<table>
+								<tr>
+									<td valign="top" align="left" style="text-align:left;">
+										<ul class="flist_small">
+											<li class="textarea bold"><%= h habitat.city.name %> property types
+											</li>
+											<li>
+												<a href="/for_sale/Saratoga_Springs,UT/SINGLE-FAMILY_HOME_type/">Saratoga Springs Single-Family Homes</a>
+											</li>
+											<li>
+												<a href="/for_sale/Saratoga_Springs,UT/CONDO_type/">Saratoga Springs Condos</a>
+											</li>
+											<li>
+												<a href="/for_sale/Saratoga_Springs,UT/TOWNHOUSE_type/">Saratoga Springs Townhomes</a>
+											</li>
+											<li>
+												<a href="/for_sale/Saratoga_Springs,UT/COOP_type/">Saratoga Springs Coops</a>
+											</li>
+											<li>
+												<a href="/for_sale/Saratoga_Springs,UT/APARTMENT_type/">Saratoga Springs Apartments</a>
+											</li>
+											<li>
+												<a href="/for_sale/Saratoga_Springs,UT/LOFT_type/">Saratoga Springs Lofts</a>
+											</li>
+											<li>
+												<strong><a onclick="show_more_links('div_see_more_3', event)" style="text-decoration:underline;">See all Saratoga Springs property types</a></strong>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<div id="div_see_more_1" style="width:300px;height:475px;display:none;background-color:#FFFFFF;border:1px solid #000000;padding:10px 10px 10px 10px;margin: 10px;">
+					<div style="float:right;">
+						<a href="javascript:hide('div_see_more_1');" class="flist_small">Close [X]</a>
+					</div>
+					<div style="float:left;padding:10px 5px 10px 25px;" class="srp_location_header">
+						Saratoga Springs &amp; nearby cities
+					</div>
+					<div id="div_see_more_1_content" style="clear:both;display:block;overflow:auto;width:250px;height:400px;border:1px solid #999999;margin:25px 15px 5px 25px;padding:5px;">
+						<ul class="flist_small">
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/foreclosure_lt/">Saratoga Springs foreclosures</a>
+							</li>
+							<li>
+								<a href="/UT/Eagle_Mountain/">Eagle Mountain real estate</a>
+							</li>
+							<li>
+								<a href="/UT/Eagle_Mtn/">Eagle Mtn real estate</a>
+							</li>
+							<li>
+								<a href="/UT/Lehi/">Lehi real estate</a>
+							</li>
+							<li>
+								<a href="/UT/Cedar_Hills/">Cedar Hills real estate</a>
+							</li>
+							<li>
+								<a href="/UT/Pleasant_Grove/">Pleasant Grove real estate</a>
+							</li>
+							<li>
+								<a href="/UT/Alpine/">Alpine real estate</a>
+							</li>
+							<li>
+								<a href="/UT/Lindon/">Lindon real estate</a>
+							</li>
+							<li>
+								<a href="/UT/Draper/">Draper real estate</a>
+							</li>
+							<li>
+								<a href="/UT/Orem/">Orem real estate</a>
+							</li>
+							<li>
+								<a href="/UT/Bluffdale/">Bluffdale real estate</a>
+							</li>
+						</ul>
+					</div>
+					<div style="float:right;padding:10px 0px 10px 0px;">
+						<a href="javascript:hide('div_see_more_1');" class="flist_small">Close [X]</a>
+					</div>
+				</div>
+				<div id="div_see_more_2" style="width:300px;height:475px;display:none;background-color:#FFFFFF;border:1px solid #000000;padding:10px 10px 10px 10px;margin: 10px;">
+					<div style="float:right;">
+						<a href="javascript:hide('div_see_more_2');" class="flist_small">Close [X]</a>
+					</div>
+					<div style="float:left;padding:10px 5px 10px 25px;" class="srp_location_header">
+						Saratoga Springs ZIPs
+					</div>
+					<div id="div_see_more_2_content" style="clear:both;display:block;overflow:auto;width:250px;height:400px;border:1px solid #999999;margin:25px 15px 5px 25px;padding:5px;">
+						<ul class="flist_small">
+							<li>
+								<a href="/UT/Saratoga_Springs/84045/">84045 real estate</a>
+							</li>
+						</ul>
+					</div>
+					<div style="float:right;padding:10px 0px 10px 0px;">
+						<a href="javascript:hide('div_see_more_2');" class="flist_small">Close [X]</a>
+					</div>
+				</div>
+				<div id="div_see_more_3" style="width:300px;height:475px;display:none;background-color:#FFFFFF;border:1px solid #000000;padding:10px 10px 10px 10px;margin: 10px;">
+					<div style="float:right;">
+						<a href="javascript:hide('div_see_more_3');" class="flist_small">Close [X]</a>
+					</div>
+					<div style="float:left;padding:10px 5px 10px 25px;" class="srp_location_header">
+						Saratoga Springs property types
+					</div>
+					<div id="div_see_more_3_content" style="clear:both;display:block;overflow:auto;width:250px;height:400px;border:1px solid #999999;margin:25px 15px 5px 25px;padding:5px;">
+						<ul class="flist_small">
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/SINGLE-FAMILY_HOME_type/">Saratoga Springs Single-Family Homes</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/CONDO_type/">Saratoga Springs Condos</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/TOWNHOUSE_type/">Saratoga Springs Townhomes</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/COOP_type/">Saratoga Springs Coops</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/APARTMENT_type/">Saratoga Springs Apartments</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/LOFT_type/">Saratoga Springs Lofts</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/APARTMENT|CONDO|TOWNHOUSE_type/">Saratoga Springs Apartments/Condos/Townhomes</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/MOBILE|MANUFACTURED_type/">Saratoga Springs Mobile/Manufactured Homes</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/FARM|RANCH_type/">Saratoga Springs Farms/Ranches</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/LOT|LAND_type/">Saratoga Springs Lot/Land</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/MULTI-FAMILY_type/">Saratoga Springs Multi-Family Homes</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/INCOME|INVESTMENT_type/">Saratoga Springs Income/Investment</a>
+							</li>
+							<li>
+								<a href="/for_sale/Saratoga_Springs,UT/UNKNOWN_type/">Saratoga Springs Unspecified</a>
+							</li>
+						</ul>
+					</div>
+					<div style="float:right;padding:10px 0px 10px 0px;">
+						<a href="javascript:hide('div_see_more_3');" class="flist_small">Close [X]</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="amp_box" class="clearfix lite_bkgrd">
+			<p style="clear:both;float:left;margin-top:10px;margin-bottom:10px;width:100%;" class="small">
+				<b>What's I Like Utah?</b> I Like Utah is a real estate search engine that helps you find homes for sale and make smarter real estate decisions in the process. How? By analyzing real estate information on millions of <a href="/sitemap/Utah-real-estate/">homes in Utah</a> and nationwide as well as helping you understand hyper-local <a href="/real_estate/Saratoga_Springs-Utah/">Saratoga Springs real estate trends</a>. Refine your real estate search in Saratoga Springs, UT by price, number of bedrooms, bathrooms, property type (including <a href="/for_sale/Saratoga_Springs,UT/TOWNHOUSE_type/">townhouses</a>, <a href="/for_sale/Saratoga_Springs,UT/CONDO_type/">condominiums</a> and <a href="/for_sale/Saratoga_Springs,UT/SINGLE-FAMILY_HOME_type/">single-family homes</a>), and more. Use our interactive <a href="/home_prices/Utah/Saratoga_Springs-heat_map/">Saratoga Springs home price map</a> to view real estate activity across Saratoga Springs ZIP codes and in other cities nearby Saratoga Springs. See local real estate trends, and compare your home to <a href="/sold/Saratoga_Springs,UT/">recently sold homes in Saratoga Springs</a> and to similar homes for sale in Saratoga Springs, Utah. View our <a href="/real_estate/Saratoga_Springs-Utah/">Saratoga Springs real estate guide</a> to see average listing prices, sale prices and information for local school districts. Join <a href="/voices/Saratoga_Springs---33290--">Saratoga Springs, Utah community</a> to get in touch with Saratoga Springs real estate agents, real estate brokers and other real estate sellers and buyers.
+			</p>
+		</div>
+	</div>
+	<div class="footer">
+		<table border="0" cellpadding="0" cellspacing="1">
+			<tr valign="top" style="font-size:11px">
+				<td align="left" style="padding-right:20px;">
+					<strong>Company&nbsp;Info:</strong>
+				</td>
+				<td align="left">
+					<strong><a href="/info/about/">About&nbsp;Us</a> &nbsp;|&nbsp; <a href="/help/">Help&nbsp;Center</a> &nbsp;|&nbsp; <a href="/info/news/">News&nbsp;Room</a> &nbsp;|&nbsp; <a href="http://www.truliablog.com" rel="nofollow">Blog</a> &nbsp;|&nbsp; <a href="/info/jobs/" style="color:red;">We're hiring</a> &nbsp;|&nbsp; <a href="/info/leave_feedback/" rel="nofollow">Feedback</a></strong>
+				</td>
+			</tr>
+			<tr valign="top" style="font-size:11px">
+				<td align="left" style="padding-right:20px;">
+					<strong>Partners:</strong>
+				</td>
+				<td align="left">
+					<strong><a href="/industry/">Real&nbsp;Estate&nbsp;Professionals</a> &nbsp;|&nbsp; <a href="/submit_listings/">Submit&nbsp;Your&nbsp;Listings&nbsp;on&nbsp;I Like Utah</a> &nbsp;|&nbsp; <a href="/advertisers/" title="Advertise with Us">Advertise</a> &nbsp;|&nbsp; <a rel="nofollow" href="http://widgets.trulia.com/">Tools&nbsp;for&nbsp;Your&nbsp;Site</a> &nbsp;|&nbsp; <a href="http://developer.trulia.com/">Trulia&nbsp;API</a> &nbsp;|&nbsp; <a rel="nofollow" href="/publishers/">Publishing&nbsp;Platform</a>&nbsp;<img src="http://images.trulia.com/images/new.gif" width="25" height="9" alt="new" /></strong>
+				</td>
+			</tr>
+			<tr valign="top" style="font-size:11px">
+				<td align="left" style="padding-right:20px;">
+					<strong>Legal:</strong>
+				</td>
+				<td align="left">
+					<strong><a href="/info/terms/" rel="nofollow">Terms&nbsp;of&nbsp;Use</a> &nbsp;|&nbsp; <a href="/info/privacy/" rel="nofollow">Privacy&nbsp;Policy</a> &nbsp;|&nbsp; <a href="/info/guidelines/" rel="nofollow">Community&nbsp;Guidelines</a> &nbsp;|&nbsp; <a href="/info/contact/" rel="nofollow">Contact&nbsp;Us</a></strong>
+				</td>
+			</tr>
+			<tr height="10">
+				<td></td>
+				<td></td>
+			</tr>
+			<tr valign="top" style="font-size:11px;">
+				<td align="left" style="padding-right:20px;">
+					<strong>Residential<br />
+					Real&nbsp;Estate:</strong>
+				</td>
+				<td align="left">
+					<a href="/CA/San_Francisco/">San&nbsp;Francisco&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/NY/New_York/">New&nbsp;York&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/CA/Los_Angeles/">Los&nbsp;Angeles&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/FL/Orlando/">Orlando&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/FL/Miami/">Miami&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/PA/Philadelphia/">Philadelphia&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/AZ/Phoenix/">Phoenix&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/CA/San_Diego/">San&nbsp;Diego&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/CA/San_Jose/">San&nbsp;Jose&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/IL/Chicago/">Chicago&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/sitemap/Arizona-real-estate/">Arizona&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/sitemap/California-real-estate/">California&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/sitemap/Florida-real-estate/">Florida&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/sitemap/Illinois-real-estate/">Illinois&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/sitemap/Massachusetts-real-estate/">Massachusetts&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/sitemap/New_Jersey-real-estate/">New&nbsp;Jersey&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/sitemap/Pennsylvania-real-estate/">Pennsylvania&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/sitemap/Texas-real-estate/">Texas&nbsp;real&nbsp;estate</a><br />
+					<a href="/sitemap/">Other&nbsp;local&nbsp;real&nbsp;estate</a> &nbsp;|&nbsp; <a href="/home_prices/">Home&nbsp;price&nbsp;maps</a> &nbsp;|&nbsp; <a href="/city/">Real&nbsp;estate&nbsp;guides</a>
+				</td>
+			</tr>
+			<tr valign="top" align="left" style="font-size:10px">
+				<td></td>
+				<td style="padding-top:8px;" class="Example">
+					Copyright © 2007 I Like Utah.com All rights reserved. &nbsp;&nbsp;&nbsp;&nbsp; <img src="http://images.trulia.com/images/FHEO.gif" border="0" alt="Fair Housing and Equal Opportunity logo" height="14" width="17" style="display:inline;" /> <a href="http://www.hud.gov/offices/fheo/index.cfm" target="_blank" rel="nofollow" title="Fair Housing and Equal Opportunity">Fair Housing and Equal Opportunity</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div><!-- END SRP -->

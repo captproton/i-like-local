@@ -1,0 +1,58 @@
+<p>
+  <b>Location:</b>
+  <%=h @search_alert.location %>
+</p>
+
+<p>
+  <b>Neighborhood:</b>
+  <%=h @search_alert.neighborhood_id %>
+</p>
+
+<p>
+  <b>Price min:</b>
+  <%=h @search_alert.price_min %>
+</p>
+
+<p>
+  <b>Price max:</b>
+  <%=h @search_alert.price_max %>
+</p>
+
+<p>
+  <b>Property type:</b>
+  <%=h @search_alert.property_type_id %>
+</p>
+
+<p>
+  <b>Min bedroooms:</b>
+  <%=h @search_alert.min_bedroooms %>
+</p>
+
+<p>
+  <b>Min bathrooms:</b>
+  <%=h @search_alert.min_bathrooms %>
+</p>
+
+<p>
+  <b>Min sqft:</b>
+  <%=h @search_alert.min_sqft %>
+</p>
+
+<p>
+  <b>Email frequency:</b>
+  <%=h @search_alert.email_frequency %>
+</p>
+
+<p>
+  <b>Alert on:</b>
+  <%=h @search_alert.alert_on %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @search_alert.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_search_alert_path(user,@search_alert) %> |
+<%= link_to 'Back', search_alerts_path %>

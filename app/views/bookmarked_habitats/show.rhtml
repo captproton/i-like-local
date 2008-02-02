@@ -1,0 +1,18 @@
+<p>
+  <b>User:</b>
+  <%=h @bookmarked_habitats.user_id %>
+</p>
+
+<p>
+  <b>Habitat:</b>
+  <%=h @bookmarked_habitats.habitat_id %>
+</p>
+
+<p>
+  <b>Fave:</b>
+  <%=h @bookmarked_habitats.fave %>
+</p>
+
+
+<%= link_to 'Edit', edit_bookmarked_habitats_path(@bookmarked_habitats) %> |
+<%= link_to 'Back', bookmarked_habitats_path %>

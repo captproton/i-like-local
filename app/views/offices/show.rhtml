@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @office.name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @office.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @office.email %>
+</p>
+
+<p>
+  <b>Picture url:</b>
+  <%=h @office.picture_url %>
+</p>
+
+
+<%= link_to 'Edit', habitat_edit_office_path(@office) %> |
+<%= link_to 'Back', habitat_offices_path %>

@@ -1,0 +1,27 @@
+<h1>Listing offices</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Picture url</th>
+  </tr>
+  
+<% for office in @offices %>
+  <tr>
+    <td><%=h office.name %></td>
+    <td><%=h office.phone %></td>
+    <td><%=h office.email %></td>
+    <td><%=h office.picture_url %></td>
+    <td><%= link_to 'Show', habitat_office_path(office) %></td>
+    <td><%= link_to 'Edit', habitat_edit_office_path(office) %></td>
+    <td><%= link_to 'Destroy', habitat_office_path(office), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New office', habitat_new_office_path %> | 
+<%= link_to ("Back to details page for " + @habitat.street ), habitat_path(@habitat)%>

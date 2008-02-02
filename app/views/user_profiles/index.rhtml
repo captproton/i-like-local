@@ -1,0 +1,26 @@
+<h1>Listing user_profiles</h1>
+
+<table>
+  <tr>
+    <th>About me</th>
+    <th>Mugshot</th>
+    <th>User kind</th>
+    <th>Contact me</th>
+  </tr>
+  
+<% for user_profile in @user_profiles %>
+  <tr>
+    <td><%=h user_profile.about_me %></td>
+    <td><%=h user_profile.mugshot %></td>
+    <td><%=h user_profile.user_kind_id %></td>
+    <td><%=h user_profile.contact_me %></td>
+    <td><%= link_to 'Show', user_profile_path(user_profile) %></td>
+    <td><%= link_to 'Edit', edit_user_profile_path(user_profile) %></td>
+    <td><%= link_to 'Destroy', user_profile_path(user_profile), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user_profile', new_user_profile_path %>

@@ -1,0 +1,26 @@
+<h1>Listing franchises</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Picture url</th>
+  </tr>
+  
+<% for franchise in @franchises %>
+  <tr>
+    <td><%=h franchise.name %></td>
+    <td><%=h franchise.phone %></td>
+    <td><%=h franchise.email %></td>
+    <td><%=h franchise.picture_url %></td>
+    <td><%= link_to 'Show', habitat_franchise_path(franchise) %></td>
+    <td><%= link_to 'Edit', habitat_edit_franchise_path(franchise) %></td>
+    <td><%= link_to 'Destroy', habitat_franchise_path(franchise), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New franchise', habitat_new_franchise_path %>

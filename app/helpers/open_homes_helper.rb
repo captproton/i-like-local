@@ -1,0 +1,2 @@
+module OpenHomesHelper
+end

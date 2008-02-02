@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @site.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @site.url %>
+</p>
+
+
+<%= link_to 'Edit', habitat_edit_site_path(@site) %> |
+<%= link_to 'Back', habitat_sites_path %>

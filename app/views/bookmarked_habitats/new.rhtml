@@ -1,0 +1,26 @@
+<h1>New bookmarked_habitats</h1>
+
+<%= error_messages_for :bookmarked_habitats %>
+
+<% form_for(:bookmarked_habitats, :url => bookmarked_habitats_path) do |f| %>
+  <p>
+    <b>User</b><br />
+    <%= f.text_field :user_id %>
+  </p>
+
+  <p>
+    <b>Habitat</b><br />
+    <%= f.text_field :habitat_id %>
+  </p>
+
+  <p>
+    <b>Fave</b><br />
+    <%= f.check_box :fave %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', bookmarked_habitats_path %>

@@ -1,0 +1,26 @@
+<h1>Listing advertisers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Addr1</th>
+    <th>Addr2</th>
+    <th>Email</th>
+  </tr>
+  
+<% for advertiser in @advertisers %>
+  <tr>
+    <td><%=h advertiser.name %></td>
+    <td><%=h advertiser.addr1 %></td>
+    <td><%=h advertiser.addr2 %></td>
+    <td><%=h advertiser.email %></td>
+    <td><%= link_to 'Show', advertiser_path(advertiser) %></td>
+    <td><%= link_to 'Edit', edit_advertiser_path(advertiser) %></td>
+    <td><%= link_to 'Destroy', advertiser_path(advertiser), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New advertiser', new_advertiser_path %>

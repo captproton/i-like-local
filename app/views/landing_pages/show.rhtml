@@ -1,0 +1,18 @@
+<p>
+  <b>Lp url:</b>
+  <%=h @landing_page.lp_url %>
+</p>
+
+<p>
+  <b>Virtual tour url:</b>
+  <%=h @landing_page.virtual_tour_url %>
+</p>
+
+<p>
+  <b>Habitat:</b>
+  <%=h @landing_page.habitat.street %>
+</p>
+
+
+<%= link_to 'Edit', habitat_edit_landing_page_path(@landing_page) %> |
+<%= link_to 'Back', habitat_landing_pages_path %>

@@ -1,0 +1,32 @@
+<h1>New open_home</h1>
+
+<%= error_messages_for :open_home %>
+
+<% form_for(:open_home, :url => habitat_open_homes_path) do |f| %>
+
+  <p>
+    <b>Date</b><br />
+    <%= f.datetime_select :date %>
+  </p>
+
+  <p>
+    <b>Starttime</b><br />
+    <%= f.datetime_select :starttime %>
+  </p>
+
+  <p>
+    <b>Endtime</b><br />
+    <%= f.datetime_select :endtime %>
+  </p>
+
+  <p>
+    <b>Details</b><br />
+    <%= f.text_area :details %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', habitat_open_homes_path %>

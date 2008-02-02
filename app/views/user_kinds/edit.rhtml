@@ -1,0 +1,17 @@
+<h1>Editing user_kind</h1>
+
+<%= error_messages_for :user_kind %>
+
+<% form_for(:user_kind, :url => user_kind_path(@user_kind), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Title</b><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', user_kind_path(@user_kind) %> |
+<%= link_to 'Back', user_kinds_path %>

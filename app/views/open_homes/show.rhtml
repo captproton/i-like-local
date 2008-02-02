@@ -1,0 +1,28 @@
+<p>
+  <b>Habitat:</b>
+  <%=h (@open_home.habitat.street + ", " + @open_home.habitat.city.name) %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @open_home.date %>
+</p>
+
+<p>
+  <b>Starttime:</b>
+  <%=h @open_home.starttime %>
+</p>
+
+<p>
+  <b>Endtime:</b>
+  <%=h @open_home.endtime %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%=h @open_home.details %>
+</p>
+
+
+<%= link_to 'Edit', habitat_edit_open_home_path(@habitat, @open_home) %> |
+<%= link_to 'Back', habitat_open_homes_path %>

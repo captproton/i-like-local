@@ -1,0 +1,3 @@
+*.log
+db/schema.rb
+log/*.log

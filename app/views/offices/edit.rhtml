@@ -1,0 +1,32 @@
+<h1>Editing office</h1>
+
+<%= error_messages_for :office %>
+
+<% form_for(:office, :url => habitat_office_path(@habitat, @office), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Phone</b><br />
+    <%= f.text_field :phone %>
+  </p>
+
+  <p>
+    <b>Email</b><br />
+    <%= f.text_area :email %>
+  </p>
+
+  <p>
+    <b>Picture url</b><br />
+    <%= f.text_area :picture_url %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', habitat_office_path(@habitat, @office) %> |
+<%= link_to 'Back', habitat_offices_path %>

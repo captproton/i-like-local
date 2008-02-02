@@ -1,0 +1,31 @@
+<h1>New advertiser</h1>
+
+<%= error_messages_for :advertiser %>
+
+<% form_for(:advertiser, :url => advertisers_path) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Addr1</b><br />
+    <%= f.text_field :addr1 %>
+  </p>
+
+  <p>
+    <b>Addr2</b><br />
+    <%= f.text_field :addr2 %>
+  </p>
+
+  <p>
+    <b>Email</b><br />
+    <%= f.text_area :email %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', advertisers_path %>

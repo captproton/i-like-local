@@ -1,0 +1,31 @@
+<h1>New user_profile</h1>
+
+<%= error_messages_for :user_profile %>
+
+<% form_for(:user_profile, :url => user_profiles_path) do |f| %>
+  <p>
+    <b>About me</b><br />
+    <%= f.text_area :about_me %>
+  </p>
+
+  <p>
+    <b>Mugshot</b><br />
+    <%= f.text_field :mugshot %>
+  </p>
+
+  <p>
+    <b>User kind</b><br />
+    <%= f.text_field :user_kind_id %>
+  </p>
+
+  <p>
+    <b>Contact me</b><br />
+    <%= f.check_box :contact_me %>
+  </p>
+
+  <p>
+    <%= submit_tag "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', user_profiles_path %>

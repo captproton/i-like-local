@@ -1,0 +1,22 @@
+<h1>Editing landing_page</h1>
+
+<%= error_messages_for :landing_page %>
+
+<% form_for(:landing_page, :url => habitat_landing_page_path(@habitat, @landing_page), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Lp url</b><br />
+    <%= f.text_area :lp_url %>
+  </p>
+
+  <p>
+    <b>Virtual tour url</b><br />
+    <%= f.text_area :virtual_tour_url %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', habitat_landing_page_path(@habitat, @landing_page) %> |
+<%= link_to 'Back', habitat_landing_pages_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  street: 1234 Mayfari Street
+  zip:  84404
+  mlsId: 4356
+  city_id: 1
+two:
+  id: 2
+  street: 1234 Mayfarin Street
+  zip:  84405
+  mlsId: 435678
+  city_id: 1

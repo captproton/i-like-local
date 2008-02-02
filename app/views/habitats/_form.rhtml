@@ -1,0 +1,73 @@
+<label for="">
+<p>
+  <b>Street</b><br />
+  <%= f.text_field :street, :class => "text_field" %>
+</p>
+</label>
+<p>
+  <%= @city.name %>, <%= @city.state.name %>
+
+</p>
+
+<p>
+  <b>Zip</b><br />
+  <%= f.text_field :zip, :class => "text_field" %>
+</p>
+</label>
+
+<p>
+  <b>price</b><br />
+  <%= f.text_field :price, :class => "text_field" %>
+</p>
+</label>
+
+
+<p>
+  <b>available</b><br />
+  <%= f.text_field :available, :class => "text_field" %>
+</p>
+</label>
+
+<p>
+  <b>property_type</b><br />
+  <%= f.text_field :property_type, :class => "text_field" %>
+</p>
+</label>
+
+<p>
+  <b>no_bathrooms</b><br />
+  <%= f.text_field :no_bathrooms, :class => "text_field" %>
+</p>
+</label>
+
+<p>
+  <b>no_bedrooms</b><br />
+  <%= f.text_field :available, :class => "text_field" %>
+</p>
+</label>
+
+
+t.column "year_built",          :integer,                                :default => 0
+t.column "featured",            :boolean,                                :default => false
+t.column "open_house",          :boolean,                                :default => false
+t.column "description",         :text
+t.column "offer_type",          :boolean,                                :default => false
+t.column "created_at",          :datetime
+t.column "updated_at",          :datetime
+t.column "visits_count",        :integer,                                :default => 0
+t.column "attachable_type",     :string
+t.column "attachable_id",       :integer
+t.column "parent_id",           :integer
+t.column "sq_feet",             :integer
+t.column "first_day_on_market", :datetime
+t.column "city_id",             :integer
+t.column "unit_number",         :string
+t.column "longitude",           :integer
+t.column "latitude",            :integer
+t.column "geocode_type",        :integer
+t.column "display_address",     :boolean
+t.column "lot_size",            :integer
+t.column "date_listed",         :datetime
+t.column "date_sold",           :datetime
+t.column "mlsId",               :string
+t.column "provider_listingId",  :string

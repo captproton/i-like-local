@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @franchise.name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @franchise.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @franchise.email %>
+</p>
+
+<p>
+  <b>Picture url:</b>
+  <%=h @franchise.picture_url %>
+</p>
+
+
+<%= link_to 'Edit', habitat_edit_franchise_path(@franchise) %> |
+<%= link_to 'Back', habitat_franchises_path %>

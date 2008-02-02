@@ -1,0 +1,16 @@
+<h1>Editing habitat</h1>
+
+<%= error_messages_for :habitat %>
+
+
+<% form_for(:habitat, :url => city_habitat_path(@habitat), :html => { :method => :put }) do |f| %>
+
+<%= render :partial => 'form', :locals => {:f => f} %>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', habitat_path(@habitat) %> |
+<%= link_to 'Back', city_habitats_path %>

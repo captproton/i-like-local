@@ -1,0 +1,17 @@
+<h1>Editing foreclosure</h1>
+
+<%= error_messages_for :foreclosure %>
+
+<% form_for(:foreclosure, :url => foreclosure_path(@foreclosure), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Status</b><br />
+    <%= f.text_field :status %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', foreclosure_path(@foreclosure) %> |
+<%= link_to 'Back', foreclosures_path %>

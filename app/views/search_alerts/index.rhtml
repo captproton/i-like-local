@@ -1,0 +1,40 @@
+<h1>Listing search_alerts</h1>
+
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Neighborhood</th>
+    <th>Price min</th>
+    <th>Price max</th>
+    <th>Property type</th>
+    <th>Min bedroooms</th>
+    <th>Min bathrooms</th>
+    <th>Min sqft</th>
+    <th>Email frequency</th>
+    <th>Alert on</th>
+    <th>User</th>
+  </tr>
+  
+<% for search_alert in @search_alerts %>
+  <tr>
+    <td><%=h search_alert.location %></td>
+    <td><%=h search_alert.neighborhood_id %></td>
+    <td><%=h search_alert.price_min %></td>
+    <td><%=h search_alert.price_max %></td>
+    <td><%=h search_alert.property_type_id %></td>
+    <td><%=h search_alert.min_bedroooms %></td>
+    <td><%=h search_alert.min_bathrooms %></td>
+    <td><%=h search_alert.min_sqft %></td>
+    <td><%=h search_alert.email_frequency %></td>
+    <td><%=h search_alert.alert_on %></td>
+    <td><%=h search_alert.user_id %></td>
+    <td><%= link_to 'Show', search_alert_path(search_alert) %></td>
+    <td><%= link_to 'Edit', edit_search_alert_path(search_alert) %></td>
+    <td><%= link_to 'Destroy', search_alert_path(search_alert), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New search_alert', new_search_alert_path %>

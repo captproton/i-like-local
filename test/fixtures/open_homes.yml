@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  habitat_id: 1
+  date: 2008-01-14 07:29:06
+  starttime: 2008-01-14 07:29:06
+  endtime: 2008-01-14 07:29:06
+  details: MyText
+two:
+  id: 2
+  habitat_id: 1
+  date: 2008-01-14 07:29:06
+  starttime: 2008-01-14 07:29:06
+  endtime: 2008-01-14 07:29:06
+  details: MyText

@@ -1,0 +1,13 @@
+<h1>Editing state</h1>
+
+<%= error_messages_for :state %>
+
+<% form_for(:state, :url => state_path(@state), :html => { :method => :put }) do |f| %>
+<%= render :partial => 'form', :locals => {:f => f} %>
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', state_path(@state) %> |
+<%= link_to 'Back', states_path %>

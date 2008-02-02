@@ -1,0 +1,30 @@
+<h1>Listing open_homes</h1>
+
+<table>
+  <tr>
+    <th>Habitat</th>
+    <th>Date</th>
+    <th>Starttime</th>
+    <th>Endtime</th>
+    <th>Details</th>
+  </tr>
+  
+<% for open_home in @open_homes %>
+  <tr>
+    <td><%=h open_home.habitat_id %></td>
+    <td><%=h open_home.date %></td>
+    <td><%=h open_home.starttime %></td>
+    <td><%=h open_home.endtime %></td>
+    <td><%=h open_home.details %></td>
+    <td><%= link_to 'Show', habitat_open_home_path(open_home) %></td>
+    <td><%= link_to 'Edit', habitat_edit_open_home_path(open_home) %></td>
+    <td><%= link_to 'Destroy', habitat_open_home_path(open_home), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<%= link_to 'New open_home time', habitat_new_open_home_path(@habitat) %> | 
+<%= link_to ("Back to details page for " + @habitat.street ), habitat_path(@habitat)%>

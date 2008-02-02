@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @agent.name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @agent.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @agent.email %>
+</p>
+
+<p>
+  <b>Picture url:</b>
+  <%=h @agent.picture_url %>
+</p>
+
+
+<%= link_to 'Edit', habitat_edit_agent_path(@agent) %> |
+<%= link_to 'Back', habitat_agents_path %>

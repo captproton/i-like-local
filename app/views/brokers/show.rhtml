@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @broker.name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @broker.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @broker.email %>
+</p>
+
+<p>
+  <b>Picture url:</b>
+  <%=h @broker.picture_url %>
+</p>
+
+
+<%= link_to 'Edit', habitat_edit_broker_path(@broker) %> |
+<%= link_to 'Back', habitat_brokers_path %>

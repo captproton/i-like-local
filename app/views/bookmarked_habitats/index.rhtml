@@ -1,0 +1,24 @@
+<h1>Listing bookmarked_habitats</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Habitat</th>
+    <th>Fave</th>
+  </tr>
+  
+<% for bookmarked_habitats in @bookmarked_habitats %>
+  <tr>
+    <td><%=h bookmarked_habitats.user_id %></td>
+    <td><%=h bookmarked_habitats.habitat_id %></td>
+    <td><%=h bookmarked_habitats.fave %></td>
+    <td><%= link_to 'Show', bookmarked_habitats_path(bookmarked_habitats) %></td>
+    <td><%= link_to 'Edit', edit_bookmarked_habitats_path(bookmarked_habitats) %></td>
+    <td><%= link_to 'Destroy', bookmarked_habitats_path(bookmarked_habitats), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bookmarked_habitats', new_bookmarked_habitats_path %>

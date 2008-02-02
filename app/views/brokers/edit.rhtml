@@ -1,0 +1,32 @@
+<h1>Editing broker</h1>
+
+<%= error_messages_for :broker %>
+
+<% form_for(:broker, :url => habitat_brokers_path(@broker), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Phone</b><br />
+    <%= f.text_field :phone %>
+  </p>
+
+  <p>
+    <b>Email</b><br />
+    <%= f.text_area :email %>
+  </p>
+
+  <p>
+    <b>Picture url</b><br />
+    <%= f.text_area :picture_url %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', habitat_broker_path(@broker) %> |
+<%= link_to 'Back', habitat_brokers_path %>

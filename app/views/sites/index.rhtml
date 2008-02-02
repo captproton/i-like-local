@@ -1,0 +1,23 @@
+<h1>Listing sites</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+  </tr>
+  
+<% for site in @sites %>
+  <tr>
+    <td><%=h site.name %></td>
+    <td><%=h site.url %></td>
+    <td><%= link_to 'Show', habitat_site_path(site) %></td>
+    <td><%= link_to 'Edit', habitat_edit_site_path(site) %></td>
+    <td><%= link_to 'Destroy', habitat_site_path(site), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New site', habitat_new_site_path %> | 
+<%= link_to ("Back to details page for " + @habitat.street ), habitat_path(@habitat)%>

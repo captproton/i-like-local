@@ -1,0 +1,15 @@
+<h1>Editing franchise</h1>
+
+<%= error_messages_for :franchise %>
+
+<% form_for(:franchise, :url => habitat_franchise_path(@habitat, @franchise), :html => { :method => :put }) do |f| %>
+
+<%= render :partial => 'form', :locals => {:f => f} %>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', habitat_franchises_path(@franchise) %> |
+<%= link_to 'Back', habitat_franchises_path %>

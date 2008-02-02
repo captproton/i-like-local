@@ -1,0 +1,17 @@
+login: &login
+  adapter: mysql
+  host: localhost
+  username: carlbtan_relisti
+  password: melorbode
+
+development:
+  database: carlbtan_reListingDev
+  <<: *login
+
+test:
+  database: carlbtan_reListingTest
+  <<: *login
+
+production:
+  database: carlbtan_reListingProd
+  <<: *login

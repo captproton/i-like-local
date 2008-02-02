@@ -1,0 +1,16 @@
+<h1>Editing city</h1>
+
+<%= error_messages_for :city %>
+
+<% form_for(:city, :url => state_city_path(@state, @city), :html => { :method => :put }) do |f| %>
+
+<%= render :partial => 'form', :locals => {:f => f} %>
+
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', city_path(@city) %> |
+<%= link_to 'Back', state_cities_path(@state) %>

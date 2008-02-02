@@ -1,0 +1,24 @@
+<h1>Listing user_links</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Url</th>
+    <th>User</th>
+  </tr>
+  
+<% for user_links in @user_links %>
+  <tr>
+    <td><%=h user_links.title %></td>
+    <td><%=h user_links.url %></td>
+    <td><%=h user_links.user_id %></td>
+    <td><%= link_to 'Show', user_links_path(user_links) %></td>
+    <td><%= link_to 'Edit', edit_user_links_path(user_links) %></td>
+    <td><%= link_to 'Destroy', user_links_path(user_links), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user_links', new_user_links_path %>

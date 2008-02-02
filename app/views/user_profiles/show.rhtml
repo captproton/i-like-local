@@ -1,0 +1,23 @@
+<p>
+  <b>About me:</b>
+  <%=h @user_profile.about_me %>
+</p>
+
+<p>
+  <b>Mugshot:</b>
+  <%=h @user_profile.mugshot %>
+</p>
+
+<p>
+  <b>User kind:</b>
+  <%=h @user_profile.user_kind_id %>
+</p>
+
+<p>
+  <b>Contact me:</b>
+  <%=h @user_profile.contact_me %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
+<%= link_to 'Back', user_profiles_path %>
