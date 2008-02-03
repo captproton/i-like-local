@@ -29,11 +29,8 @@ class User < ActiveRecord::Base
   # Protect internal methods from mass-update.
   attr_accessible :login, :email, :password, :password_confirmation, :time_zone
   
-  has_many :bookmarked_habitats
   has_many :habitats
-  has_many :user_profiles
-  has_many :search_alerts
-  has_many :user_links
+
   def to_param
     login
   end

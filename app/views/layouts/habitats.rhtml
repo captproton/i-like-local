@@ -1,52 +1,334 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title></title>
+	<title>The Yahoo! User Interface Library (YUI)</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<link rel="stylesheet" type="text/css" href="http://developer.yahoo.com/yui/assets/yui.css" >
 
-<!--CSS source files for the entire YUI Library--> 
-<!--CSS Foundation: (also partially aggegrated in reset-fonts-grids.css; does not include base.css)--> 
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset/reset-min.css"> 
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/base/base-min.css"> 
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/fonts/fonts-min.css"> 
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/grids/grids-min.css"> 
-  <%# stylesheet_link_tag 'screen' %>
-  <%= javascript_include_tag :defaults %>
+<style type="text/css">
+p#compressor {margin-top:0.2em;}	
+#index-main #promo li {list-style-type:disc; font-size:100%; margin-top:.2em; margin-left:1em;}
+#index-main #promo ul {margin:0;}
+#index-main #promo .yui-gb .yui-u {width:31%;}
+</style>
+
 
 </head>
+<body id="yahoo-com" class=" yui-skin-sam">
 
-<body>
-  <div id="doc2">
-    <div id="hd">
-      <a href="/">Main</a>
-      <% if logged_in? %>
-				<%= link_to "Logout", session_path, :method => :delete %>
-      <% else %>
-				<%= link_to "Login", new_session_path %>
-      <% end %>
-      
-    <!-- header goes here -->
-      <% if flash.any? %>
-        <div id="flash"><%= flash[:notice] %></div><% flash.clear %>
-      <% end %>
-    </div>
-  
-    <div class="yui-gc"><!-- 2 columns, 66%/33% -->
-      <div class="yui-u first" id="main">
-    
-        <%= yield %>
+<div id="doc3" class="yui-t2">
+<div id="hd">
+	<div id="ygunav">
+		<p><em>
+			<a href="http://developer.yahoo.com">Developer Network Home</a> <i> - </i>	
+			<a href="http://help.yahoo.com/help/us/ysearch">Help</a>
+			</em>
+		</p>
 
-      </div> 
-      <div class="yui-u" id="sidebar">
-        
-          <%= yield :sidebar %>
+		<form action="http://search.yahoo.com/search"><label for="ygsp">Site Search</label> 
+		<input name="vs" type="hidden" value="developer.yahoo.com">
+		<input name="fr" type="hidden" value="ush-myweb">
+		<input id="ygsp" name="va" size="22"> 
+		<input type="submit" value="Search" class="ygbt"></form>
+	</div>
+	<div id="ygma"><a href="/"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/nt/ma/ma_devnet_1.gif"  border="0"></a></div>
+	<div id="pagetitle"><h1>The Yahoo! User Interface Library (YUI)</h1></div>
+</div>
 
-      </div><!-- yui-u -->
-    </div><!-- yui-gc -->
-    <div id="ft">
-      <!-- footer goes here -->
-    </div>
-  </div><!-- doc2 -->
+<div id="bd">
+<div id="yui-main">
+<div class="yui-b">
+	<div id="index-secondary">			
+		
+				<div id="yui-theater">
+					<div>
+						[<a href="theater/">more videos</a> <a href="theater/"><img src="http://us.i1.yimg.com/us.yimg.com/i/nt/ic/ut/bsc/vidcam12_1.gif" width="12" height="12" border="0"></a> ]					
+					</div>
+					<h3>YUI Theater <a href="http://feeds.feedburner.com/yuiblog/yui-theater"><img class="rssbadge" src="http://us.i1.yimg.com/us.yimg.com/i/us/ext/rss.gif" height="17" width="36" alt="RSS badge"></a></h3>
+
+					<h2>Nate Koechley &mdash; "The YUI CSS Foundation"</h2>
+	
+<embed src='http://us.i1.yimg.com/cosmos.bcst.yahoo.com/player/media/swf/FLVVideoSolo.swf' flashvars='id=4732784&emailUrl=http%3A%2F%2Fvideo.yahoo.com%2Futil%2Fmail%3Fei%3DUTF-8%26vid%3D1373808&imUrl=http%253A%252F%252Fvideo.yahoo.com%252Fvideo%252Fplay%253Fei%253DUTF-8%2526vid%253D1373808&imTitle=Nate%2BKoechley%253A%2B%2526quot%253BThe%2BYUI%2BCSS%2BFoundation%2526quot%253B&searchUrl=http://video.yahoo.com/search/video?p=&profileUrl=http://video.yahoo.com/video/profile?yid=&creatorValue=ZXJpY21pcmFnbGlh&vid=1373808' type='application/x-shockwave-flash' width='300' height='275'></embed>
+					
+					<p>Senior YUI engineer Nate Koechley guides you through the YUI CSS foundation in this October 2007 tech talk.</p>
+	  </div><h2 id="yuiblogTitle">Yahoo! User Interface Blog <a href="http://feeds.yuiblog.com/YahooUserInterfaceBlog"><img class="rssbadge" src="http://us.i1.yimg.com/us.yimg.com/i/us/ext/rss.gif" height="17" width="36" alt="RSS badge"></a></h2>
+				<div id="yuiblogBody"><ul class="yuirssreader"><li><a href="http://feeds.yuiblog.com/~r/YahooUserInterfaceBlog/~3/222478388/
+		">Birthday Party! Celebrate the 2nd Birthday of the YUI Library and Yahoo Pattern Library February 26 at Yahoo
+		</a><p class='byline'><cite>Eric Miraglia
+		
+		</cite><span class='yuirssreader-date'>01/24/08 12:08:25</span></p></li><li><a href="http://feeds.yuiblog.com/~r/YahooUserInterfaceBlog/~3/221969798/
+		">Empty Links and Screen Readers
+		</a><p class='byline'><cite>Mike Davies
+		
+		</cite><span class='yuirssreader-date'>01/23/08 17:02:20</span></p></li><li><a href="http://feeds.yuiblog.com/~r/YahooUserInterfaceBlog/~3/218958211/
+		">In the Wild for January 18
+		</a><p class='byline'><cite>Eric Miraglia
+		
+		</cite><span class='yuirssreader-date'>01/18/08 08:58:49</span></p></li><li><a href="http://feeds.yuiblog.com/~r/YahooUserInterfaceBlog/~3/218318296/
+		">Automatic conversion from simple, accessible data tables to YUI Charts
+		</a><p class='byline'><cite>Christian Heilmann
+		
+		</cite><span class='yuirssreader-date'>01/17/08 08:10:00</span></p></li><li><a href="http://feeds.yuiblog.com/~r/YahooUserInterfaceBlog/~3/217163794/
+		">Carousel Design Pattern
+		</a><p class='byline'><cite>Christian Crumlish
+		
+		</cite><span class='yuirssreader-date'>01/15/08 10:17:13</span></p></li></ul><!--cached--></div><h2 id="ydnJsTitle">YUI Forum on Yahoo! Groups <a href="http://rss.groups.yahoo.com/group/ydn-javascript/rss"><img class="rssbadge" src="http://us.i1.yimg.com/us.yimg.com/i/us/ext/rss.gif" height="17" width="36" alt="RSS badge"></a></h2>
+
+				<div id="ydnJsBody"><ul class="yuirssreader"><li><a href="http://tech.groups.yahoo.com/group/ydn-javascript/message/24942
+      ">Calendar CSS Problem
+      </a><p class='byline'><cite>mallilkarjuna nagabhushan ammu
+      </cite><span class='yuirssreader-date'>02/02/08 14:35:16</span></p></li><li><a href="http://tech.groups.yahoo.com/group/ydn-javascript/message/24941
+      ">Re: How can I improve performance on draggable Panels.
+      </a><p class='byline'><cite>Jaime Bueza
+      </cite><span class='yuirssreader-date'>02/02/08 12:42:24</span></p></li><li><a href="http://tech.groups.yahoo.com/group/ydn-javascript/message/24940
+      ">Re: How can I improve performance on draggable Panels.
+      </a><p class='byline'><cite>Jaime Bueza
+      </cite><span class='yuirssreader-date'>02/02/08 12:42:23</span></p></li><li><a href="http://tech.groups.yahoo.com/group/ydn-javascript/message/24939
+      ">Re: How can I improve performance on draggable Panels.
+      </a><p class='byline'><cite>Jaime Bueza
+      </cite><span class='yuirssreader-date'>02/02/08 12:29:56</span></p></li><li><a href="http://tech.groups.yahoo.com/group/ydn-javascript/message/24938
+      ">Re: How can I improve performance on draggable Panels.
+      </a><p class='byline'><cite>Jaime Bueza
+      </cite><span class='yuirssreader-date'>02/02/08 12:29:55</span></p></li><li><a href="http://tech.groups.yahoo.com/group/ydn-javascript/message/24937
+      ">Re: Javascript: what is the difference in coding method
+      </a><p class='byline'><cite>Satyam
+      </cite><span class='yuirssreader-date'>02/02/08 12:11:50</span></p></li><li><a href="http://tech.groups.yahoo.com/group/ydn-javascript/message/24936
+      ">Re: Datatable server side sorting problem
+      </a><p class='byline'><cite>Satyam
+      </cite><span class='yuirssreader-date'>02/02/08 12:09:01</span></p></li></ul><!--cached--></div>
+
+<!-- 1 --><!--http%3A%2F%2Fdeveloper.yahoo.com%2Fyui%2F--><h2 id="delicious">YUI on del.icio.us <a href="http://del.icio.us/rss/tag/yui"><img class="rssbadge" src="http://us.i1.yimg.com/us.yimg.com/i/us/ext/rss.gif" height="17" width="36" alt="RSS badge"></a></h2>
+<div class="delicious">
+<div id="delicious-badge">
+   <p><a href="http://del.icio.us/post?url=http%3A%2F%2Fdeveloper.yahoo.com%2Fyui%2F" class="bookmark">bookmark on del.icio.us</a></p>
+      <div>
+      <span>tags:</span>
+      <ul>
+                     <li><a href="http://del.icio.us/tag/css" class="tag-size-1">css</a><!--(1337)--></li>
+
+                     <li><a href="http://del.icio.us/tag/yui" class="tag-size-1">yui</a><!--(822)--></li>
+                     <li><a href="http://del.icio.us/tag/javascript" class="tag-size-5">javascript</a><!--(4620)--></li>
+                     <li><a href="http://del.icio.us/tag/library" class="tag-size-3">library</a><!--(2677)--></li>
+                     <li><a href="http://del.icio.us/tag/webdesign" class="tag-size-1">webdesign</a><!--(782)--></li>
+                     <li><a href="http://del.icio.us/tag/ajax" class="tag-size-5">ajax</a><!--(4524)--></li>
+                     <li><a href="http://del.icio.us/tag/web2.0" class="tag-size-2">web2.0</a><!--(2023)--></li>
+
+                     <li><a href="http://del.icio.us/tag/programming" class="tag-size-2">programming</a><!--(2135)--></li>
+                     <li><a href="http://del.icio.us/tag/ui" class="tag-size-2">ui</a><!--(1738)--></li>
+                     <li><a href="http://del.icio.us/tag/development" class="tag-size-1">development</a><!--(880)--></li>
+                     <li><a href="http://del.icio.us/tag/yahoo" class="tag-size-3">yahoo</a><!--(2973)--></li>
+               </ul>
+   </div>
+            <p><a href="http://del.icio.us/url/4fe10b5b2254b2831dab3bd3463d21b1" class="saved-by">saved by <span>7964</span>  people</a></p>
+
+   </div></div>
+
+</div>
+
+	<div id="index-main">
+			<h2>Today's Featured Communites</h2>
+<p>			
+				<a href="http://lakeside.iLikeUtah.com" ><img src="http://ilikeutah.com/assets/2008/1/28/Picture_1.png" /></a><br />
+				<a href="http://lakeside.iLikeUtah.com"  height="281" >Lakeside at Saratoga Springs</a>
+</p>
+<p>				<a href="http://parcgatewaycondo.com/" ><img src="http://ilikeutah.com/assets/2008/2/1/good_tower.png" alt="The Parc Gateway clock tower"  width="250"/></a><br />
+				<a href="http://parcgatewaycondo.com/">The Parc Gateway</a>
+</p>				
+	<div id="promo">
+		<h1>The Yahoo! User Interface Library (YUI)</h1>
+		<p><strong>The Yahoo! User Interface (YUI) Library is a set of utilities and controls, written in JavaScript, for building richly interactive web applications using techniques such as DOM scripting, DHTML and AJAX. The YUI Library also includes several core CSS resources. All components in the YUI Library have been released as open source under a <a href="license.html">BSD license</a> and are free for all uses.</strong></p>
+
+<p id="download"><a href="download/"><img src="http://us.i1.yimg.com/us.yimg.com/i/ydn/yuiweb/download_1.gif" width="108" height="23" border="0" title="Download the YUI Library from Sourceforge."></a><a href="/yui/download/">Download YUI version 2.4.1</a>, including <a href="docs/">full API documentation</a> and <a href="examples/">more than 230 functional examples</a> from Sourceforge.</p>
+		  
+		<p id="blog">The library's developers blog <a href="http://yuiblog.com">at the YUI Blog</a> and the YUI Library community exchanges ideas at <a href="http://groups.yahoo.com/group/ydn-javascript">YDN-JavaScript on Yahoo! Groups</a>.</p>
+
+			
+		<div class="yui-gb">
+			<div class="yui-u first">
+			<h4>Using YUI:</h4>
+			<ul>
+				<li><a href="articles/faq/">FAQ</a></li>
+				<li><a href="#start">Getting Started</a></li>
+				<li><a href="#license">Licensing</a></li>
+
+				<li><a href="#articles">Articles</a></li>
+				<li><a href="#cheatsheets">Cheat Sheets</a></li>
+				<li><a href="#support">Support &amp; Community</a></li>
+				<li><a href="#filingbugs">Filing Bugs &amp; Feature Requests</a></li>
+			</ul>
+
+	
+			<h4>Searchable API Documentation:</h4>
+			
+			<p id="api">API docs are availabe for every YUI component.  You can search the API documentation with instant filtering <a href="docs/">on the main API page</a>.</p>
+            
+            <h4>The YUI Compressor:</h4>
+            
+            <p id="compressor">The YUI Compressor is a build-process component that helps you minify your JavaScript and CSS.  <a href="compressor/">Documentation and download information are available here</a>.</p>
+			</div>
+
+			<div class="yui-u">
+			
+			<h4>YUI Core:</h4>
+			
+			<ul>
+				<li><a href="yahoo/">The YAHOO Global Object</a> (base requirement for all YUI components)</li>
+			    <li><a href="dom/">DOM Collection</a> (convenience methods for DOM interactions)</li>
+
+				<li><a href="event/">Event Utility</a> (event normalization and tools)</li>			
+			</ul>
+		 
+			<h4>YUI Library Utilities:</h4>
+			<ul>
+			    <li><a href="animation/">Animation Utility</a></li>
+				<li><a href="history/">Browser History Manager</li>
+
+			    <li><a href="connection/">Connection Manager</a> (for XHR/Ajax)</li>
+				<li><a href="datasource/">DataSource Utility</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+			    <li><a href="dragdrop/">Drag and Drop Utility</a></li>
+				<li><a href="element/">Element Utility</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+				<li><a href="get/">Get Utility</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+
+				<li><a href="imageloader/">ImageLoader Utility</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+				<li><a href="json/">JSON Utility</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+				<li><a href="profiler/">Profiler</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+				<li><a href="selector/">Selector Utility</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+				<li><a href="yuiloader/">The YUI Loader Utility</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+
+				<li><a href="yuitest/">The YUI Test Utility</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+			</ul>		 
+		 	</div>
+		 
+			 <div class="yui-u">
+
+			<h4>YUI Library Controls/Widgets:</h4>
+			<ul>
+				<li><a href="autocomplete/">AutoComplete</a></li>
+
+				<li><a href="button/">Button</a></li>
+				<li><a href="calendar/">Calendar</a></li>
+				<li><a href="charts/">Charts</a> [experimental]</li>
+				<li><a href="colorpicker/">Color Picker</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+				<li><a href="container/">Container</a> (including <a href="container/module/">Module</a>, <a href="container/overlay/">Overlay</a>, <a href="container/panel/">Panel</a>, <a href="container/tooltip/">Tooltip</a>, <a href="container/dialog/">Dialog</a>, <a href="container/simpledialog/">SimpleDialog</a>) </li>
+
+				<li><a href="datatable/">DataTable</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+				<li><a href="logger/">Logger</a></li>
+				<li><a href="menu/">Menu</a></li>
+				<li><a href="editor/">Rich Text Editor</a> <img src="http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif" alt="beta"></li>
+				<li><a href="slider/">Slider</a></li>
+
+				<li><a href="tabview/">TabView</a></li>
+				<li><a href="treeview/">TreeView</a></li>
+			</ul>
+			
+			<h4>YUI Library CSS Tools:</h4>
+			<ul>
+				<li><a href="reset/">CSS Reset</a> (neutralizes browser CSS styles)</li>
+
+				<li><a href="base/">CSS Base</a> (applies consistent style foundation for common elements)</li>
+				<li><a href="fonts/">CSS Fonts</a> (foundation for typography and font-sizing)</li>
+				<li><a href="grids/">CSS Grids</a> (more than 1,000 CSS-driven wireframes in a 4KB file)</li>
+			</ul>
+
+ 
+		 	</div>
+		</div>
+
+	  			
+	</div>
+
+	
+<h2 id="start" class="first">Getting Started</h2>
+<ol class="gettingstarted">
+  <li><strong>Check out the examples of YUI in action.</strong> We recommend starting with the <a href="examples/event/index.html">Event Utility</a> and <a href="examples/dom/index.html">Dom Collection</a> examples; Event and Dom are part of the YUI Core (along with the <a href="yahoo/">YAHOO Global Object</a>) and provide an important foundation for JavaScript developers using YUI. Once you've reviewed those  foundational pieces, go on to explore utilities like <a href="examples/dragdrop/index.html">Drag and Drop</a> and <a href="examples/animation/index.html">Animation</a> or UI controls like <a href="examples/button/index.html">Button</a>, <a href="examples/calendar/index.html">Calendar</a> and <a href="examples/tabview/index.html">TabView</a>. If you're interested in YUI's CSS components, read through the examples for <a href="examples/reset/index.html">Reset</a>, <a href="examples/base/index.html">Base</a>, <a href="examples/fonts/index.html">Fonts</a>, and <a href="examples/grids/index.html">Grids</a> in that order.</li>
+
+  <li><strong>Remember that there are full user's guides</strong> for each component here on the website. If you have any questions about a component as you play with the examples, check out the component's user's guide (by following any of the links along the left side of the page) or the <a href="docs/index.html">searchable API documentation</a>.</li>
+  <li><strong>You have <a href="#cheatsheets">cheat sheets</a></strong> for each component available on landing pages and <a href="docs/assets/cheatsheets.zip">downloadable as a full set</a>. These documents support the online user's guides by providing concise print documentation for YUI components. </li>
+  <li><strong>Start building.</strong> You can include YUI scripts and CSS from <a href="download/">the YUI download</a> (in the <code><a href="build/">/build</a></code> directory) or <a href="http://developer.yahoo.com/yui/articles/hosting/">directly from Yahoo! servers</a>. <a href="http://developer.yahoo.com/yui/yuiloader/">The YUI Loader Utility</a> is a client-side loading package that can dynamically pull in YUI scripts as needed, whether from your servers or from ours.</li>
+
+  <li><strong>Become a member of the YUI community.</strong> YUI developers and implementers share thoughts and solutions and provide a helping hand <a href="http://tech.groups.yahoo.com/group/ydn-javascript/">in our forums</a>. YUI developers also contribute to <a href="http://yuiblog.com/">the YUIBlog</a>, where you'll find in-depth articles, videos and other great content about YUI and the world of frontend engineering. </li>
+</ol>
+
+	<h2 id="license">Licensing</h2>
+	<p>All of the YUI Library components are provided free of charge under a liberal <a href="license.html">BSD license</a>.</p>
+
+	<h2 id="articles">Articles</h2>
+    <ul>
+	<li><a href="articles/gbs/">Graded Browser Support</a>: This article details the browser-support philosophy we use in  developing the YUI Library. Graded Browser Support provides a sane path to achieving accessibility and graceful degradation while still building richly interactive interfaces in the browser.</li>
+	<li><a href="articles/skinning/">Skinning YUI</a>: YUI components get their look and feel from a visual "skin" that you can modify or replace in your own applications.</li>
+</ul>
+		<h2 id="cheatsheets">Cheat Sheets</h2>
+
+	<p><a href="docs/assets/cheatsheets.zip"></a><a href="docs/assets/cheatsheets.zip">Cheat Sheets</a> for the YUI Library provide quick references to the key methods, properties, and syntax patterns of each component.  When you find yourself elbow-deep in a coding problem, sometimes it's quicker to turn to these rather than firing up a browser to review documentation and examples &mdash; and reviewing the cheat sheets can help you discover hidden gems you didn't know were there.</p>
+	<p>These one page references aren't comprehensive, but we think you'll find them valuable to have on hand. (Cheat Sheets are currently provided for all YUI Utilities, nearly all UI Controls, and for the YUI CSS foundation.) </p>
+
+	<h2 id="support">Support &amp; Community</h2>
+	<p>The YUI Library and related topics are discussed on the on the <a href="http://groups.yahoo.com/group/ydn-javascript/">ydn-javascript</a> mailing list.</p>
+
+	<form method="get" action="http://groups.yahoo.com/subscribe/ydn-javascript">
+	<table cellspacing="0" cellpadding="2">
+		<tr>
+			<td align="right" width="50%"><input type="text" name="user" value="enter email address" size="20"></td>
+			<td align="left"><input type="image" border="0" alt="Click here to join ydn-javascript" name="Click here to join ydn-javascript" src="http://us.i1.yimg.com/us.yimg.com/i/ydn/yuiweb/img/joinbtn.gif"></td>
+		</tr>
+	</table>
+	</form>
+
+    <p>In addition, please visit the <a href="http://yuiblog.com">YUIBlog</a> for updates and articles about the YUI Library written by the library's developers.</p>
+	
+	<h2 id="filingbugs">Filing Bugs &amp; Feature Requests</h2>
+	
+	<p>The YUI Library's public bug tracking and feature request repositories are located on <a href="http://sourceforge.net/projects/yui">the YUI SourceForge project site</a>.  Before filing new feature requests or bug reports, please review <a href="/yui/articles/reportingbugs/">our reporting guidelines</a>.</p>
+
+	
+	<ul>
+		<li><a href="/yui/articles/reportingbugs/">Guidelines for YUI feature requests and bug reports</a>.</li>
+		<li><a href="http://sourceforge.net/tracker/?group_id=165715&atid=836476">Review current bug list</a> or <a href="http://sourceforge.net/tracker/?func=add&group_id=165715&atid=836476">file a new bug</a>.</li>
+		<li><a href="http://sourceforge.net/tracker/?group_id=165715&atid=836479">Review current feature requests</a> or <a href="http://sourceforge.net/tracker/?func=add&group_id=165715&atid=836479">file a new feature request</a>.</li>
+
+	</ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="yui-b" id="tocWrapper">
+<!-- TABLE OF CONTENTS -->
+<div id="toc">
+<ul>
+<li class="sect first">Yahoo! UI Library</li><li class="selected "><a title="The Yahoo! User Interface Library (YUI)" href="/yui/">Home</a></li><li class="item"><a title="The Yahoo! User Interface Blog" href="http://yuiblog.com">YUIBlog</a></li><li class="item"><a title="The Yahoo! Group YDN-JavaScript hosts the YUI community forum" href="http://tech.groups.yahoo.com/group/ydn-javascript/">YUI Discussion Forum <img src='http://us.i1.yimg.com/us.yimg.com/i/nt/ic/ut/bsc/post12_1.gif'></a></li><li class="item"><a title="The YUI Library can be downloaded from SourceForge" href="http://sourceforge.net/projects/yui/">YUI on Sourceforge</a></li><li class="item"><a title="Instantly searchable API documentation for the entire YUI library." href="/yui/docs/">API Documentation</a></li><li class="item"><a title="Examples of every YUI utility and control in action" href="/yui/examples/">YUI Examples Gallery</a></li><li class="item"><a title="YUI is used by Yahoo! and by hundreds of other sites, including many you know and love." href="/yui/poweredby/">Powered by YUI</a></li><li class="item"><a title="Videos and podcasts from the YUI Team and from the Yahoo! frontend engineering community." href="/yui/theater/">YUI Theater <img src='http://us.i1.yimg.com/us.yimg.com/i/nt/ic/ut/bsc/vidcam12_1.gif'></a></li><li class="item"><a title="YUI is free and open, offered under a BSD license." href="/yui/license.html">YUI License</a></li><li class="sect">YUI Articles</li><li class="item"><a title="Answers to Frequently Asked Questions about the YUI Library" href="/yui/articles/faq/">YUI FAQ</a></li><li class="item"><a title="Yahoo!'s philosophy of Graded Browser Support" href="/yui/articles/gbs/">Graded Browser Support</a></li><li class="item"><a title="Modifying YUI's visual "skin" and building skins of your own" href="/yui/articles/skinning/">Skinning YUI</a></li><li class="item"><a title="Reporting Bugs and Making Feature Requests for YUI Components" href="/yui/articles/reportingbugs/">Bug Reports/Feature Requests</a></li><li class="item"><a title="Serve YUI source files from Yahoo! -- free, fast, and simple" href="/yui/articles/hosting/">Serving YUI Files from Yahoo!</a></li><li class="item"><a title="Best practices for working with web services while protecting user privacy" href="/security/">Security Best Practices</a></li><li class="sect">YUI Components</li><li class="item"><a title="The YUI Animation Utility" href="/yui/animation/">Animation</a></li><li class="item"><a title="The YUI AutoComplete Control" href="/yui/autocomplete/">AutoComplete</a></li><li class="item"><a title="The YUI Browser History Manager" href="/yui/history/">Browser History Manager</a></li><li class="item"><a title="The YUI Button Control" href="/yui/button/">Button</a></li><li class="item"><a title="The YUI Calendar Control" href="/yui/calendar/">Calendar</a></li><li class="item"><a title="The YUI Charts Control" href="/yui/charts/">Charts (experimental)</a></li><li class="item"><a title="The YUI Color Picker Control" href="/yui/colorpicker/">Color Picker <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI Connection Manager (AJAX)" href="/yui/connection/">Connection Manager</a></li><li class="item"><a title="The YUI Container Family (Module, Overlay, Tooltip, Panel, Dialog, SimpleDialog)" href="/yui/container/">Container</a></li><li class="item"><a title="The YUI DataSource Utility" href="/yui/datasource/">DataSource <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI DataTable Control" href="/yui/datatable/">DataTable <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI Dom Collection" href="/yui/dom/">Dom</a></li><li class="item"><a title="The YUI Drag &amp; Drop Utility" href="/yui/dragdrop/">Drag &amp; Drop</a></li><li class="item"><a title="The YUI Element Utility" href="/yui/element/">Element <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI Event Utility" href="/yui/event/">Event</a></li><li class="item"><a title="The YUI Get Utility" href="/yui/get/">Get <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI ImageLoader Utility" href="/yui/imageloader/">ImageLoader <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI JSON Utility" href="/yui/json/">JSON <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI Logger Control" href="/yui/logger/">Logger</a></li><li class="item"><a title="The YUI Menu Control" href="/yui/menu/">Menu</a></li><li class="item"><a title="The YUI Profiler" href="/yui/profiler/">Profiler <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI Rich Text Editor" href="/yui/editor/">Rich Text Editor <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI Selector Utility" href="/yui/selector/">Selector <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI Slider Control" href="/yui/slider/">Slider</a></li><li class="item"><a title="The YUI TabView Control" href="/yui/tabview/">TabView</a></li><li class="item"><a title="The YUI TreeView Control" href="/yui/treeview/">TreeView</a></li><li class="item"><a title="The YUI YAHOO Global Object" href="/yui/yahoo/">Yahoo Global Object</a></li><li class="item"><a title="The YUI Loader Utility" href="/yui/yuiloader/">YUI Loader <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="The YUI Test Utility" href="/yui/yuitest/">YUI Test <img src='http://us.i1.yimg.com/us.yimg.com/i/not/beta_1.gif'></a></li><li class="item"><a title="YUI Reset CSS" href="/yui/reset/">Reset CSS</a></li><li class="item"><a title="YUI Base CSS" href="/yui/base/">Base CSS</a></li><li class="item"><a title="YUI Fonts CSS" href="/yui/fonts/">Fonts CSS</a></li><li class="item"><a title="YUI Grids CSS" href="/yui/grids/">Grids CSS</a></li><li class="sect">YUI Tools</li><li class="item"><a title="YUI Compressor for CSS and JavaScript" href="/yui/compressor/">YUI Compressor</a></li><li class="sect">Yahoo! Developer Network</li><li class="item"><a title="What's hot?" href="/">Home</a></li><li class="item"><a title="Who we are and what we do." href="/about/">About Us</a></li><li class="item"><a title="What we've done lately." href="/blog/">Developer Network Blog</a></li><li class="item"><a title="With answers!" href="/faq/">YDN FAQ</a></li><li class="item"><a title="Where to go for help." href="/community/">Support Communities</a></li><li class="item"><a title="gallery.yahoo.com" href="http://gallery.yahoo.com/">Working Examples</a></li></ul>
+
+</div>
+</div>
+
+
+
+	<div id="ft">
+        <p class="first">Copyright &copy; 2008 Yahoo! Inc. All rights reserved.</p>
+        <p><a href="http://privacy.yahoo.com/privacy/us/devel/index.html">Privacy Policy</a> - 
+            <a href="http://docs.yahoo.com/info/terms/">Terms of Service</a> - 
+            <a href="http://docs.yahoo.com/info/copyright/copyright.html">Copyright Policy</a> - 
+            <a href="http://careers.yahoo.com/">Job Openings</a></p>
+
+	</div>
+</div>
+<!--MyBlogLog instrumentation-->
+<script type="text/javascript" src="http://track2.mybloglog.com/js/jsserv.php?mblID=2007020704011645"></script>
+
 </body>
+
 </html>
+
+<!-- spaceId: 792400325 -->
+<!-- VER-363 -->
+<script language=javascript>
+if(window.yzq_p==null)document.write("<scr"+"ipt language=javascript src=http://l.yimg.com/us.js.yimg.com/lib/bc/bc_2.0.4.js></scr"+"ipt>");
+</script><script language=javascript>
+if(window.yzq_p)yzq_p('P=utjaEEJe5GKILNHWQxPmltuKGBfkEUelG8YAB_GL&T=13t4ajbau%2fX%3d1202002886%2fE%3d792400325%2fR%3ddev_net%2fK%3d5%2fV%3d1.1%2fW%3dJ%2fY%3dYAHOO%2fF%3d1463694511%2fS%3d1%2fJ%3d1FAB49D1');
+if(window.yzq_s)yzq_s();
+</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=utjaEEJe5GKILNHWQxPmltuKGBfkEUelG8YAB_GL&T=142vk8cbe%2fX%3d1202002886%2fE%3d792400325%2fR%3ddev_net%2fK%3d5%2fV%3d3.1%2fW%3dJ%2fY%3dYAHOO%2fF%3d2786946730%2fQ%3d-1%2fS%3d1%2fJ%3d1FAB49D1"></noscript>
+
+<!-- com1.devnet.scd.yahoo.com compressed/chunked Sat Feb  2 17:41:26 PST 2008 -->

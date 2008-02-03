@@ -34,9 +34,6 @@ ActionController::Routing::Routes.draw do |map|
     # url looks clean independent of url helper and route names.
     user.resources :user_assets, :opaque_name => :assets
         
-    user.resources :user_kinds,         :name_prefix => "user_"
-        
-    user.resources :user_links,         :name_prefix => "user_"
    
   end
       
