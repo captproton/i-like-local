@@ -17,7 +17,7 @@
 								</h1>
 								<div class="module_header_link">
 									<strong class="dark_hilite">More search results</strong><br />
-									<a style="" href="/UT/Saratoga_Springs/">&lt;&lt; <span class="underline">Saratoga Springs homes for sale</span></a>
+									<a style="" href="/UT/Saratoga_Springs/">&lt;&lt; <span class="underline"><%= h @habitat.city %> homes for sale</span></a>
 								</div>
 							</div><!-- END PAGE HEADER -->
 							<!-- START DETAILS COLUMN CONTAINER-->
@@ -29,7 +29,7 @@
 										<!-- START property module header -->
 										<div class="module_header clearfix">
 											<div class="section_header" style="">
-												$485,000
+												$<%= habitat.price %>
 											</div>
 										</div><!-- END property module header -->
 										<!-- START property module property -->
