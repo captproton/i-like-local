@@ -1,134 +1,111 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>I Like Utah.com - http://ilikeutah.com - Real Estate Search</title>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<%= stylesheet_link_tag "reset-fonts-grids", :media => "all" %> 
-	<%= stylesheet_link_tag "custom-base-yui", :media => "all" %> 
+		<title>I Like Utah.com - http://ilikeutah.com - Real Estate Search</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<%= stylesheet_link_tag "reset-fonts-grids", :media => "all" %> 
+		<%= stylesheet_link_tag "skin", :media => "all" %> 
+		<%= stylesheet_link_tag "custom-base", :media => "all" %> 
 
-<style type="text/css">
-p#compressor {margin-top:0.2em;}	
-#index-main #promo li {list-style-type:disc; font-size:100%; margin-top:.2em; margin-left:1em;}
-#index-main #promo ul {margin:0;}
-#index-main #promo .yui-gb .yui-u {width:31%;}
-</style>
+	<style type="text/css">
+	p#compressor {margin-top:0.2em;}	
+	#index-main #promo li {list-style-type:disc; font-size:100%; margin-top:.2em; margin-left:1em;}
+	#index-main #promo ul {margin:0;}
+	#index-main #promo .yui-gb .yui-u {width:31%;}
+	</style>
 
 
 </head>
-<body id="yahoo-com" class=" yui-skin-sam">
+<body>
+<div id="doc2" class="yui-t6">
+   <div id="hd">
+		<div id="ygunav">
+			<p><em>
+				<a href="http://real-estate.ilikeutah.com">Real Estate Search Home</a> <i> - </i>	
+				<a href="http://ilikeutah.com/help">Help</a>
+				</em>
+			</p>
 
-<div id="doc3" class="yui-t2">
-<div id="hd">
-	<div id="ygunav">
-		<p><em>
-			<a href="http://real-estate.ilikeutah.com">Real Estate Search Home</a> <i> - </i>	
-			<a href="http://ilikeutah.com/help">Help</a>
-			</em>
+			<form action="http://search.yahoo.com/search"><label for="ygsp">Site Search</label> 
+			<input name="vs" type="hidden" value="developer.yahoo.com">
+			<input name="fr" type="hidden" value="ush-myweb">
+			<input id="ygsp" name="va" size="22"> 
+			<input type="submit" value="Search" class="ygbt"></form>
+		</div>
+		<div id="ygma"><a href="http://ilikeutah.com">I Like Utah.com</a></div>
+		<div id="pagetitle"><h1>Home Search</h1></div>
+		<div class="yui-g">
+			<a href="/">Main</a>
+	      <% if logged_in? %>
+					<%= link_to "Logout", session_path, :method => :delete %>
+	      <% else %>
+					<%= link_to "Login", new_session_path %>
+	      <% end %>
+
+	    <!-- header goes here -->
+	      <% if flash.any? %>
+	        <div id="flash"><%= flash[:notice] %></div><% flash.clear %>
+	      <% end %>
+	     
+		</div>
+	</div>
+   <div id="bd">
+	<div id="yui-main">
+	<div class="yui-b"><div class="yui-gf">
+    <div class="yui-u first">
+	<!-- YOUR DATA GOES HERE -->
+	<%= render :partial => 'advanced_search_form' %>
+	<%# search refinement and sponsored links %>
+	<%= yield :sidebar %>
+	
+	
+	    </div>
+    <div class="yui-u">
+	<!-- YOUR DATA GOES HERE -->
+      <%= yield %> <%# search results %>
+
+	</div>
+</div>
+</div>
+	</div>
+	<div class="yui-b"><!-- YOUR NAVIGATION GOES HERE --></div>
+	<div id="promo">
+					<h1>Today's Featured Communites</h1>
+		<p>			
+						<a href="http://lakeside.iLikeUtah.com" ><img src="/images/communities/tshot2_256x153.jpg" /></a><br />
+						<strong><a href="http://lakeside.iLikeUtah.com"  height="281" >Lakeside at Saratoga Springs</a></strong>
 		</p>
+		<p>				<a href="http://parcgatewaycondo.com/" ><img src="/images/communities/good_tower.jpg" alt="The Parc Gateway clock tower"  width="250"/></a><br />
+						<strong><a href="http://parcgatewaycondo.com/">The Parc Gateway</a></strong>
+		</p>				
 
-		<form action="http://search.yahoo.com/search"><label for="ygsp">Site Search</label> 
-		<input name="vs" type="hidden" value="developer.yahoo.com">
-		<input name="fr" type="hidden" value="ush-myweb">
-		<input id="ygsp" name="va" size="22"> 
-		<input type="submit" value="Search" class="ygbt"></form>
 	</div>
-	<div id="ygma"><a href="http://ilikeutah.com">I Like Utah.com</a></div>
-	<div id="pagetitle"><h1>Home Search</h1></div>
-</div>
-
-<div id="bd">
-<div id="yui-main">
-<div class="yui-b">
-	<div id="index-secondary">			
-		
-				<div id="yui-theater">
-					<div>
-						[<a href="theater/">more videos</a> <a href="theater/"><img src="http://us.i1.yimg.com/us.yimg.com/i/nt/ic/ut/bsc/vidcam12_1.gif" width="12" height="12" border="0"></a> ]					
-					</div>
-					<h3>YUI Theater <a href="http://feeds.feedburner.com/yuiblog/yui-theater"><img class="rssbadge" src="http://us.i1.yimg.com/us.yimg.com/i/us/ext/rss.gif" height="17" width="36" alt="RSS badge"></a></h3>
-
-					<h2>Nate Koechley &mdash; "The YUI CSS Foundation"</h2>
 	
-<embed src='http://us.i1.yimg.com/cosmos.bcst.yahoo.com/player/media/swf/FLVVideoSolo.swf' flashvars='id=4732784&emailUrl=http%3A%2F%2Fvideo.yahoo.com%2Futil%2Fmail%3Fei%3DUTF-8%26vid%3D1373808&imUrl=http%253A%252F%252Fvideo.yahoo.com%252Fvideo%252Fplay%253Fei%253DUTF-8%2526vid%253D1373808&imTitle=Nate%2BKoechley%253A%2B%2526quot%253BThe%2BYUI%2BCSS%2BFoundation%2526quot%253B&searchUrl=http://video.yahoo.com/search/video?p=&profileUrl=http://video.yahoo.com/video/profile?yid=&creatorValue=ZXJpY21pcmFnbGlh&vid=1373808' type='application/x-shockwave-flash' width='300' height='275'></embed>
-					
-					<p>Senior YUI engineer Nate Koechley guides you through the YUI CSS foundation in this October 2007 tech talk.</p>
-	  </div>
+	<div id="yui-theater">
+		<div>
+			[<a href="theater/">more videos</a> <a href="theater/"><img src="http://us.i1.yimg.com/us.yimg.com/i/nt/ic/ut/bsc/vidcam12_1.gif" width="12" height="12" border="0"></a> ]
+		</div>
+		<h3>
+			YUI Theater <a href="http://feeds.feedburner.com/yuiblog/yui-theater"><img class="rssbadge" src="http://us.i1.yimg.com/us.yimg.com/i/us/ext/rss.gif" height="17" width="36" alt="RSS badge"></a>
+		</h3>
+		<h2>
+			Nate Koechley — "The YUI CSS Foundation"
+		</h2><!--<embed src='http://us.i1.yimg.com/cosmos.bcst.yahoo.com/player/media/swf/FLVVideoSolo.swf' flashvars='id=4732784&emailUrl=http%3A%2F%2Fvideo.yahoo.com%2Futil%2Fmail%3Fei%3DUTF-8%26vid%3D1373808&imUrl=http%253A%252F%252Fvideo.yahoo.com%252Fvideo%252Fplay%253Fei%253DUTF-8%2526vid%253D1373808&imTitle=Nate%2BKoechley%253A%2B%2526quot%253BThe%2BYUI%2BCSS%2BFoundation%2526quot%253B&searchUrl=http://video.yahoo.com/search/video?p=&profileUrl=http://video.yahoo.com/video/profile?yid=&creatorValue=ZXJpY21pcmFnbGlh&vid=1373808' type='application/x-shockwave-flash' width='300' height='275'></embed>-->
+		<object width="300" height="260">
+			<param name="movie" value="http://d.yimg.com/static.video.yahoo.com/yep/YV_YEP.swf?ver=2.0.44">
+			<param name="allowFullScreen" value="true">
+			<param name="flashVars" value="id=4732784&amp;vid=1373808&amp;lang=en-US&amp;intl=us&amp;thumbUrl=http://us.i1.yimg.com/us.yimg.com/i/us/sch/cn/v/v3/w956/1373808_320_240.jpeg">
+			<embed src="http://d.yimg.com/static.video.yahoo.com/yep/YV_YEP.swf?ver=2.0.44" type="application/x-shockwave-flash" width="300" height="260" allowfullscreen="true" flashvars="id=4732784&amp;vid=1373808&amp;lang=en-US&amp;intl=us&amp;thumbUrl=http://us.i1.yimg.com/us.yimg.com/i/us/sch/cn/v/v3/w956/1373808_320_240.jpeg">
+		</object>
+		<p>
+			Senior YUI engineer Nate Koechley guides you through the YUI CSS foundation in this October 2007 tech talk.
+		</p>
+	</div>
 	
-
-
-<!-- 1 --><!--http%3A%2F%2Fdeveloper.yahoo.com%2Fyui%2F--><h2 id="delicious">YUI on del.icio.us <a href="http://del.icio.us/rss/tag/yui"><img class="rssbadge" src="http://us.i1.yimg.com/us.yimg.com/i/us/ext/rss.gif" height="17" width="36" alt="RSS badge"></a></h2>
-<div class="delicious">
-<div id="delicious-badge">
-   <p><a href="http://del.icio.us/post?url=http%3A%2F%2Fdeveloper.yahoo.com%2Fyui%2F" class="bookmark">bookmark on del.icio.us</a></p>
-      <div>
-      <span>tags:</span>
-      <ul>
-                     <li><a href="http://del.icio.us/tag/css" class="tag-size-1">css</a><!--(1337)--></li>
-
-                     <li><a href="http://del.icio.us/tag/yui" class="tag-size-1">yui</a><!--(822)--></li>
-                     <li><a href="http://del.icio.us/tag/javascript" class="tag-size-5">javascript</a><!--(4620)--></li>
-                     <li><a href="http://del.icio.us/tag/library" class="tag-size-3">library</a><!--(2677)--></li>
-                     <li><a href="http://del.icio.us/tag/webdesign" class="tag-size-1">webdesign</a><!--(782)--></li>
-                     <li><a href="http://del.icio.us/tag/ajax" class="tag-size-5">ajax</a><!--(4524)--></li>
-                     <li><a href="http://del.icio.us/tag/web2.0" class="tag-size-2">web2.0</a><!--(2023)--></li>
-
-                     <li><a href="http://del.icio.us/tag/programming" class="tag-size-2">programming</a><!--(2135)--></li>
-                     <li><a href="http://del.icio.us/tag/ui" class="tag-size-2">ui</a><!--(1738)--></li>
-                     <li><a href="http://del.icio.us/tag/development" class="tag-size-1">development</a><!--(880)--></li>
-                     <li><a href="http://del.icio.us/tag/yahoo" class="tag-size-3">yahoo</a><!--(2973)--></li>
-               </ul>
-   </div>
-            <p><a href="http://del.icio.us/url/4fe10b5b2254b2831dab3bd3463d21b1" class="saved-by">saved by <span>7964</span>  people</a></p>
-
-   </div></div>
-
-</div>
-
-	<div id="index-main">
-	<%= yield %>
-	
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="yui-b" id="tocWrapper">
-<!-- TABLE OF CONTENTS -->
-<div id="toc">
-<ul>
-<li class="sect first">Yahoo! UI Library</li><li class="selected "><a title="The Yahoo! User Interface Library (YUI)" href="/yui/">Home</a></li>
-
-<li class="sect">YUI Articles</li><li class="item"><a title="Answers to Frequently Asked Questions about the YUI Library" href="/yui/articles/faq/">YUI FAQ</a></li><li class="item"><a title="Yahoo!'s philosophy of Graded Browser Support" href="/yui/articles/gbs/">Graded Browser Support</a></li><li class="item"><a title="Modifying YUI's visual "skin" and building skins of your own" href="/yui/articles/skinning/">Skinning YUI</a></li><li class="item"><a title="Reporting Bugs and Making Feature Requests for YUI Components" href="/yui/articles/reportingbugs/">Bug Reports/Feature Requests</a></li><li class="item"><a title="Serve YUI source files from Yahoo! -- free, fast, and simple" href="/yui/articles/hosting/">Serving YUI Files from Yahoo!</a></li><li class="item"><a title="Best practices for working with web services while protecting user privacy" href="/security/">Security Best Practices</a></li>
-
-<li class="sect">YUI Components</li><li class="item"><a title="The YUI Animation Utility" href="/yui/animation/">Animation</a></li>
-<li class="sect">YUI Tools</li><li class="item"><a title="YUI Compressor for CSS and JavaScript" href="/yui/compressor/">YUI Compressor</a></li><li class="sect">Yahoo! Developer Network</li><li class="item"><a title="What's hot?" href="/">Home</a></li><li class="item"><a title="Who we are and what we do." href="/about/">About Us</a></li><li class="item"><a title="What we've done lately." href="/blog/">Developer Network Blog</a></li><li class="item"><a title="With answers!" href="/faq/">YDN FAQ</a></li><li class="item"><a title="Where to go for help." href="/community/">Support Communities</a></li><li class="item"><a title="gallery.yahoo.com" href="http://gallery.yahoo.com/">Working Examples</a></li></ul>
-
-</div>
-</div>
-
-
-
-	<div id="ft">
-		<%= render :partial => "/shared/footer" %>
+	</div>
+   <div id="ft"><%= render :partial => "/shared/footer" %>
 	</div>
 </div>
-<!--MyBlogLog instrumentation-->
-<script type="text/javascript" src="http://track2.mybloglog.com/js/jsserv.php?mblID=2007020704011645"></script>
-
 </body>
-
 </html>
-
-<!-- spaceId: 792400325 -->
-<!-- VER-363 -->
-<script language=javascript>
-if(window.yzq_p==null)document.write("<scr"+"ipt language=javascript src=http://l.yimg.com/us.js.yimg.com/lib/bc/bc_2.0.4.js></scr"+"ipt>");
-</script><script language=javascript>
-if(window.yzq_p)yzq_p('P=utjaEEJe5GKILNHWQxPmltuKGBfkEUelG8YAB_GL&T=13t4ajbau%2fX%3d1202002886%2fE%3d792400325%2fR%3ddev_net%2fK%3d5%2fV%3d1.1%2fW%3dJ%2fY%3dYAHOO%2fF%3d1463694511%2fS%3d1%2fJ%3d1FAB49D1');
-if(window.yzq_s)yzq_s();
-</script><noscript><img width=1 height=1 alt="" src="http://us.bc.yahoo.com/b?P=utjaEEJe5GKILNHWQxPmltuKGBfkEUelG8YAB_GL&T=142vk8cbe%2fX%3d1202002886%2fE%3d792400325%2fR%3ddev_net%2fK%3d5%2fV%3d3.1%2fW%3dJ%2fY%3dYAHOO%2fF%3d2786946730%2fQ%3d-1%2fS%3d1%2fJ%3d1FAB49D1"></noscript>
-
-<!-- com1.devnet.scd.yahoo.com compressed/chunked Sat Feb  2 17:41:26 PST 2008 -->

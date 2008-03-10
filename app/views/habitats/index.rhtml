@@ -1,12 +1,18 @@
-<div id="promo">
-				<h1>Today's Featured Communites</h1>
-	<p>			
-					<a href="http://lakeside.iLikeUtah.com" ><img src="/images/communities/tshot2_256x153.jpg" /></a><br />
-					<strong><a href="http://lakeside.iLikeUtah.com"  height="281" >Lakeside at Saratoga Springs</a></strong>
-	</p>
-	<p>				<a href="http://parcgatewaycondo.com/" ><img src="/images/communities/good_tower.jpg" alt="The Parc Gateway clock tower"  width="250"/></a><br />
-					<strong><a href="http://parcgatewaycondo.com/">The Parc Gateway</a></strong>
-	</p>				
-  			
-</div>
 <h1>Your Search Results</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Habitat</th>
+    <th>Fave</th>
+  </tr>
+  
+<% for habitats in @habitats %>
+  <tr>
+    <td><%=h habitats.street %></td>
+    <td><%=h habitats.id %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
