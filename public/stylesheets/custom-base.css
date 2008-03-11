@@ -1,3 +1,25 @@
+/* base.css, part of YUI's CSS Foundation */
+h1 {
+	/*18px via YUI Fonts CSS foundation*/
+	font-size:138.5%;  
+}
+h2 {
+	/*16px via YUI Fonts CSS foundation*/
+	font-size:123.1%; 
+}
+h3 {
+	/*14px via YUI Fonts CSS foundation*/
+	font-size:108%;  
+}
+h1,h2,h3 {
+	/* top & bottom margin based on font size */
+	margin:1em 0;
+}
+h1,h2,h3,h4,h5,h6,strong {
+	/*bringing boldness back to headers and the strong element*/
+	font-weight:bold; 
+}
+
 /***************************************
 FILTERS SUMMARY
 ***************************************/

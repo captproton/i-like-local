@@ -1,18 +1,40 @@
-<h1>Your Search Results</h1>
+<div id="yui-main">
+	<div class="yui-b">
+		<div class="yui-gf">
+			<div class="yui-u first">
+				<!-- YOUR DATA GOES HERE -->
+				<%= render :partial => 'advanced_search_form' %><%# search refinement and sponsored links %><%= yield :sidebar %>
+			</div>
+			<div class="yui-u">
+				<!-- YOUR DATA GOES HERE -->
+<%# above is yui formatting %>
+<h1>Your Search Results (<%= @total_habitats %>)</h1>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Habitat</th>
-    <th>Fave</th>
-  </tr>
+<% @habitats.each do |habitat_listing| %> 
+<!-- START Row Left Content -->
+<div class="left_content">
+  <%= link_to (habitat_listing.street + ", " + @city.name + ", " + @city.state.abbr),
+	:action => 'show', :id => habitat_listing %>
+  <div class="hilite_img mart5" onmouseover="add_class(this, 'hover');" onmouseout="remove_class(this, 'hover');" title="Click to preview listing">
+    <img width="70" height="50" border="0" alt="<%= (habitat_listing.street + ", " + @city.name + ", " + @city.state.abbr) %>, Saratoga Springs UT" src="/images/mockup/no_photo_icon_sm.gif" />
+  </div>
   
-<% for habitats in @habitats %>
-  <tr>
-    <td><%=h habitats.street %></td>
-    <td><%=h habitats.id %></td>
-  </tr>
-<% end %>
-</table>
+  <div class="fleft mart5">
+    <p class="price  "><strong>$<%= habitat_listing.price %></strong></p>
+    <p class=""><%= habitat_listing.no_bedrooms %> br <%= habitat_listing.no_bathrooms %> ba <%= habitat_listing.sq_feet %> sqft</p>
+    <p class="">Single-Family Home</p>
+    <p class="gone"></p>
+  </div>
+</div>
+<!-- END Row Left Content -->
+<% end %> 
 
-<br />
+<%# below is yui formatting. the partial changes with CRUD %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="yui-b">
+	<!-- YOUR NAVIGATION GOES HERE -->
+	<%= render :partial => 'right_col' %>
+</div>

@@ -1,6 +1,6 @@
 ---
 mode: development
-runs_at_launch: 0
+runs_at_launch: 1
 identifier: re_listing
 port: 3000
 bundle: /Applications/Locomotive2/Bundles/standardRailsMar2007.locobundle
