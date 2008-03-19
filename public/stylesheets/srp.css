@@ -1,0 +1,527 @@
+@import "main.css?v=20080305";
+
+#srp_main {
+  margin: 15px 0 15px 10px;
+  width: 977px;  
+}
+
+#srp_content, #link_box {
+  padding: 5px 10px 10px;
+}
+
+
+/***************************************
+PAGE HEADER
+***************************************/
+.page_header h1 {
+  display: inline;
+}
+
+.page_header span.extras {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.module_header_link a {
+  float: left;
+  font-size: 11px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#intro_module {
+  padding-bottom:10px;
+}
+
+/***************************************
+MAP NAV
+***************************************/
+.refresh_icon {
+  float:left;
+  overflow: hidden;
+  height:10px;
+  width:12px;
+}
+.map_ctrl {
+  float:left;
+  overflow: hidden;
+  margin-top:6px;
+  padding-left:2px;
+  height:9px;
+  width:9px;
+}
+
+/***************************************
+COLUMN CONTAINER
+***************************************/
+#left_column_container {
+  margin-top: 15px;
+}
+
+
+/***************************************
+LEFT CONTENT
+***************************************/
+#result_page #left_content {
+  float: left;
+  margin-right: 20px;
+  width: 165px;
+  font-size:10px;
+}
+
+
+/***************************************
+RIGHT CONTENT
+***************************************/
+#result_page #right_content {
+  float: left;
+  width : 769px;
+}
+
+#right_content #moveable_map {
+  padding-bottom: 10px;
+}
+
+#right_content #moveable_map.shrunk {
+  float: right;
+  width: 300px;
+}
+
+#right_content #moveable_map.expanded {
+  width: 100%;
+}
+
+#right_content #center_rail {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 449px;
+}
+
+#right_content #right_rail {
+  clear: right;
+  float: right;
+  width: 300px;
+}
+
+
+/***************************************
+FILTERS SUMMARY
+***************************************/
+#filter_rail_summary {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+#left_content .dash_on_bottom {
+  padding: 10px 0;
+}
+
+#left_content .lite_hilite_bkg {
+  padding: 7px 10px;
+  margin: 5px 0;
+}
+
+#left_content .lite_hilite_bkg p {
+  margin: 0;
+  padding: 0 0 1px;
+}
+
+#left_content .lite_hilite_bkg p.filter_rail_title {
+  font-size: 11px;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+
+#filter_rail_summary .trulia_frm {
+  font-size: 11px;
+  height: 244px;
+}
+
+#filter_rail_summary .trulia_frm label {
+  float: left;
+  margin-bottom: 2px;
+}
+
+#filter_rail_summary label.side_lbl {
+  line-height: 17px;
+  height: 17px;
+  width: 57px;
+}
+
+#filter_rail_summary  select.tru_price {
+  margin-bottom: 10px;
+}
+
+
+#filter_rail_summary select.tru_bed, 
+#filter_rail_summary select.tru_ba
+{
+  clear: both;
+  float: left;
+}
+
+
+/***************************************
+FILTERS
+***************************************/
+#left_content .filter {
+  font-size: 11px;
+  padding: 3px 0;
+}
+
+#filter_rail .triangle {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  /*padding-left: 3px;*/
+}
+
+#filter_rail #filter_rail_summary .triangle {
+  font-size: 12px;
+}
+
+#left_content .filter_title {
+  line-height: 13px;
+
+}
+
+#left_content .filter_content {
+  font-size: 11px;
+  margin-top: 3px;
+  padding-left: 12px;
+}
+
+#left_content .filter_content input {
+  margin: 1px 2px 1px 0;
+}
+
+.filter_right {
+  float: right;
+  font-size: 9px;
+}
+
+#filter_rail .filter_city {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.filter a.popup_opener {
+  display: block;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  text-decoration: underline;
+}
+
+#left_content  #filter_price_section_content input, #left_content #filter_sqft_section_content input {
+  margin-bottom: 5px;
+}
+
+#left_content #filter_lt_section_content .filter_content {
+  margin: 0;
+}
+
+.checkbox_w {
+  cursor: pointer;
+}
+
+#left_content #filter_beds_section_content .checkbox_w {
+  float: left;
+  padding-right: 5px;
+}
+
+#left_content #filter_baths_section_content .checkbox_w {
+  cursor: pointer;
+  float: left;
+  width: 45px;
+}
+
+#left_content #filter_type_section_content input, 
+#left_content #filter_lt_section_content input, 
+#left_content #location_filters input, 
+#left_content #filter_baths_section_content input, 
+#left_content #filter_beds_section_content input,
+#left_content #filter_other_features_section_content input {
+  height: 13px;
+  width: 14px;
+}
+#left_content #sqft_form input,
+#left_content #price_form input
+{
+  height: 14px;
+  width: 45px;
+}
+#left_content #location_filters input {
+  height: auto;
+  width: auto;
+}
+#left_content #lot_size_filter {
+  padding: 5px 0px;
+}
+
+#left_content #built_form input {
+  width: 40px;
+}
+
+**************************************
+RSS MENU
+***************************************/
+#f_rss {
+  left: 0px;
+  top: 0px;
+}
+
+#f_rss .menu_contents {
+  padding: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  width: 115px;
+}
+
+#f_rss a.imgsheet {
+  float: left;
+  margin-bottom: 8px;
+}
+
+#f_rss a.close_btn {
+  font-size: 10px;
+  float: right;
+  padding-top: 5px;
+}
+
+/***************************************
+CENTER RAIL
+***************************************/
+#center_rail .action_module {
+  margin-bottom: 15px;
+  padding: 6px 10px;
+}
+
+#center_rail .srp_result_rows_header {
+  height: 23px;
+  line-height: 23px; 
+  margin: 5px 0;
+}
+
+.srp_result_rows_header .btn_previous, .srp_result_rows_header .btn_next {
+  float: left;
+}
+
+.srp_result_rows_header .btn_next {
+    margin: 0 0 0 5px; /* overwriting style */
+}
+
+.srp_result_rows_header .btn_previous {
+    margin: 0 5px 0 10px; /* overwriting style */
+}
+
+
+/***************************************
+RESULTS TABS
+***************************************/
+.tab_set {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+div.results_tab {
+  cursor: pointer;
+  float: left;
+  height: 12px;
+  margin-left: 5px;
+  padding: 7px 15px 7px 25px;
+}   
+
+.results_tab.hover {
+  text-decoration: underline;
+}
+
+div.results_tab.active, .active.hover {
+  height: 13px;
+  margin-bottom: -1px;
+  text-decoration: none;
+}
+
+
+/***************************************
+ROW TOP PAGING
+***************************************/
+#center_rail .results_tab_rows {
+  clear: both;
+  position: relative;
+  width: 449px;
+}
+
+#center_rail .results_tab_rows .srp_result_rows_header {
+  position: absolute;
+  top: -34px;
+  right: 0;
+}
+
+
+/***************************************
+ROW HIGHLIGHT
+***************************************/
+#center_rail .srp_row {
+  cursor: pointer;
+  font-size: 11px;
+  padding: 10px 5px 5px;
+}
+
+
+/***************************************
+ROW CONTENT
+***************************************/
+.srp_row .left_content {
+  float: left;
+  width: 315px;
+}
+
+.srp_row a.address {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.srp_row .left_content p {
+  margin: 0;
+  padding: 0 0 1px 5px;
+}
+
+.srp_row p.price {
+  font-size: 13px;
+}
+
+.srp_row .right_content {
+  float: right;
+  overflow: hidden;
+  width: 120px;
+}
+
+.srp_row .right_content .dark_hilite {
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 20px;
+  height: 20px;
+}
+
+
+/***************************************
+EXPANDED ROW
+***************************************/
+.row_actions .triangle {
+  float: left;
+  padding-left: 8px;
+}
+
+/*.expand_row {
+  cursor: pointer;
+  float: left;
+  font-weight: bold;
+  height: 20px;
+  line-height: 15px;
+  padding-left: 4px;
+ /*  width: 105px;
+}*/
+
+/*.expand_row.open a, .expand_row.close a  {
+  float: left;
+  margin-top: 3px;
+  text-align: center;
+}*/
+
+.srp_row .left_expanded_row {
+  float: left;
+  padding: 5px 0;
+  width: 256px;
+}
+
+.srp_row .left_expanded_row p {
+  margin: 0;
+  padding: 0 0 1px 0;
+}
+
+.srp_row .left_expanded_row a.more {
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.srp_row .left_expanded_row p.comps {
+  padding-top: 5px;
+}
+
+.srp_row .right_expanded_row {
+  float: right;
+  overflow: hidden;
+  height: 140px;
+  width: 180px;
+}
+
+#map_mini.map_mini {
+  font-size: 9px;
+  height: 138px;
+  width: 178px;
+  z-index: 6;
+  overflow: hidden;
+}
+
+
+/***************************************
+RESULTSET PAGING
+***************************************/
+#srp_content .paging {
+  margin-bottom: 20px;
+}
+
+
+/***************************************
+VOICES MODULE
+***************************************/
+#center_rail .voices_content {
+  margin-top: 10px;
+}
+
+
+/***************************************
+LINK BOX AND SPAM BOX MODULE
+***************************************/
+#link_box, #amp_box {
+  margin-top: 15px;
+}
+
+#amp_box {
+  font-size: 11px;
+  padding: 15px;
+}
+
+/***************************************
+PAGE FOOTER
+***************************************/
+#result_page .footer {
+  padding: 0;
+}
+
+#result_page .footer table {
+  margin-top: 30px;
+}
+
+
+/***************************************
+VOICES MODULE
+***************************************/
+#voices {
+  padding: 10px 0;
+}
+
+
+/***************************************
+ADS
+***************************************/
+#ad_lside, #ad_rside {
+  padding: 10px 0;
+}
+
+#ad_rside {
+  text-align: center;
+}

@@ -1,0 +1,4113 @@
+/*
+This file has all:
+- colors, 
+- borders, 
+- backgrounds, and 
+- opacitys
+css attributes 
+*/
+
+/*
+DONE:
+main.css
+srp.css
+styles.css
+static.css
+qa.css
+tt_styles
+tabs
+agent_feature
+details
+member_search
+
+
+*/
+
+.imgsheet {
+  background: url('http://images.trulia.com/images/flair/main_imgsheet.png?v=20080219') no-repeat;
+}
+
+#result_page a.imgsheet:hover {
+  text-decoration: none;
+}
+
+/************************************************************************************************
+*************************************** FROM MAIN.CSS ***************************************
+************************************************************************************************/
+
+/***************************************
+GENERAL ELEMENTS
+***************************************/
+body {
+  background-color: #FFFFFF;
+}
+
+td,th {
+  color: #000000;
+}
+
+input.srchbtn {
+  color: #000000;
+  background-color: #ECECEC;
+}
+
+/***************************************
+LINKS
+***************************************/
+a.notlink,
+a.notlink:hover,
+a.notlink:active,
+a.notlink:visited { color:#000000; }
+  
+a, .pseudolink {
+  color: #0066CC;
+}
+
+a:hover, .pseudolink:hover {
+  color: #DF7E00;
+}
+
+.pseudolink_black
+{
+  color: #000000;
+}
+
+.pseudolink_black:hover
+{
+  color: #FFFFFF;
+  background-color: #99CC33;
+}
+
+a.whitecolortxtlink:link, 
+a.whitecolortxtlink:hover, 
+a.whitecolortxtlink:active, 
+a.whitecolortxtlink:visited { color: #ffffff; }
+
+
+.LandingPageLink a:active, 
+.LandingPageLink a:visited, 
+.LandingPageLink a:link {
+  color: #008000;
+}
+
+.LandingPageLinkSmall a:active, 
+.LandingPageLinkSmall a:visited, 
+.LandingPageLinkSmall a:link {
+  color: #008000;
+}
+
+.LandingPageLinkTiny a:link, 
+.LandingPageLinkTiny a:visited, 
+.LandingPageLinkTiny a:active {
+  color: #008000;
+}
+
+.LandingPageLink a:hover, 
+.LandingPageLinkSmall a:hover, 
+.LandingPageLinkTiny a:hover {
+  color: #DF7E00;
+}
+
+/***************************************
+UTILITY CLASSES
+***************************************/
+/* colors */
+.black { color: #000; }
+.orange { color: orange; }
+/*.dark_orange { color: #F35F00; }*/
+.green { color: #df7e00; } /* now gold yellow */
+.grey { color: #999; }
+.very_dark_grey { color: #666; }
+.light_grey { color: #efefef; }
+.red_txt { color: #CC0000; }
+.orange_txt { color: #ff9900; }
+.blue { color: blue; }
+/*.yellow { color: #ffcc00; }*/
+
+/* border */
+.black_border { border:1px solid black; }
+.dark_grey_border { border: 1px solid #999999;  }
+.light_grey_border { border: 1px solid #CCCCCC;  }
+.grey_border { border: 1px solid #EDEFF2; }
+
+.soft_border { border: 1px solid #CCCCCC; }
+.soft_top_border { border-top: 1px solid #CCCCCC; }
+/*.hoverBoxOn{border:1px solid #ffcc00;}*/
+/*.hoverBoxOff{border:1px solid #ffffff;}*/
+
+/* left border */
+/*.left_light_grey_border { border-left: 1px solid #CCCCCC;  }
+.white_left_border { border-left:1px solid #ffffff; }*/
+
+/* background-color */
+.grey_container, .gray_container { background-color:#EDEFF2; }
+.light_grey_container { background-color:#efefef; }
+/*.dark_grey_bckg { background-color:#aaa; }*/
+/*.no_bckg { background: none; }*/
+/*.hghlit_cell { background-color: #fde591; }*/
+/*.light_green_bckg { background-color: #eef7db; }*/
+
+
+/***************************************
+COLOR CLASSES
+***************************************/
+.lite_bkgrd {
+  background-color: #efefef; /* light grey */
+}
+
+.dark_border {
+  border: 1px solid #ccc; /* dark grey */
+}
+
+.dark_txt {
+  color: #ccc; /* dark grey */
+}
+
+.disabled_txt {
+  color: #999; /* very dark grey */
+}
+
+.lite_hilite_bkg {
+  background-color: #ffffc1; /* light orange */
+}
+
+.hilite {
+  color: #f90; /* orange */
+}
+
+.hilite_border {
+  border: 1px solid #f90; /* orange */
+}
+
+.dark_hilite, .accent, a.dark_hilite {
+  color: #e37833; /* dark orange */
+}
+
+.dark_hilite_bold, a.dark_hilite_bold {
+  color: #e37833; /* dark orange */
+}
+
+.dark_lolite, a.dark_lolite {
+  color: #690; /* dark green */
+}
+
+.sold_color {
+  color: #c30; /* reddish orange*/
+}
+
+.white_border {
+ border: 1px solid white; 
+}
+
+
+/***************************************
+GENERAL CLASSES
+***************************************/
+.plain_text {
+  color: #000000;
+}
+
+.Example {
+  color: #333333;
+}
+
+.top_down_grey
+{ background: url('http://images.trulia.com/images/flair/grey_top_gradient.gif') repeat-x; }
+
+.fl_landing_tag {
+  color: #FF6600;
+}
+
+.orange_title {
+  color: #FF9900; 
+}
+
+.intro_title {
+  color: #E37833;
+}
+
+.intro_subtitle {
+  color: black;
+}
+
+.close_button {
+  background: url('http://images.trulia.com/images/flair/btn_master.gif') no-repeat left;
+  background-position: 27px -49px;
+}
+
+/*.grey_box {
+  background-color:#EEEEEE;
+}*/
+
+/*.tiptext{
+  color:#f1aa3f;
+}*/
+
+/*.useful_msg {
+  color: #F35F00;
+}*/
+
+/*.map_color_low {
+  color:#669900;
+}*/
+
+a.more_info {
+  background: url("http://images.trulia.com/images/icons/icon_info.gif") no-repeat 100% 0;
+}
+
+.breadcrumb
+{
+  color:#666666;
+}
+a.breadcrumb
+{
+  color:#666666;
+}
+a.breadcrumb:hover
+{
+  color:#DF7E00;
+}
+
+.bordered_img, img.bordered_img, a.bordered_img {
+  border: 1px solid #ccc;
+}
+
+.noborder {
+  border: none;
+}
+
+.bubble_header_container {
+  background: url('http://sofia.utah.trulia.com/~laurence/cobrand_merge/images/flair/header_pointer_green.png') 15px bottom no-repeat;
+  margin-bottom: 7px;
+  padding-bottom: 8px;
+}
+
+.bubble_header {
+  background: #DEEB9F;
+  font-weight: bold;
+  line-height: 18px;
+  padding: 5px 10px;
+}
+
+#link_box {
+  border: 1px solid #ccc;
+}
+
+#voices a.btn_voices_ask {
+  background: url("http://images.trulia.com/images/buttons/btn_voices_ask.gif") 0 0 no-repeat;
+}
+
+#voices a.btn_voices_ask:hover {
+  background-position: 0 -30px;
+}
+
+#qa_ask .qa_lp_top_promo { background-color: #FFFFFF }
+
+
+/***************************************
+PAGE HEADER
+***************************************/
+.page_header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+
+/***************************************
+ERRORS
+***************************************/
+.ErrorMessage {
+  color: #000000;
+  background-color: #FFFF66;
+}
+
+.error {
+  color: red;
+}
+
+
+/***************************************
+TOP NAV WITH TABS
+***************************************/
+/* PLEASE do not change the comment above. */
+
+#top_nav #nav_tabs {
+  border: 0px solid #0000ff;
+}
+
+.main_nav_tab {
+  background: #E7EFC5 url('http://images.trulia.com/images/navhdr/main_nav_tab_off.gif') repeat-x;
+  color: #ffffff;
+  border: 1px solid #69a303;
+  border-bottom: 0;
+}
+
+.main_nav_tab a, .main_nav_tab a:hover { color: #fff;}
+
+.main_nav_tab_active {
+  background: #d8efa9 url('http://images.trulia.com/images/navhdr/main_nav_tab_on.gif') repeat-x;
+  color: #000000;
+}
+
+.main_nav_tab_active a, .main_nav_tab_active a:hover { color: #000;}
+
+.main_nav_tab_highlight {
+  background-image: url('http://images.trulia.com/images/navhdr/main_nav_tab_hi.gif');
+  background-repeat: repeat-x
+}
+
+/* Middle header */
+#top_middle_nav {
+  background-color: #d8efa9;
+  border-top: 3px solid #69a303;
+}
+
+/* Bottom header */
+#top_bottom_nav {
+  background-color: #f1f8e1;
+}
+
+#top_bottom_nav.top_bottom_search_nav {
+  background-color: #d8efa9;
+  border-top: 3px solid #69a303; 
+}
+
+#top_bottom_nav input.srchbtn {
+  border: auto;
+}
+
+
+/* PLEASE do not change the comment below. */
+/***************************************
+ADS
+***************************************/
+.googletitle, a.googletitle:link, 
+a.googletitle:active, 
+a.googletitle:visited {
+  color: #0066CC;
+
+}
+
+.googletitle a:hover, 
+a.googletitle:hover {
+  color: #DF7E00;
+}
+
+.googletext, 
+.googletext a:hover, 
+a.googletext:hover {
+  color: #000000;
+}
+
+.googletext a:link, 
+a.googletext:link { color: #000000; }
+
+
+.googlelink a:link,
+a.googlelink:link {
+  color: #008000;
+}
+
+.googlelink a:hover, 
+a.googlelink:hover {
+  color: #DF7E00;
+}
+
+.AdsenseBorder {
+  border:1px solid #fff;
+}
+.AdsenseContainer {
+  background-color:#FFFFFF;
+}
+
+.AdsenseHeader {
+  color:#2B79DD; 
+  background-color:#DBEFFB;
+}
+
+.ad_sky_container a { color: #666; }
+
+
+/***************************************
+POPUPS
+***************************************/
+/*
+".login_box" is for all the login/signup popups
+
+"#login_box" is only for the top nav popups
+
+".header_link_section #login_box_1" is for the home page pop ups
+
+*/
+
+/* for ie */
+*html .drop_shadow { background: url('http://images.trulia.com/images/ds_ie.gif') repeat; }
+
+/* others */
+.drop_shadow { background: url('http://images.trulia.com/images/popup-dropshadow.png') bottom right no-repeat; }
+
+.drop_shadow_inner {
+  border: 1px solid #000000;
+  background-color: #FFFFFF;
+}
+
+/* New Popup */
+.popup_header_hilite {
+  border-bottom: 1px dotted #ccc;
+  color: #e37833;
+}
+
+a.popup_closer {
+  background-position: 0 -840px;
+  height: 12px;
+  width: 13px;
+}
+
+
+/***************************************
+EMAIL SIGNUP MODULE
+***************************************/
+#email_property_alert_form .btn_sign_up {
+  background: url("http://images.trulia.com/images/buttons/btn_sign_up.gif") 0 0 no-repeat;
+  border: 0;
+}
+
+#email_property_alert_form .btn_sign_up:hover {
+  background-position: 0 -26px;
+}
+
+/*#email_property_alert_form .module_header {
+  background: url('http://images.trulia.com/images/icons/icon_email.gif') no-repeat 0 0;
+}*/
+
+#email_property_alert_form #email_property_subscribe_status {
+  color: black;
+}
+
+
+/***************************************
+IMG HILIGHTING TODO: grep for it
+***************************************/
+.hilite_img img {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.hilite_img.hover img {
+  border: 1px solid #ff9933;
+}
+
+.hilite_img div.plus_icon {
+  background: url('http://images.trulia.com/images/icons/plus_icon.gif') no-repeat 0 0;
+}
+
+.hilite_img.hover div.plus_icon {
+  background-position: 0 -15px;
+}
+
+
+/***************************************
+PAGING
+***************************************/
+.pg_link_cur {
+  background-color: white;
+  border:1px solid #666666;
+  color: #000000;
+} 
+
+.pg_link {
+  background-color: white;
+  border:1px solid #cccccc;
+  color: #0066CC;
+}
+
+.pg_btn {
+  color: #0066CC;
+}
+
+.pg_btn:hover {
+  color: #DF7E00;
+}
+
+.pg_btn_disabled {
+  color: #999999;
+}
+
+.pg_link_curnobx {
+  /*border:1px solid #666666;*/
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+  
+/***************************************
+MENUS
+***************************************/
+/*.menu_title */
+a.menu_title {
+  color: #000000;
+  background: url('http://images.trulia.com/images/dd-uhlt.gif') no-repeat right;
+}
+
+a.menu_title:hover {
+  background: url('http://images.trulia.com/images/dd-hlt.gif') no-repeat right;
+
+}
+
+/* pulldown title hover state */
+a.menu_title_h
+{
+	background: url('http://images.trulia.com/images/dd-hlt.gif') no-repeat right;
+}
+
+/* pulldown title clicked state */
+a.menu_title_active {
+	background: url('http://images.trulia.com/images/dd-hlt.gif') no-repeat right;
+
+}
+
+a.menu_title .menu_title_underline, 
+a.menu_title_h .menu_title_underlne, 
+a.menu_title_active .menu_title_underline {
+  border-bottom: 1px dotted #0066CC;
+  color: #000000;
+}
+
+a.menu_title:hover .menu_title_underline, 
+a.menu_title_h:hover .menu_title_underline, 
+a.menu_title_active:hover .menu_title_underline {
+  background-color: #0099FF;
+  color: #FFFFFF;
+}
+
+a.menu_title_h .menu_title_underline, 
+a.menu_title_active .menu_title_underline {
+  background-color: #0099FF;
+  color: #FFFFFF;
+}
+
+/* new pulldown menu */
+.menu_contents {
+  background-color: #FFFFFF;
+  border: 1px solid black;
+}
+
+/* PROGRESS BAR */
+#progress .step
+{
+  background: url(http://images.trulia.com/images/submit_progress.gif) no-repeat;
+}
+#progress .step h2
+{
+  color: #8f8f8f;
+}
+#progress .step a
+{
+  color: #8f8f8f;
+}
+#progress .active
+{
+  background: url(http://images.trulia.com/images/submit_progress_active.gif) no-repeat;
+}
+#progress .active h2, #progress .active a
+{
+  color: #ff6a07;
+}
+
+#progressBar .active div
+{
+  color:#ff9900;
+  border-bottom:5px solid #ff9900;
+}
+#progressBar .notactive div
+{
+  color:#bbbbbb;
+  border-bottom:5px solid #bbbbbb;
+}
+
+
+/*TODO: old classes to be cleaned */
+/*.slidersqft, .sliderprice
+{
+  background-image: url('http://images.trulia.com/images/flair/slider_bkgd.gif');
+  background-repeat:repeat-x;
+}
+
+#indicator1, #indicator3{
+  background-image:url('http://images.trulia.com/images/flair/slider_min.gif');
+  background-repeat:repeat-x;
+  background-color: transparent;
+}
+
+#indicator2, #indicator4{
+  background-image:url('http://images.trulia.com/images/flair/slider_max.gif');
+  background-repeat:repeat-x;
+  background-color: transparent;
+}
+
+.indicator {
+  background-color: #FF9900;
+}
+  
+.indicator:focus
+{
+  background-color: #f00;
+}*/
+
+/***************************************
+Left Content TODO: old classes to be cleaned
+***************************************/
+.map_legend
+{
+  background-color:#FFFFFF;
+}
+
+.map_mini
+{
+  border:1px solid #cccccc;
+}
+
+/*.broker_cell
+{
+  color:#339900;
+}*/
+#map {
+  border:1px solid #000000;
+}
+
+.tooltip {
+  background-color: #FFFFFF;
+  color: #000000;
+  filter:alpha(opacity=95);
+    -moz-opacity:0.95;
+}
+.mapNavHead{
+  color:#000000;
+}
+.mapZoomBar{
+  background-color:#FF9933;
+}
+.mapZoomBar_hi{
+  background-color:#FF9933;
+}
+.mapZoomBar_rl{
+  background-color:#A4B5C7;
+}
+.mapZoomBar_un{
+  background-color:#dddddd;
+}
+.mapViewNormal{
+  color:#000000;
+}
+.mapViewBold{
+  color:#000000;
+  background-color:#FF9933;
+}
+
+/*
+.mapView_G_MAP_TYPE_on {
+  background:url('http://images.trulia.com/images/map/nav/ctrl_map_on.gif') repeat-x left;
+}
+.mapView_G_MAP_TYPE_off {
+  background:url('http://images.trulia.com/images/map/nav/ctrl_map.gif') repeat-x left;
+}
+.mapView_G_SATELLITE_TYPE_on {
+  background:url('http://images.trulia.com/images/map/nav/ctrl_satellite_on.gif') repeat-x left;
+}
+.mapView_G_SATELLITE_TYPE_off {
+  background:url('http://images.trulia.com/images/map/nav/ctrl_satellite.gif') repeat-x left;
+}
+.mapView_G_HYBRID_TYPE_on {
+  background:url('http://images.trulia.com/images/map/nav/ctrl_hybrid_on.gif') repeat-x left;
+}
+.mapView_G_HYBRID_TYPE_off {
+  background:url('http://images.trulia.com/images/map/nav/ctrl_hybrid.gif') repeat-x left;
+}
+*/
+
+.mapInfoWindow {
+  background-color:#ffffff;
+  border:1px #000000 solid;
+}
+.mapInfoWindowNoPic {
+  background-color:#ffff00;
+  border:1px #000000 solid;
+
+}
+.mapInfoWinAddress {
+  background-color: #f8c049;
+  color: #ffffff;
+}
+.mapInfoMessage {
+  border-style:double;
+  border-width:3px;
+  border-color:#efefef;
+  background-color:#ffffff;
+  color:#000000;
+  filter:alpha(opacity=80);
+  -moz-opacity:0.80;
+}
+.mapControlBar {
+  background-color:#ffffff;
+  filter:alpha(opacity=80);
+  -moz-opacity:0.80;
+}
+
+.mapMessageControl_300px {
+  background-color:#efefef;
+}
+
+#mapControlTable {
+  border:1px solid #B6C0CC;
+  border-bottom-width:0px;
+}
+
+.InfoWindowData {
+  background-color: #FFFFFF;   
+  color: #000000;
+}
+
+.listing_cell_short_odd
+{
+  background-color:#EDEFF2;
+}
+.listing_cell_short_even
+{
+  background-color:#FFFFFF;
+}
+/* for mouseover */
+/* base_class_active, base_class_highlight in the CSS*/
+.listing_cell_short_active,.listing_cell_short_even_active,.listing_cell_short_odd_active
+{
+  background-color:#FFF796;
+}
+.listing_cell_short_highlight,.listing_cell_short_even_highlight,.listing_cell_short_even_highlight
+{
+  background-color:#E0E0E0;
+}
+
+.sponsored_top
+{
+  border-color:#66CCFF;
+  border-width:1px;
+  border-left-width: 1px !important; border-left-width: 2px;
+  border-right-width: 1px !important; border-right-width: 2px;
+  border-style: solid;
+}
+.sponsored_middle
+{
+  border-color:#66CCFF;
+  border-width: 1px;
+  border-style: solid;
+  border-bottom-width: 4px;
+  border-top-width: 0px;
+  border-top-style: none;
+
+}
+.sponsored_bottom
+{
+  border-color:#66CCFF;
+  border-width:1px;
+  border-style: solid;
+  border-left-width: 1px !important; border-left-width: 2px;
+  border-right-width: 1px !important; border-right-width: 2px;
+  border-bottom-width: 4px;
+  border-top-width: 0px;
+  border-top-style: none;
+}
+.sponsored_single_row
+{
+  border-color:#66CCFF;
+  border-width:1px;
+  border-style: solid;
+  border-bottom-width:4px;
+  border-left-width: 1px !important; border-left-width: 2px;
+  border-right-width: 1px !important; border-right-width: 2px;
+}
+.sponsored_header
+{
+  background-color:#66CCFF;
+}
+.sponsored_link
+{
+  color:#FFFFFF;
+}
+.sponsored_link:hover
+{
+  color:#FFFFFF;
+}
+
+.results_sort_row
+{
+  background-color:#EDEFF2;
+}
+/* call to action row */
+
+/*.action_row
+{
+  background-color:#EDEFF2;
+  border-bottom:1px solid #D2D3D3;
+}*/
+.action_row_featured
+{
+  /*background-color:#C4E7FE;*/
+  /*border-bottom:1px solid #94D3FB;*/
+}
+
+.step_link
+{
+  background-color:#FFFFFF; 
+  color: #0066CC;
+  border:1px solid #cccccc;
+}
+
+.step_link:hover
+{
+  background-color:#0099FF;
+  color: #FFFFFF;
+  border-color:#0099FF;
+}
+
+/***************************************
+Bottom of result page TODO: old classes to be cleaned
+***************************************/
+.top_down_gradient
+{
+  background:url('http://images.trulia.com/images/flair/grey_top_gradient.gif') repeat-x left;
+}
+
+a.qa_pg_link
+{
+  color:#666666;
+}
+a.qa_pg_link:hover
+{
+  color:#DF7E00;
+}
+a.qa_answer_link, a.qa_answer_link_plain
+{
+  color:#669900;
+}
+a.qa_answer_link
+{
+  background-image:url('http://images.trulia.com/images/qa/icon_mini_answer.gif');
+  background-repeat:no-repeat;
+  background-position:bottom right;
+}
+a.qa_answer_link:hover
+{
+  color:#DF7E00;
+}
+.qa_question_footer
+{
+
+  color:#666666;
+}
+
+.qa_error_summary
+{
+  border:2px solid #990505;
+  background-color: #FFFFFF;
+  color: #990505;
+}
+.qa_promo_tip
+{
+  background-image:url('http://images.trulia.com/images/qa/icon_mini_ask.gif');
+  background-repeat:no-repeat;
+  background-position:center left;
+}
+
+.menu_hlt
+{color:#FFFFFF;background:url('http://images.trulia.com/images/dd_bg.gif') repeat-x;}
+.hlt {background-color:#E7E7E7}
+.unhlt {background-color:#FFFFFF}
+
+/*.picture_cell_pic_view
+{
+  border:2px solid #FFFFFF;
+}*/
+/*.listing_highlight, .listing_cell_highlight, .listing_cell_cto_highlight, .listing_cell_cto_short_highlight
+{
+  border-color:#666666;
+}
+.listing_active, .listing_cell_active, .listing_cell_cto_active, .listing_cell_cto_short_active
+{
+  border-color:#FF9933;
+}
+.sponsored_listing_highlight, .sponsored_listing_cell_highlight, .sponsored_listing_cell_cto_highlight
+{
+  border-color:#ff0000;
+}
+.sponsored_listing_active, .sponsored_listing_cell_active, .sponsored_listing_cell_cto_active
+{
+  border-color:#0275BE;
+}*/
+
+.error_title
+{
+  color:#990000;
+}
+.error_content
+{
+  color:#000000;
+}
+
+.noerror {
+color: #454545;
+}
+.success {
+color: green;
+}
+.disclaimer
+{
+  color: gray;
+}
+
+/*.SponsoredLinks {
+  background-color: #FFFFFF;
+}*/
+
+/************** VOICES CROSS-PAGE MODULE STYLES **************/
+.recent_question_display_main
+{
+  border:1px solid #CCCCCC;
+}
+
+.recent_question_display_header_new
+{
+  color:orange;
+}
+.recent_question_display_get_answers
+{
+  background-color:#F7F7F7;
+}
+.question_home_main_content_description
+{
+  color:#777777;
+}
+.question_home_main_content_link
+{
+  color:blue;
+}
+
+.button_size
+{
+  color: #838383;
+}
+.button_code_caption
+{
+  color: #838383;
+}
+.button_header
+{
+  color: #FF6A07;
+}
+
+.qa_promo_tip_container
+{
+  border:1px solid #FF9900;
+}
+
+#voices_got_a_question
+{
+  background-image: url('http://images.trulia.com/images/qa/voices_question_mark.gif');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+/******** END VOICES CROSS-PAGE MODULE ***********/
+
+
+/***************************************
+SURVEY BUTTON
+***************************************/
+a.btn_hp_top_right {
+  background: #f3b955 url('http://images.trulia.com/images/buttons/btn_house_hunting_tips.gif') no-repeat 0 0;
+}
+
+a.btn_hp_top_right:hover {
+  background-color: #cf562e;
+  background-position: 0 -46px;
+}
+
+
+/***************************************
+WAS THIS USEFUL
+***************************************/
+.useful a.yes {
+  background: url('http://images.trulia.com/images/yes_off.gif') no-repeat;
+}
+
+.useful a.yes:hover {
+  background: url('http://images.trulia.com/images/yes_on.gif') no-repeat;
+}
+
+.useful a.no {
+  background: url('http://images.trulia.com/images/no_off.gif') no-repeat;
+}
+
+.useful a.no:hover {
+  background: url('http://images.trulia.com/images/no_on.gif') no-repeat;
+}
+
+
+/*
+  new left nav styles
+*/
+.left_nav_container
+{
+  background-color:#ECF7D6;
+  border-top:2px solid #ECF7D6;
+  border-bottom:2px solid #ECF7D6;
+}
+.left_nav_cat_active, .left_nav_cat_active a
+{
+  background-color:#6ACA00;
+  color: #FFFFFF;
+}
+.left_nav_cat_inactive
+{
+  color: #0066CC;
+}
+.left_nav_cat_hover
+{
+  color: #0066CC;
+  background-color:#FFFFFF;
+}
+.left_nav_cat_open
+{
+  background-image:url('http://images.trulia.com/images/li_open.gif');
+  background-repeat:no-repeat;
+  background-position:left;
+}
+.left_nav_cat_closed
+{
+  background-image:url('http://images.trulia.com/images/li_closed.gif');
+  background-repeat:no-repeat;
+  background-position:left;
+}
+.left_nav_sub_link_list
+{
+  border:0;
+}
+.left_nav_sub_link_list
+{
+  list-style-type:none;
+  border-bottom:1px solid #B6E67B;
+}
+.left_nav_sub_link_list li
+{
+  background-color:#FFFFFF;
+}
+.left_nav_sub_link_list_selected 
+{
+  background-image:url('http://images.trulia.com/images/li_selected.gif');
+  background-repeat:no-repeat;
+  background-position:left;
+}
+/* end new left nav*/
+
+
+/************************************************************************************************
+/*************************************** FROM STYLES.CSS ***************************************
+*************************************************************************************************/
+/*************FONT STYLES & WEIGHTS ***********/
+/* FONT SIZES */
+
+.table_layout_main_row {
+  background-color: #FAE8AB;
+}
+.table_layout_row_1 {
+  background-color: #edeff2;
+}
+.table_layout_row_2 {
+  background-color: #ffffff;
+}
+.table_layout_row_1_highlight, .table_layout_row_2_highlight, .table_layout_main_row_highlight {
+  background-color: #e0e0e0;
+}
+.table_layout_row_1_active, .table_layout_row_2_active, .table_layout_main_row_active {
+  background-color: #FFF796;
+}
+
+.contentTitle {
+  border-bottom:1px solid #999999;
+}
+
+.DisclaimerText
+{
+  color: #808080;
+}
+.textboldblack {
+  color: black;
+}
+
+/* TODO: clean up details*/
+.detailsSmall {
+  color:#999999;
+}
+.detailsMatrixHeader{
+  background-color:#3370B6;
+  color:#FFFFFF;
+}
+.detailsMatrix {
+  border-style:solid;
+  border-width:0px;
+  border-color:#ffffff;
+  background-color:#F1F4F7;
+  border-bottom-width:1px;
+  border-right-width:1px;
+}
+.detailsMatrixRt {
+  border-style:solid;
+  border-width:0px;
+  border-color:#ffffff;
+  background-color:#F1F4F7;
+  border-bottom-width:1px;
+}
+.detailsBlueListingBox {
+  background-color:#F1F4F7;
+}
+.detailsTitle {
+  border-bottom:1px solid #E7E8E9;
+}
+.detailsPrice {
+  color:#000000;
+}
+.detailsPriceIndexHeader {
+  background-color:#3370B6;
+  color:#FFFFFF;
+}
+.detailsPriceAddress {
+  color: black;
+}
+.detailsAddress {
+  color: black;
+}
+
+.txt12_black_bold
+{
+  color: black;
+}
+.txt12_black
+{
+  color: black;
+}
+
+.txt_black10pt
+{
+  color: black;
+}
+
+.txt_red10pt
+{
+  color: red;
+}
+.blueText_12_bold
+{
+  color: #0066CC;
+}
+
+/* INVERSED TYPE */
+.inversedTextNorm {
+  color: #FFFFFF;
+}
+.inversedTextBold {
+  color: #FFFFFF;
+}
+.inversedHeader {
+  color: #FFFFFF;
+  background-color:#92A2A0;
+}
+
+/* hyperlinks */
+
+a.blackcolortxtlink:link, a.blackcolortxtlink:hover, a.blackcolortxtlink:active, a.blackcolortxtlink:visited
+{
+  color: #000000;
+}
+a.redcolortxtlink:link, a.redcolortxtlink:hover, a.redcolortxtlink:active, a.redcolortxtlink:visited
+{
+  color: #ff0000;
+}
+a.plainlink:link, a.plainlink:hover, a.plainlink:active, a.plainlink:visited{
+  color: #000000;
+}
+a.selectedlink:link,a.selectedlink:hover,a.selectedlink:active,a.selectedlink:visited
+{color:#000000;}
+a.glossary:link, a.glossary:hover, a.glossary:active, a.glossary:visited
+{
+  border-bottom: 1px dotted #000;
+}
+
+a.bluecolortxtlink:link, a.bluecolortxtlink:hover, a.bluecolortxtlink:active, a.bluecolortxtlink:visited
+{color:#0066CC;}
+
+a.delete_link:link,a.delete_link:active,a.delete_link:visited
+{color:#C11302;}
+
+a.delete_link:hover
+{color:#DF7E00}
+
+.pseudolinkBlue
+{
+  color: #0066CC;
+}
+.pseudolinkBlue:hover
+{
+  color:#0066CC;
+}
+.pseudolink_hover
+{
+  color:#DF7E00;
+}
+.pseudolinkNormal
+{
+  color: #0066CC;
+}
+.pseudolinkNormal:hover
+{
+  color:#DF7E00;
+}
+
+.BigSiteLink 
+{
+  color: #0066CC;
+}
+.BigSiteLink:hover
+{
+  color:#DF7E00;
+}
+
+/***  Border, bkground colors, etc ****/
+
+.homepage_green_bar
+{
+  background-image:url('http://images.trulia.com/images/flair/homepg_green_gradient.gif');
+  background-repeat:repeat-x;
+}
+.home_content_header
+{
+  color:#669900;
+}
+.home_sidebar
+{
+  background-color:#FFFFFF;
+}
+.home_box_header
+{
+  color: #6B696B;
+}
+
+.home_search table
+{
+  border:1px solid black;
+}
+.home_search_smarter table
+{
+  border:1px solid black;
+}
+.home_accent
+{
+  color:#DF7E00;
+}
+
+.drop_down_panel
+{
+  background-color:#FFFFFF;
+  filter:alpha(opacity=90);
+  -moz-opacity:0.90;
+
+}
+.msnVEControl {
+  border-style: solid;
+  border-width: 1px;
+  border-color:#000000;
+}
+.msnVEControlHover {
+  border-style: solid;
+  border-width: 1px;
+  border-color:#000000;
+  background-color:#F2F6FA;
+}
+.msnVEControlActive {
+  border-style: solid;
+  border-width: 1px;
+  border-color:#000000;
+  background-color:#f1aa3f;
+}
+
+
+.whtTrans {
+  background-color:#FFFFFF;
+  filter:alpha(opacity=80);
+  -moz-opacity:0.80;
+}
+
+.LoginBox td, .LoginBox th
+{
+  border: 0px;
+  background-color: #FFFFFF;
+}
+.LoginBox table
+{
+  border: 0px;
+}
+.FilterHeader {
+  background-color: #EDEFF2;
+  border: 1px solid #000000;
+}
+.refine_label
+{
+  color:#000000;
+}
+
+.results_nav_green
+{
+  /* background-color:#d8efa9; */
+  border-top:0px solid #000000;
+}
+
+.ControlPanelTop {
+  border-bottom: 0px;
+  background-color: #EDEFF2;
+}
+.ControlPanelTopBottomBorder {
+  background-color: #EDEFF2;
+}
+.ControlPanelBottom
+{
+  background-color: #EDEFF2;
+}
+
+.p_w_bg
+{
+  background-color: #EDEFF2;
+}
+
+.SidebarInactiveCell
+{
+  background-color: #FFFFFF;
+}
+.SidebarInactiveCellNoTopPadding
+{
+  background-color: #FFFFFF;
+}
+.SidebarInviteCell
+{
+  background-color:#FFFFF1;
+  border:2px solid #FCF470;
+}
+
+
+.TableHeader {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.SearchBody {
+  background-color: #F2EFE9;
+  border: 0px solid #5E6A9E;
+}
+.FilterBox 
+{
+  background-color:#FFFFFF;
+}
+.bottom_border
+{
+  border-bottom:1px solid #F2F4F6;
+}
+.SearchBodyWhite {
+  background-color: #FFFFFF;
+  border: 1px solid #A4B3C3;
+ }
+ 
+.SearchHeading {
+  background-color: #92A2A0;
+}
+.SearchBoxTopText {
+  color: grey;
+}
+.SearchEntry {
+  border-top: 1px solid #F2F4F6;
+}
+.SearchEntryNonClickable {
+  border-top: 1px solid #F2F4F6;
+}
+
+
+.DetailBox {
+  background-color: #FFFFFF;
+}
+.SearchCompareConnect {
+  background-color: #FFFFFF;
+}
+
+.TextBody {
+     background-color: #FFFFFF;
+}
+.TextBodyInternal {
+     background-color: #FFFFFF;
+}
+.TextBodyWhiteBg
+{
+     background-color:#FFFFFF;
+}
+
+.MoreSearch {
+  background-color: #F2EFE9;
+  border-top: 1px solid #000000;
+}
+.MoreSearch a {
+  color: #0066CC;
+}
+.bg_ad
+{
+  border: 0px;
+}
+
+.BuyersGuideSectionHeader, .BuyersGuideSectionHeader td {
+  background-color: #F1F4F7;
+  color: #000000;
+}
+.BuyersGuideSectionHeader
+{
+  border: 0px;
+}
+
+.BuyersGuideSectionHeaderBottomBorder, .BuyersGuideSectionHeaderBottomBorder td {
+  background-color: #F1F4F7;
+  color: #000000;
+}
+.BuyersGuideSectionHeaderBottomBorder {
+  border-bottom: 1px solid #A4B3C3;
+}
+
+
+.AdvancedSearchSectionHeader
+{
+  background-color:#EDEFF2;
+  color: #000000;
+  border-top: 1px solid #A4B3C3;
+}
+.AdvancedSearchSection
+{
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.GrayBorderBox
+{
+  border: 1px solid #CCCCCC;
+}
+.CensusTable 
+{
+  border:0;
+  border-collapse: collapse;
+  border-bottom:1px solid #CCCCCC;
+}
+.CensusTable tr
+{
+  border-bottom:1px solid #CCCCCC;
+}
+.CensusTable th
+{
+  background-color: #EDEFF2;
+  border-right: 1px solid #CCCCCC;
+  border-collapse: collapse;
+}
+.CensusTable td
+{
+  border-right: 1px solid #CCCCCC;
+  border-collapse: collapse;
+  border-bottom:1px solid #CCCCCC;
+}
+.table_header_cell
+{
+  background-color: #EDEFF2;
+}
+.CensusTableRowHighlight
+{
+  background-color:#FDE591;
+}
+
+.FAQRow {
+     background-color: #FFFFFF;
+}
+
+.FAQHeaderRow {
+     background-color: #FFFFFF;
+}
+.signup_box
+{
+  background-color:#FFFFFF;
+  border:1px solid #000000;
+}
+
+UL LI.yes
+{
+  list-style-image: url('http://images.trulia.com/images/yes.gif')
+}
+UL LI.no
+{
+  list-style-image: url('http://images.trulia.com/images/no.gif')
+}
+
+.halfbanner
+{
+  border:0px;
+}
+
+.tdbrd
+{
+  border: 1px solid #000000;
+}
+.FactTable {
+  border-bottom: 1px solid #A4B3C3;
+}
+.factLabel1
+{
+  color: #000000;
+}
+.factDataNumeric
+{
+  color:#000000;
+}
+.factDataText
+{
+  color:#000000;
+}
+.factLabel {
+
+  color: #000000;
+}
+.factValue {
+  color: #000000;
+}
+
+.tableCellHR {
+  background-color: #FFFFFF;
+  border-top: 1px solid #A4B3C3;
+}
+
+.blueText_8pt{
+color: #3B71A0;
+}
+
+.txt12_red_bold{
+color: red;
+}
+.txt12_red{ 
+color: red;
+}
+.txt_lightgreen
+{
+  color: lightgreen;
+}
+.txt_markergreen{
+color: #99cc33;
+}
+
+.buttonTD1 {
+  border:#c2c2c2 1px solid;
+  background:#ffffff;
+}
+
+.eaBox
+{
+  border: #F2EFE9 10px solid;
+}
+
+.eaBox1 {
+  border: #F2EFE9 1px solid;
+}
+
+.GlossaryItemCell
+{
+  border-top: 1px solid #A4B3C3;
+}
+
+
+.cgHeadGreyRtBottom {
+   border-top-width:0px;
+   border-left-width:0px;
+   border-right-width:1px;
+   border-bottom-width:1px;
+   border-style:solid;
+   border-color:#CCCCCC;
+   background-color:#EDEFF2;
+}
+.cgHeadWhtRtBottom {
+   border-top-width:0px;
+   border-left-width:0px;
+   border-right-width:1px;
+   border-bottom-width:1px;
+   border-style:solid;
+   border-color:#CCCCCC;
+   color:#0000FF;
+}
+.cgWhtRtBottom {
+   border-top-width:0px;
+   border-left-width:0px;
+   border-right-width:1px;
+   border-bottom-width:1px;
+   border-style:solid;
+   border-color:#CCCCCC;
+   color:#0000FF;
+}
+
+.listing_cell_trulia_trends
+{
+  color: #0000ff;
+}
+.listing_highlight_trulia_trends
+{
+  color: #F8C049;
+}
+.listing_active_trulia_trends
+{
+  color: #F8C049;
+}
+
+.cgSectionHeader {
+  color: #6B696B;
+}
+.cgSectionTitle {
+  background-color: #EDEFF2;
+}
+.cgStatsSectionTitle {
+  background-color: #fff;
+}
+
+.heatnolink
+{
+  color:#000000;
+}
+
+.heatdetdesc, .heatdetdesc a
+{
+  color:#0000FF;
+}
+
+.heatdetdesc a:hover
+{
+  color:#DF7E00;
+}
+
+.heatdetch
+{
+  border-left: 1px solid #FFFFFF;
+  color: #666666;
+}
+
+.heatsrttxt
+{
+  color: #666666;
+}
+
+/* TODO: check if used
+#map.guide_map {
+  border-color:#B6C0CC;
+}
+*/
+
+/* 
+  Heat Map Styles
+*/
+
+.heat_map_header
+{
+  color:#000000;
+}
+.heat_map_orange
+{
+  color:#E56D39;
+}
+.heat_map_green
+{
+  color:#99cc33;
+}
+
+.heat_map_title_active
+{
+  background-color:#3399cc;
+  color:#ffffff;
+}
+a.heat_map_title_active:hover
+{
+  color:#ffffff;
+}
+
+.detrow1
+{
+  background-color:#EDEFF2;
+}
+
+.detrow0
+{
+  background-color:#FFFFFF;
+}
+
+.heatfoot1
+{
+  background-color:#EDEFF2;
+}
+.heatfoot0
+{
+  background-color:#FFFFFF;
+}
+
+.home_stackup_for_sale
+{
+	color:#ABD74C;
+}
+.home_stackup_sold
+{
+	color:#E3542E;
+}
+.indicator_high
+{
+  color:#FF9A31;
+}
+.indicator_mid
+{
+  color:#FFCC00;
+}
+.indicator_low
+{
+  color:#4AAAEF;
+}
+
+.snapshot_container
+{
+  background-color:#FFFFFF;
+}
+.det_ext_link
+{
+  color:#478C25;
+}
+.search_tab
+{
+  border:1px solid #D6D6D6;
+  background-color:#E7EFC5;
+  color:#0066CC;
+}
+.search_tab_highlight
+{
+  border-bottom:1px solid #FFFFFF;
+  background-color:#FFFFFF;
+  color:#000000;
+}
+
+/* tabbed search box */
+#tabmenu
+{
+  color: #000000;
+  border-bottom: 1px solid #7CAF0E;
+}
+#tabmenu_top, #tabmenu_bottom
+{
+  color: #000000;
+  border-bottom: 0px solid #7CAF0E;
+}
+
+.main_nav_search_pretext
+{
+  color:#999999;
+}
+
+#tabmenu span, #tabmenu span.active
+{
+  color: #000000;
+  background: #E7EFC5;
+  border: 1px solid #7CAF0E;
+}
+#tabmenu_top span, #tabmenu_top span.active,
+#tabmenu_bottom span, #tabmenu_bottom span.active 
+{
+  color: #ffffff;
+  background: #E7EFC5;
+  border: 1px solid #7CAF0E;
+}
+#tabmenu span.active, #tabmenu_top span.active, #tabmenu_bottom span.active
+{
+  background: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF; 
+  color:#000000;
+}
+#tabmenu span.hilite, #tabmenu_top span.hilite, #tabmenu_bottom span.hilite
+{
+  background: #99CC33;
+  color:#FFFFFF;
+  border-bottom: 1px solid #99CC33; 
+}
+#tabmenu_top span.active,#tabmenu_bottom span.active
+{
+  border-bottom-width:2px;
+}
+#tabmenu_top span,#tabmenu_bottom span
+{
+  border-bottom-color:#E7EFC5;
+}
+
+/*
+  calls to action
+*/
+.action_links li
+{
+  color:#0066CC;
+}
+
+.action_links a, a.action_links, 
+.action_links_short a, a.action_links_short
+{
+  color:#0066CC;
+}
+.action_links a:hover, a.action_links:hover,
+.action_links_short a:hover, a.action_links_short:hover
+{
+  background-color:#0099FF;
+  color: #FFFFFF;
+}
+
+/* links in green header bar */
+.header_link a, a.header_link
+{
+  color:#000000;
+}
+.header_link a:hover, a.header_link:hover
+{
+  color:#FFFFFF;
+  background-color:#0099FF;
+}
+
+/*
+  buttons
+*/
+input.actionbtn
+{
+  color:#FFFFFF;
+  background-color:#669900;
+}
+.header_link_section
+{
+  color:#000000;
+  background-color:#FFFFFF;
+}
+a.top_header_link:link, a.top_header_link:active, a.top_header_link:visited
+{
+  color:#000000;
+}
+a.top_header_link:hover
+{
+  color:#FFFFFF;
+  background-color:#99CC33;
+}
+.wait, #wait
+{
+  color:green;
+}
+
+/* editor */
+.editor_textarea
+{
+  border:0px;
+  background-color:#FFF6C4;
+}
+
+.note_container
+{
+  background-color:#FFF6C4;
+}
+.note_timestamp
+{
+  color:#5A5A5A;
+}
+
+.mt_header_row
+{
+  border-bottom:1px solid #000000;
+  background-color:#E7E7E7;
+;
+}
+.mt_sub_container
+{
+  border:1px solid #FFFFFF;
+}
+.mt_highlight
+{
+  border:1px solid #666666;
+}
+.mt_sub_mgt_row
+{
+
+  background-color:#EDEFF2;
+  border-bottom:1px solid #C0BA8F;
+}
+.mt_promo
+{
+  background-color:#DCEC9B;
+}
+
+/* navigation tabs for My Trulia */
+#mytabmenu
+{
+  color: #000000;
+  border-bottom: 3px solid #46ADE3;
+}
+#mytabmenu li.mytrulia_header
+{
+  color: #E06607;
+  background-color: #FFFFFF;
+  border-bottom: 3px solid #46ADE3;
+  border-top:0;
+  border-left:0;
+  border-right:0;
+}
+#mytabmenu li, #mytabmenu li.active
+{
+  color: blue;
+  background-color:#BEE2F6;
+  border: 1px solid #46ADE3;
+}
+#mytabmenu li.active
+{
+  background:#FFFFFF;
+  border-bottom: 1px solid #46ADE3; 
+  border-top: 1px solid #46ADE3;
+  border-left: 1px solid #46ADE3;
+  border-right: 1px solid #46ADE3;
+  color:black;
+}
+#mytabmenu li.hilite
+{
+  color:white;
+  background-color:#46ADE3;
+}
+#mytabmenu li.unhilite
+{
+  color:black;
+  background-color:#BEE2F6;
+}
+
+/* list display for single-row property listing */
+.feedback_block
+{
+  border:1px solid #FAD163;
+  background-color: #FAD163;
+}
+.feedback_block_error
+{
+  border:1px solid #FAD163;
+  background-color: #FAD163;
+}
+
+.mt_login_invite_header
+{
+  background-color:#FFFC94;
+}
+.mt_login_subheader
+{
+  color:#FF8519;
+}
+
+.LandingPage
+{
+  border:1px solid #FC9A34;
+}
+.LandingPageHeader
+{
+  color:#FC9A34;
+}
+.LandingPageTail
+{
+  color:#FC9A34;
+}
+
+TABLE.hlp_maintbl, TR.hlp_maintbl, TD.hlp_maintbl
+{
+  border-collapse:collapse;
+  border:0px;
+}
+.hlp_helphead
+{  
+  background-color:#ff6633;
+  color:#FFFFFF;
+}
+.hlp_stepon
+{
+  color:#000000;
+}
+.hlp_steponno
+{
+  color:#000000;
+}
+.hlp_stepoff
+{
+  color:#0066CC;
+}
+.hlp_steps
+{
+  color:#ff6633;
+}
+.hlp_search
+{
+  color:#000000;
+}
+.hlp_greenft
+{
+  background-color:#F2F7E2;
+}
+.hlp_whtft
+{
+  background-color:#FFFFFF;
+}
+.hlp_helpfoot
+{
+  background-color:#edeff2;
+}
+.hlp_green
+{
+  background-color:#F2F7E2;
+}
+
+.modal_dialog
+{
+  border-top:2px solid #F2F0EE;
+  border-left:2px solid #F2F0EE;
+  border-right:2px solid #75736E;
+  border-bottom:2px solid #75736E;
+  background-color:#EFEFEF;
+  background-image:url('http://images.trulia.com/images/info-icon.gif');
+  background-repeat:no-repeat;
+  background-position:top left;
+}
+
+/* email alerts */
+.acct_search_row_header
+{
+  background-color:#EFEFEF;
+}
+
+/* my trulia property cells */
+.my_trulia_saved_cell
+{
+  border-top:1px solid #FFFFFF;
+  border-left:1px solid #FFFFFF;
+  border-right:1px solid #FFFFFF;
+  /*border-bottom:1px solid #CFCFCF;*/
+  border-bottom:1px solid #FFFFFF;
+}
+.my_trulia_saved_cell_hlt
+{
+  border:1px solid #FFA138;
+  /*background-color:#FEFAE0;*/
+}
+.my_trulia_recent_cell
+{
+  border-top:1px solid #FFFFFF;
+  border-left:1px solid #FFFFFF;
+  border-right:1px solid #FFFFFF;
+  /*border-bottom:1px solid #CFCFCF;*/
+  border-bottom:1px solid #FFFFFF;
+}
+.my_trulia_recent_cell_hlt
+{
+  border:1px solid #FFA138;
+  /*background-color:#FEFAE0;*/
+}
+ .my_trulia_saved_table
+{
+  border:0px;
+}
+ .my_trulia_recent_table
+{
+  border:0px;
+}
+.my_trulia_actions
+{
+  background-color:#EEEEEE;
+}
+.my_trulia_sub_header
+{
+  background-color:#EEEEEE;
+}
+.my_trulia_map_legend
+{
+  background-color:#E7E7E7;
+}
+
+/***************************************
+NEW
+***************************************/
+/* TODO: is this needed - YES */
+#home_page
+{
+  background-color: #EFEFEF;
+}
+
+#home_trends {
+  border: 1px solid #cccccc;
+}
+
+#home_voices table {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#outer_box  {
+  border-left:1px solid #669900; 
+  border-right:1px solid #669900;
+  background-color:#FFFFFF;
+}
+
+
+ol.highlight_list
+{
+  color:#FF9900;
+}
+
+.email_alert
+{
+  background-image:url('http://images.trulia.com/images/email_button_mini.gif');
+  background-repeat:no-repeat;
+  background-position:center left;
+}
+
+.founding_member 
+{
+  background-image:url('http://images.trulia.com/images/qa/founding.gif');
+  background-position:right center;
+  background-repeat:no-repeat;
+  color:#FFA700;
+}
+
+/*
+////////////////////////////////////////////////////
+//  NEW CLASSES                                   //
+////////////////////////////////////////////////////
+*/
+/********** for agent featured pages**********/
+#agent_about_box {
+  border:1px solid black;
+  background-color:#FFFFFF;
+}
+
+.agent_info_cancel {
+  color:#0066CC;
+}
+#agent_email {
+  border-top:1px solid #DDDDDD;
+}
+
+
+/***************************************
+MY TRULIA AND OTHER PAGES TABS
+***************************************/
+.results_tab {
+  background: #d8e1eb;
+  border: 1px solid #99b3cc;
+  border-bottom: none;
+  color: #000000;
+}
+
+.results_tab_active_plain, .results_tab_active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.results_tab_active {
+  background-color: #edeff2;
+  background-image: url('http://images.trulia.com/images/results_tab_grey_bottom_up.gif');
+  background-repeat: repeat-x;
+}
+
+.results_tab_highlight
+{
+  background-color: #99b3cc;
+  color: #ffffff;
+}
+
+
+/************************************************************************************************
+*************************************** FROM STATIC.CSS ***************************************
+************************************************************************************************/
+.homeowner_alert
+{
+  border: 1px solid #ff6a07;
+  background:#fefee2 url('http://images.trulia.com/images/no_ho_alert.gif') no-repeat 5px 10px;
+}
+
+.ab_alert
+{
+  border: 1px solid #ff6a07;
+  background:#fefee2;
+}
+
+.faq_body
+{
+  background-color:#fefee2;
+}
+
+/* start image rollover for links block */
+
+#btn_submit
+{
+  background: url('http://images.trulia.com/images/btn_submit_listings.gif') 0 0 no-repeat;
+}
+#btn_submit:hover
+{
+  background: url('http://images.trulia.com/images/btn_submit_listings.gif') 0 -30px no-repeat;
+}
+
+#btn_advertise
+{
+  background: url('http://images.trulia.com/images/btn_advertise_agents.gif') 0 0 no-repeat;
+}
+
+#btn_advertise:hover
+{
+  background: url('http://images.trulia.com/images/btn_advertise_agents.gif') 0 -30px no-repeat;
+}
+
+#btn_afl {
+  background: url('http://images.trulia.com/images/btn_afl.gif') 0 0 no-repeat;
+}
+
+#btn_afl:hover
+{
+  background: url('http://images.trulia.com/images/btn_afl.gif') 0 -30px no-repeat;
+}
+
+#btn_broker_adv
+{
+  background: url('http://images.trulia.com/images/btn_adv_broker.gif') 0 0 no-repeat;
+}
+
+#btn_broker_adv:hover
+{
+  background: url('http://images.trulia.com/images/btn_adv_broker.gif') 0 -57px no-repeat;
+}
+
+#btn_agent_adv
+{
+  background: url('http://images.trulia.com/images/btn_adv_agent.gif') 0 0 no-repeat;
+}
+
+#btn_agent_adv:hover
+{
+  background: url('http://images.trulia.com/images/btn_adv_agent.gif') 0 -57px no-repeat;
+}
+
+.btn_apply_now
+{
+  background: url('http://images.trulia.com/images/btn_apply_now.gif') 0 0 no-repeat;
+}
+
+.btn_apply_now:hover
+{
+  background: url('http://images.trulia.com/images/btn_apply_now.gif') 0 -30px no-repeat;
+}
+
+/* start stupid rounded corners */
+div.BlueBox
+{
+  background: #ffffff;
+  border:none;
+}
+
+div.BlueBox {
+  background: url('http://images.trulia.com/images/flair/rounded_corners_topleft.gif') 0 2px no-repeat;
+}
+
+div.BlueBox h1
+{
+  background: url('http://images.trulia.com/images/flair/rounded_corners_topright.gif') 100% 2px no-repeat;
+}
+
+div.BlueBoxBody
+{
+  background: url('http://images.trulia.com/images/flair/rounded_corners_rightborder.gif') top right repeat-y;
+}
+
+div.BlueBoxFooter
+{
+  background: url('http://images.trulia.com/images/flair/rounded_corners_bottomleft.gif') bottom left no-repeat;
+}
+
+div.BlueBoxFooter p
+{
+  background: url('http://images.trulia.com/images/flair/rounded_corners_bottomright_v2.gif') bottom right no-repeat;
+}
+
+h1.orange
+{
+  color: orange;
+}
+input.static_input, select.static_input
+{
+  border:1px solid #CCCCCC;
+}
+#mission_statement
+{
+  background-color: #efb32c;
+  color: #fff;
+}
+#whitepaper_box
+{
+  background-color: #ECECEC;
+  border:1px solid #CCCCCC;
+}
+
+/***************************************
+HELP PAGE
+***************************************/
+.step_link_disabled
+{
+  background-color:#EDEFF2;
+  border:1px solid #CCCCCC;
+  color:#999999;
+}
+
+.step_title {
+  color:#FF6633;
+}
+.step_top
+{
+  background-color:#FF6633;
+  color:#FFFFFF;
+}
+
+.step_content
+{
+  background:#f2f9e1;
+}
+
+
+/************************************************************************************************
+*************************************** FROM QA.CSS ***************************************
+************************************************************************************************/
+.qa_form
+{
+  background-color:#EFEFEF;
+}
+.qa_form_header, .qa_form_header h1
+{
+  color:#B8B8B8;
+}
+.qa_question_mark
+{
+  color:#000000;
+}
+
+.qa_field_example
+{
+  color: #333333;
+}
+.qa_category th
+{
+  background-color:#9FCB3E;
+  color:#FFFFFF;
+}
+.qa_category td
+{
+  background-color:#FFFFFF;
+}
+.qa_category table
+{
+  border-collapse:collapse;
+  border:1px solid #404040;
+  background-color:#FFFFFF;
+}
+.qa_submit_btn
+{
+  color: #FFFFFF;
+  border-top:2px solid #FFFFFF;
+  border-left:2px solid #FFFFFF;
+  border-right:2px solid #808080;
+  border-bottom:2px solid #808080;
+  background-color: #3B9000;
+}
+.qa_submit_btn:hover
+{
+  background-color: #5BB020;
+}
+.qa_btn
+{
+  color:#0A0A0A;
+  background-color: #EDEDED;
+  border:1px solid #666666;
+}
+.qa_btn:hover
+{
+  background-color:#CBCBCB;
+}
+
+.captcha_container
+{
+  background-color:#FFFFFF;
+  border:1px solid #404040;
+}
+.qa_error
+{
+  background-image:url('http://images.trulia.com/images/warning.gif');
+  background-repeat:no-repeat;
+  background-position:center left;
+  color: #990505;
+}
+.qa_question_preview_container
+{
+  background-color:#EFEFEF;
+}
+.qa_question_preview
+{
+  border-collapse:collapse;
+}
+.qa_left_nav_container
+{
+  border:1px solid #CFCFCF;
+
+}
+.qa_quick_email_box
+{
+  background-color: #E8F8FF;
+}
+.qa_ask_box
+{
+  border:1px solid #FF9933;
+}
+.qa_ask_got_question
+{
+  color:#FF9933;
+}
+
+.qa_side_btn
+{
+  color:#0A0A0A;
+  background-color: #EDEDED;
+  border:1px solid #666666;
+}
+.qa_side_btn:hover
+{
+  background-color: #CBCBCB;
+}
+.qa_category_sidebar_header
+{
+  background-color:#FFFFFF;
+  color:#000000;
+}
+.qa_category_sidebar_row
+{
+  color:#0000FF;
+  background-color:#FFFFFF;
+}
+
+.qa_category_sidebar_toggle_row
+{
+  color:#0000FF;
+  background-color:#FFFFFF;
+}
+.qa_category_sidebar_row:hover
+{
+  background-color:#CDCDCD;
+}
+a.qa_category_sidebar_row_link,a.qa_category_sidebar_row_link:hover,a.qa_category_sidebar_row_link:visited,a.qa_category_sidebar_row_link:active
+{
+  color: #0066CC;
+}
+.qa_category_sidebar_selected_row
+{
+  background-color:#FFFFFF;
+}
+.qa_category_sidebar
+{
+  background-color:#FFFFFF;
+}
+
+.qa_sidebar_rail_container
+{
+  background-color:#FFFFFF;
+}
+.qa_answer_form
+{  
+  background-color:#EFEFEF;
+}
+.qa_answer_form_nospam
+{ 
+  color:#4A4A4A;
+}
+.qa_answer_form_char_counter
+{
+  color:#9C9C9C;
+}
+.qa_answer_captcha
+{
+  background-color:#EFEFEF;
+}
+.qa_answer_captcha_image_pic
+{
+  border:1px solid #848484;
+  background-color:#FFFFFF;
+}
+.qa_answer_captcha_details
+{
+  color:#4A4A4A;
+}
+
+/*  TODO: grep it*/
+.qa_reload_captcha
+{
+  color: #7B7C7C;
+}
+.qa_question_container_nohover
+{
+  background-color:#FFFFFF;
+  border:1px solid #D4D4D4;
+}
+.qa_question_container_hover
+{
+  background-color:#FEFBE3;
+  border:1px solid #FFA942;
+}
+.qa_question_container_nohover .qa_answer_profile_question
+{
+  background-color:#FCF6CC;
+}
+.qa_question_container_nohover .qa_answer_profile_question_answer
+{
+  background-color:#EEF7DB;
+}
+.qa_question_container_hover .qa_answer_profile_question, 
+.qa_question_container_hover .qa_answer_profile_question .qa_answer_profile_question_answerer 
+{
+  background: #FFFFFF;
+}
+.previous_answer_display_label
+{
+  border-bottom: 1px solid #AFAFAF;
+  background-color:#e6e6e6;	
+}
+.previous_answer_display_first_best
+{
+  border-top: 1px solid #CFCFCF;
+  border-left: 1px solid #CFCFCF;
+  border-right: 1px solid #CFCFCF;
+}
+.previous_answer_display_sort
+{
+  border-left: 1px solid #CFCFCF;
+  background: #f6f5f5;
+}
+.previous_answer_display_paging
+{
+  border-right: 1px solid #CFCFCF;
+  background: #f6f5f5;
+}
+.previous_answer_display_footer
+{
+  /*border-top: 1px solid #CFCFCF;*/
+}
+.previous_answer_display_save_send
+{
+  border-top: 1px solid #CFCFCF;
+  background-color:#EFEFEF;
+}
+.previous_answer_display_permalink, a.previous_answer_display_permalink
+{
+  color:#666666;
+}
+
+.qa_answer_main
+{
+  border-top: 1px solid #CFCFCF;	
+  border-left:1px solid #CFCFCF;
+  border-right:1px solid #CFCFCF;
+  border-bottom:1px solid #CFCFCF;
+}
+.qa_answer_profile
+{
+  background-color:#ECF7CA;
+}
+.qa_question_profile
+{
+  background-color:#FCF6CC;
+}
+.qa_answer_profile_question_answer
+{
+  background-color:#EEF7DB;
+}
+.qa_best_answer
+{
+  color:#DC8810;
+}
+.qa_first_answer
+{
+  color:#69A303;
+}
+.qa_best_answer
+{
+  color:#dc8810;
+}
+.qa_answer_timestamp
+{
+  color:#8F8F8F;
+}
+.qa_answer_registration
+{
+  border:1px solid #FF9933;
+  background-color: #FFFFFF;
+}
+.qa_answer_login
+{
+  border:1px solid #FF9933;
+  background-color: #FFFFFF;
+}
+
+.qa_answer_error
+{
+  background-image:url('http://images.trulia.com/images/warning.gif');
+  background-repeat:no-repeat;
+  background-position:center left;
+  color: #990505;
+}
+.qa_editor_success
+{
+  background-image:url('http://images.trulia.com/images/editor_ok.gif');
+  background-repeat:no-repeat;
+  background-position:center left;
+  color: #4C471B;
+}
+.qa_answer_thanks_link
+{
+  color:blue;
+}
+.qa_moderation_header
+{
+  /*border-bottom:1px solid #000000;*/
+}
+.qa_moderation_title
+{
+  color:#88CC55;
+}
+.qa_moderation_table
+{
+  border-spacing:0px;
+  border:1px solid #000000;
+}
+.qa_moderation_save
+{
+  background-color:#AAEE66;
+}
+.qa_moderation_save:hover
+{
+  background-color:#88CC44;
+}
+.qa_moderation_row_header td
+{
+  border-right:1px solid #000000;
+  border-bottom:1px solid #000000;
+  background-color: #BBFF77;
+}
+.qa_moderation_row_summary td
+{
+  border-right:1px solid #000000;
+  /*border:1px solid #000000;*/
+}
+.alt
+{
+  background-color:#DDDDDD;
+}
+
+.qa_ask_box_main
+{
+  background:url('http://images.trulia.com/images/qa/ask_module_bkgd.gif');
+  background-repeat:repeat-x;
+  background-color:#EEB125;
+}
+#qa_search_box_landing
+{
+  background:url('http://images.trulia.com/images/qa/search_module_bkgd.gif');
+  background-repeat:repeat-x;
+  background-color:#D9EFAA;
+  border:1px solid #99CC00;
+}
+.qa_sort_row
+{
+  background-color:#D9EFAA;
+  border:1px solid #CCCCCC;
+  border-bottom:0px;
+}
+h2.qa_ask_box_header
+{
+  color:#000000;
+}
+.qa_ask_box_qmark
+{
+  color:#FFFFFF;
+}
+h2.qa_search_box_header
+{
+  color:#669900;
+}
+.red
+{
+  color:#FF0000;
+}
+
+.qa_save_msg
+{
+  color:#DD0000;
+}
+.qa_vote_thanks
+{
+  color:#666666;
+}
+.qa_word_match
+{
+  color: #FF7800;
+}
+.qa_email_popup_border
+{
+  border-bottom:1px solid #E7E8E9;
+}
+.qa_title_bar
+{
+  background-color:#93C618;
+  color:#FFFFFF;
+}
+.qa_sort_bar
+{
+  background-color:#FFFFFF;
+  border-bottom:1px solid #EFEFEF;
+}
+a.qa_link_call_to_action,a.qa_link_call_to_action:hover,a.qa_link_call_to_action:visited,a.qa_link_call_to_action:active
+{
+  color:#D40000;
+}
+.qa_q_label
+{
+  color:#787878;
+}
+.qa_question_abbreviated_content_display
+{
+  background-color:white;
+}
+
+/* 
+  user profile classes
+*/
+.user_profile_header, .user_profile_header h1, .user_profile_header h2
+{
+  border-bottom:2px dashed #CBCBCB;
+}
+.user_profile_home_cell, .user_profile_home_cell_hlt
+{
+  border:1px solid #FFFFFF;
+}
+.user_profile_home_cell_hlt
+{
+  border-color:#666666;
+}
+.user_profile_accent_box
+{
+  background-color:#FFF9D9;
+}
+
+/*  TODO: grep it */
+.qa_paging_row
+{
+  background-color:#EFEFEF;
+}
+.qa_share_subscribe
+{
+  color:#3090FF;
+}
+.qa_leaderboard_search
+{
+  border:2px solid #CD6A2A;
+  background-color: #FCF8D1;
+}
+.qa_leaderboard_time_selected
+{
+  color:black;
+}
+.qa_leaderboard_time_selected:hover
+{
+  color:black;
+}
+.qa_leaderboard_search_label
+{
+  color: #C43622;
+}
+.qa_leaderboard_button
+{
+  border:2px solid #AAAAAA;
+  background-color: #EFEFEF;
+}
+.qa_leaderboard_button:hover
+{
+  background-color:#DB7C00;
+}
+.qa_leaderboard_results table
+{
+  border-collapse: collapse
+}
+.qa_leaderboard_results th
+{
+  border-top:1px solid #B3C6D8;
+  border-right:1px solid #B3C6D8;
+  border-bottom:1px solid #B3C6D8;
+}
+.qa_leaderboard_results td
+{
+  border-right:1px solid #B3C6D8;
+}
+.qa_leaderboard_results_left
+{
+  border-left:1px solid #B3C6D8;
+}
+.qa_leaderboard_results_last td
+{
+  border-bottom:1px solid #B3C6D8;
+}
+.qa_leaderboard_results_alt
+{
+  background-color:#EEEEEE;
+}
+
+.qa_choose_best_answer
+{
+  color:#DC8810;
+}
+
+.qa_info
+{
+  background-image:url('http://images.trulia.com/images/info_mini_off.gif');
+  background-repeat:no-repeat;
+  background-position:top right;
+}
+.qa_info_hlt
+{
+  background-image:url('http://images.trulia.com/images/info_mini_on.gif');
+  background-repeat:no-repeat;
+  background-position:top right;
+}
+.qa_landing_header
+{
+  background-image:url('http://images.trulia.com/images/qa/answer_icon_lrg.gif');
+  background-repeat:no-repeat;
+  background-position:top right;
+}
+.qa_landing_ask_header
+{
+  background-image:url('http://images.trulia.com/images/qa/ask_icon_lrg.gif');
+  background-repeat:no-repeat;
+  background-position:top right;
+}
+.qa_best_answerer_profile
+{
+  background-color:#FCF6CC;
+}
+/* 
+social bookmarking
+borrowed from http://www.futureofrealestatemarketing.com/ with thanks
+*/
+.sociable li {
+	background: none;
+	list-style-type: none;
+}
+.sociable img {
+	border: 0;
+}
+.sociable-hovers {
+	opacity: .4;
+	-moz-opacity: .4;
+	filter: alpha(opacity=40);
+}
+.sociable-hovers:hover {
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+/*
+  border for thumbs up/down
+*/
+.thumbs_center
+{
+  background-image:url('http://images.trulia.com/images/qa/thumbs_middle.gif');
+  background-repeat:repeat-x;
+}
+.thumbs_right
+{
+  background-image:url('http://images.trulia.com/images/qa/thumbs_right.gif');
+  background-repeat:no-repeat;
+
+}
+.stats_rank
+{
+  color:#FF7B0D;
+}
+.ask_promo
+{  
+  background-image:url('http://images.trulia.com/images/qa/ask_promo_bg.gif');
+  background-repeat:repeat-x;
+  background-color: #E7C373;
+  border:1px solid #D59A3E;
+}
+.what_is_promo
+{
+  background-color:#F1F8E1;
+  border: 1px solid #76951b;
+}
+.what_is_promo_btn
+{
+  background:url('http://images.trulia.com/images/qa/dotted-line.gif');
+  background-position: top;
+  background-repeat:repeat-x;
+  background-color:#F1F8E1;
+}
+.qa_header_highlight
+{
+  color:#669900;
+  background-image:url('http://images.trulia.com/images/icons/tv_icon_gr.gif');
+  background-repeat: no-repeat;
+  background-position: middle left;
+}
+
+.ask_new_form
+{
+  background:#fcfae8;
+}
+.ask_new_box
+{
+  border: 1px solid #edde83;
+  background: #fff;
+}
+.see_more_box
+{
+  border: 1px solid #edde83;
+  background: #fff;
+}
+.see_more_box .blue
+{
+  color:#0066CC;
+}
+.ask_new_box .orange
+{
+  color:#DF7E00;
+}
+.qa_lp_top_promo
+{
+  border:2px solid #669900;
+  background-color:#F1F8E1;
+}
+.qa_answer_sort_active, .qa_answer_sort_active:hover
+{
+  color: black;
+}
+.qa_header_main
+{
+  background: url('http://images.trulia.com/images/logo_trulia_voices.gif') no-repeat;
+  color: #6f9014;
+}
+.qa_header_main a.sub
+{
+  color: #6f9014;
+}
+
+.profile_layer
+{
+  background-color: #FFFFFF;
+}
+.big_profile_layer
+{
+  background-color: #FFFFFF;
+}
+.account_billing_info_title
+{
+  /*border-top:2px dashed #CCCCCC;*/
+}
+
+.account_divider_dashed
+{
+  border-top:2px dashed #CBCBCB;
+}
+.account_divider_solid
+{
+  border-top:2px solid #CBCBCB;
+}
+.account_edit_details_button {
+  background:url('http://images.trulia.com/images/btn_afl_edit.gif') 0px 0px no-repeat;
+  border-width: 0px;	
+}
+.account_edit_details_button:hover {
+  background-position: 0px -30px;
+}
+.account_cancel_button {
+  background:url('http://images.trulia.com/images/btn_afl_cancel.gif') 0px 0px no-repeat;
+  border-width: 0px;
+}
+.account_cancel_button:hover {
+  background-position: 0px -30px;
+}
+.account_save_button {
+  background:url('http://images.trulia.com/images/btn_afl_save_changes.gif') 0px 0px no-repeat;
+  border-width:0px;
+}
+.account_save_button:hover {
+  background-position: 0px -30px;
+}
+.account_save_button_wait {
+  color:white;
+  background-color:red;
+}
+.account_enter_button {
+  background:url('http://images.trulia.com/images/btn_afl_enter.gif') 0px 0px no-repeat;
+  border-width:0px;
+}
+.account_enter_button:hover {
+  background-position: 0px -30px;
+}
+
+/******** voices colored sections *********/
+.agent_talk .voices_qa_content_header
+{
+  background-color: #e37833;
+}
+
+.agent_talk .voices_qa_content_header_sub
+{
+  background-color: #ffffc1;
+}
+.rc_orange, .rc_orange .rounded_corners_body, .rc_orange .rounded_corners_head, .rc_orange .rounded_corners_head h3
+{
+  background: transparent url('http://images.trulia.com/images/flair/rc_orange.png') no-repeat bottom right;
+}
+.rc_gow, .rc_gow .rounded_corners_body, .rc_gow .rounded_corners_head, .rc_gow .rounded_corners_head h3
+{
+  background: transparent url('http://images.trulia.com/images/flair/rc_gow.png') no-repeat bottom right;
+}
+.rc_oow, .rc_oow .rounded_corners_body, .rc_oow .rounded_corners_head, .rc_oow .rounded_corners_head h3
+{
+  background: transparent url('http://images.trulia.com/images/flair/rc_oow.png') no-repeat bottom right;
+}
+.rc_row, .rc_row .rounded_corners_body, .rc_row .rounded_corners_head, .rc_row .rounded_corners_head h3
+{
+  background: transparent url('http://images.trulia.com/images/flair/rc_row.png') no-repeat bottom right;
+}
+.voices_qotd_container .rounded_corners, .voices_qotd_container .rounded_corners .rounded_corners_body, .voices_qotd_container .rounded_corners .rounded_corners_head, .voices_qotd_container .rounded_corners .rounded_corners_head h3
+{
+  background: transparent url('http://images.trulia.com/images/flair/rc_gog.png') no-repeat bottom right;
+}
+.agent_talk .voices_qotd_container .rounded_corners, .agent_talk .voices_qotd_container .rounded_corners .rounded_corners_body, .agent_talk .voices_qotd_container .rounded_corners .rounded_corners_head, .agent_talk .voices_qotd_container .rounded_corners .rounded_corners_head h3
+{
+  background: transparent url('http://images.trulia.com/images/flair/rc_oow.png') no-repeat bottom right;
+}
+.using_trulia .voices_qotd_container .rounded_corners, .using_trulia .voices_qotd_container .rounded_corners .rounded_corners_body, .using_trulia .voices_qotd_container .rounded_corners .rounded_corners_head, .using_trulia .voices_qotd_container .rounded_corners .rounded_corners_head h3
+{
+  background: transparent url('http://images.trulia.com/images/flair/rc_row.png') no-repeat bottom right;
+}
+.agent_talk .voices_qa_content
+{
+  border: 2px solid #e37833;
+  background-color: transparent;
+}
+
+.using_trulia .voices_qa_content_header
+{
+  background-color: #c94b21;
+}
+
+.using_trulia .voices_qa_content_header_sub
+{ 
+  background-color: #f4dbd3;
+}
+
+.using_trulia .voices_qa_content
+{
+  border: 2px solid #c94b21;
+  background-color: transparent;
+}
+
+.voices_home .voices_whatis_container h3, .q_and_a .voices_whatis_container h3
+{
+  color: #669900;
+}
+.using_trulia .voices_whatis_container h3
+{
+ color: #c94b21;
+}
+.agent_talk .voices_whatis_container h3
+{
+ color: #e37833;
+}
+
+/** voices left nav **/
+ul#voices_left_nav li
+{ 
+  list-style: none;
+  border: 1px solid white;
+}
+ul#voices_left_nav ul li
+{ 
+  font-size: 11px;
+}
+
+ul#voices_left_nav li a
+{
+  font-weight: bold;
+}
+
+ul#voices_left_nav li a:hover
+{
+  background-color: #ededed;
+}
+
+ul#voices_left_nav ul li a
+{
+  font-weight: normal;
+  text-decoration: none;
+}
+
+ul#voices_left_nav li.active a
+{
+  background-color: #ededed;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+/** end voices left nav **/
+
+
+/************************************************************************************************
+*************************************** FROM TT_STYLES.CSS **************************************
+************************************************************************************************/
+.big_btn {background:url(images/css/grn-btn-mid.gif) repeat-x;}
+a.big_btn_link:link,a.big_btn_link:visited {color:white;}
+a.big_btn_link:hover,a.big_btn_link:active {color:white;}
+.sl_flat { color: #FFAF55; }
+.sl_rise { color: #CE0000; }
+.sl_fall { color: #9EB649; }
+.snapshot_title { color: black; }
+.section_title { color: black; } 
+
+/************************************************************************************************
+*************************************** FROM TABS.CSS ******************************************
+************************************************************************************************/
+.tab_trigger 
+{ 
+  color:blue;
+}
+.tab_highlight 
+{ 
+  background:url('http://images.trulia.com/images/tab-bkgd.gif') repeat-x;
+  background-color:#008ADE;
+  color:white;
+  border-top:1px solid #008ADE;
+  border-left:1px solid #008ADE;
+  border-right:1px solid #008ADE;
+}
+.tab_unhighlight 
+{ 
+  background:url('http://images.trulia.com/images/tab-bkgd-grey.gif') repeat-x;
+  background-color:#EFEBEF; 
+  color:blue;
+  border-top:1px solid #999999;
+  border-left:1px solid #999999;
+  border-right:1px solid #999999;
+}
+.tab_content
+{
+  border-left:1px solid #008ADE;
+  border-right:1px solid #008ADE;
+  border-bottom:1px solid #008ADE;
+  border-top:5px solid #008ADE;
+  background-color:white;
+}
+
+/******************************************************************************************************
+*************************************** FROM AGENT_FEATURED.CSS ***************************************
+*******************************************************************************************************/
+.afl_title span
+{
+  color:#aaaaaa
+}
+
+.afl_review_row0 {
+  background-color:#EAF5DA;
+}
+
+.afl_review_row1 {
+  background-color:#FDFDED;
+}
+
+.afl_next_button {
+  background:url('http://images.trulia.com/images/btn_afl_next.gif') 0px 0px no-repeat;
+  border-width:0px;	
+}
+.afl_next_button:hover {
+  background:url('http://images.trulia.com/images/btn_afl_next.gif') 0px -30px no-repeat;
+}
+.afl_submit_button {
+  background:url('http://images.trulia.com/images/btn_afl_submit.gif') 0px 0px no-repeat;
+  border-width:0px;	
+}
+.afl_submit_button:hover {
+  background:url('http://images.trulia.com/images/btn_afl_submit.gif') 0px -30px no-repeat;
+}
+.afl_back_button {
+  background:url('http://images.trulia.com/images/btn_afl_previous.gif') 0px 0px no-repeat;
+  border-width:0px;
+}
+.afl_back_button:hover {
+  background:url('http://images.trulia.com/images/btn_afl_previous.gif') 0px -30px no-repeat;
+}
+.afl_yes_button {
+  background:url('http://images.trulia.com/images/btn_afl_yes.gif') 0px 0px no-repeat;
+  /*border-width:0px;*/
+}
+.afl_yes_button:hover {
+  background:url('http://images.trulia.com/images/btn_afl_yes.gif') 0px -46px no-repeat;
+}
+.afl_start_button {
+  background:url('http://images.trulia.com/images/btn_afl_get_started.gif') 0px 0px no-repeat;
+}
+.afl_start_button:hover {
+  background:url('http://images.trulia.com/images/btn_afl_get_started.gif') 0px -30px no-repeat;
+}
+.afl_cancel_button_small {
+  background:url('http://images.trulia.com/images/btn_afl_cancel_small.gif') 0px 0px no-repeat;
+  width:72px;
+  height:25px;
+  display:block;
+}
+.afl_cancel_button_small:hover {
+  background:url('http://images.trulia.com/images/btn_afl_cancel_small.gif') 0px -27px no-repeat;
+  cursor:pointer;
+}
+.afl_save_button_small {
+  background:url('http://images.trulia.com/images/btn_afl_save.gif') 0px 0px no-repeat;
+}
+.afl_save_button_small:hover {
+  background:url('http://images.trulia.com/images/btn_afl_save.gif') 0px -27px no-repeat;
+}
+.afl_footer {
+  border-top:2px solid #DDDDDD;
+}
+.errorMarker
+{
+  color:red;
+}
+.errorLabel
+{
+  color:red;
+}
+.errorBox
+{
+  border:1px solid grey;
+  background-color:#ffffaa;
+}
+.account_divider_dashed
+{
+  border-top:2px dashed #CBCBCB;
+}
+.afl_source_select
+{
+  border:1px solid black;
+  background-color:white;
+}
+.afl_source_select_secondary
+{
+  border-top: 1px dashed black;
+}
+
+.afl_source_select_buttons
+{
+  border-top: 1px dashed black;
+}
+.afl_my_featured_success
+{
+  border:1px solid grey;
+  background-color:#ffffaa;
+}
+.afl_my_featured_add_header
+{
+  border-bottom:2px dashed #CCCCCC;
+}
+.afl_my_featured_search_box
+{
+  color:#EB8d00;
+}
+.afl_my_featured_search_term
+{
+  color:#999999;
+}
+.afl_my_featured_search_error
+{
+  border:1px solid grey;
+  background-color:#ffffaa;
+}
+.afl_my_featured_hints
+{
+  border-top:1px solid #aaaaaa;
+}
+
+/* TODO: grep */
+.featured_error_msg {
+  border:1px solid grey;
+  background-color:#ffff99;
+}
+
+/************************************************************************************************
+*************************************** SRP ******************************************
+************************************************************************************************/
+#srp_content {
+  border: 1px solid #ccc;
+}
+
+
+/***************************************
+COLUMN CONTAINER
+***************************************/
+#srp_main #left_column_container {
+  background: scroll url("http://images.trulia.com/images/flair/ccc_vertical_line.gif") 175px 0 repeat-y;
+}
+
+#srp_main #right_column_container {
+  background: scroll url("http://images.trulia.com/images/flair/ccc_vertical_line.gif") 643px 0 repeat-y;
+}
+
+
+/***************************************
+LEFT CONTENT
+***************************************/
+#srp_main #left_content #filter_rail {
+  border-bottom: 1px dotted #ccc;
+}
+
+#srp_main #right_content #moveable_map {
+  background-color: #fff;
+}
+
+#srp_main #right_content #right_rail {
+  border-bottom: 1px dotted #ccc;
+}
+
+
+/***************************************
+FILTERS SUMMARY
+***************************************/
+#srp_main #left_content .dash_on_bottom {
+  border-bottom: 1px dotted #ccc;
+}
+
+#srp_main #left_content .lite_hilite_bkg p.filter_rail_title {
+  color: #E37833;
+}
+
+
+/***************************************
+FILTERS
+***************************************/
+#srp_main #left_content .filter {
+  border-top: 1px dotted #ccc;
+}
+
+
+/***************************************
+RESULTS TABS
+***************************************/
+#srp_main #center_rail .tab_set {
+  border-bottom: 1px solid #ccc;
+}
+
+#srp_main #center_rail div.results_tab {
+  background-color: #efefef;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  color: black;
+}
+
+#srp_main #center_rail #results_tab_for_sale.results_tab {
+  background-image: url('http://images.trulia.com/images/flair/results_tab_for_sale_icon_on.gif');
+}
+
+#srp_main #center_rail #results_tab_sold.results_tab {                                                      
+  background-image: url('http://images.trulia.com/images/flair/results_tab_sold_icon_off.gif');
+}                                                                                                 
+                                                                                                  
+#srp_main #center_rail #results_tab_assessor.results_tab {                                                  
+  background-image: url('http://images.trulia.com/images/flair/results_tab_assessor_icon_off.gif');
+}                                                                                                 
+                                                                                                  
+#srp_main #center_rail #results_tab_for_rent.results_tab {                                                              
+  background-image: url('http://images.trulia.com/images/flair/results_tab_for_rent_icon_off.gif');
+}
+
+#srp_main #center_rail #results_tab_classified.results_tab {
+  background-image: url('http://images.trulia.com/images/flair/results_tab_classified_icon.gif');
+}
+
+#srp_main #center_rail div.results_tab.active, #center_rail .active.hover {
+  background-color: white;
+  color: black;
+}
+
+
+/***************************************
+ROW HIGHLIGHT
+***************************************/
+#srp_main #center_rail .srp_row {
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+
+#srp_main #center_rail .srp_row.last {
+  border-bottom: 1px solid #ccc;
+}
+
+#srp_main #center_rail .srp_row.on, #srp_main #center_rail .srp_row.top {
+  border-top: 1px solid #f90;
+}
+
+#srp_main #center_rail .srp_row.on {
+  border-right: 1px solid #f90;
+  border-left: 1px solid #f90;
+}
+
+#srp_main #center_rail .srp_row.last.bottom {
+  border-bottom: 1px solid #f90;
+}
+
+
+/***************************************
+EXPANDED ROW
+***************************************/
+#srp_main a.expand_row {
+  float:left;
+  font-weight: bold;
+  height: 17px;
+  line-height: 15px;
+  margin: 3px 8px 0 0;
+  padding: 0 5px;
+}
+
+#srp_main .down a.expand_row, #srp_main .right a.expand_row:hover {
+  color: #06c;
+  background-color: #e6eff8;
+}
+
+#srp_main #map_mini {
+  border:1px solid #cccccc;
+}
+
+
+/***************************************
+RESULTSET PAGING
+***************************************/
+#srp_content .paging {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+
+/***************************************
+MAP MODULE
+***************************************/
+#infowindow .more_details {
+  float:left;
+  font-weight: bold;
+  height: 20px;
+  line-height: 20px;
+  padding-right: 13px; 
+}
+
+#srp_main #map {
+  border: 0px;
+}
+
+
+/***************************************
+STATS COMMUNITY BOX
+***************************************/
+#srp_main #stats_community {
+  border-top: 1px dotted #ccc;
+}
+
+
+/***************************************
+VOICES MODULE
+***************************************/
+#srp_main #voices {
+  border-top: 1px dotted #ccc;
+}
+
+
+/***************************************
+ADS
+***************************************/
+#srp_main #ad_rside {
+  border-top: 1px dotted #ccc;
+}
+
+
+/************************************************************************************************
+*************************************** DETAILS.CSS ******************************************
+************************************************************************************************/
+#details_content, #details_main #more_links_table {
+  border: 1px solid #ccc;
+}
+
+
+/***************************************
+GENERAL
+***************************************/
+#details_main .fake_btn {
+  border: 1px solid #ccc;
+  color: #888;
+}  
+  
+#details_main #column_container {
+  background: scroll url("http://images.trulia.com/images/flair/ccc_vertical_line.gif") 630px 0 repeat-y;
+}
+
+#details_main .fake_btn div {
+  background-color: #f1f1f1;
+}
+
+#details_main #comparable, #details_main #email_signup, #details_main #voices, 
+#details_main #stats_comps, #details_main #stats_city, #details_main #millerSamuel,
+#details_main #sold_data, #details_main #gac_b, #gac_r {
+  border-top: 1px dotted #ccc;
+}
+
+#details_main #property_picture a.more_picture_link {
+  background: url("http://images.trulia.com/images/buttons/btn_more_photos_details.gif") 0 0 no-repeat;
+}
+
+#details_main #property_picture a.more_picture_link.realty_track {
+  background: url("http://images.trulia.com/images/buttons/btn_more_photo_detail_realtytrack.gif") 0 0 no-repeat;
+}
+
+#details_main #property_picture a.more_picture_link:hover {
+  background-position: 0 -54px;
+}
+
+#details_main #property_picture a.realty_track_link {
+  /*background: url("http://images.trulia.com/images/logos/realty_track_logo.gif") 0 0 no-repeat;*/
+}
+
+/***************************************
+PROPERTY REPORT LISTING ERROR
+***************************************/
+#details_main a.report_error {
+  background: url('http://images.trulia.com/images/icons/error_flag_icon.gif') no-repeat 0 0;
+  color: #666;
+}
+
+#details_main a.report_error:hover {
+  color: #666;
+}
+
+/***************************************
+OPEN HOME MODULE
+***************************************/
+#details_main .promote_module a.btn_ask_agent {
+  background: url("http://images.trulia.com/images/buttons/btn_afl_1.gif") 0 0 no-repeat;
+}
+
+#details_main .promote_module a.btn_ask_agent:hover {
+  background-position: 0 -34px;
+}
+
+#details_main #promote_property #open_home_promo_box .drop_shadow_inner {
+  background-color: #ffffff;
+}
+
+
+/**************************
+AGENT FEATURED LISTING
+***************************/
+#details_main #agent_about_box {
+  border:1px solid black;
+  background-color:#FFFFFF;
+}
+#details_main input.actionbtn
+{
+  color:#FFFFFF;
+  background-color:#669900;
+}
+#details_main .agent_info_cancel {
+  color:#0066CC;
+}
+
+
+/***************************************
+COMPARABLE MODULE
+***************************************/
+#details_main .comp a.bordered_img:hover {
+  border-color: #f90;
+}
+
+
+/***************************************
+STATS MODULE
+***************************************/
+#details_main #stats_comps .leftcol a, #details_main #stats_comps .leftcol a:hover {
+  color: #000;
+}
+
+#details_main #stats_comps .leftcol img {
+  border: 0;
+}
+
+
+/***************************************
+MILLER SAMUEL MODULE
+***************************************/
+#details_main #millerSamuel  table {
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#details_main #millerSamuel th, #details_main #millerSamuel td {
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+#details_main #millerSamuel th {
+  background-color: #efefef;
+}
+
+
+/***************************************
+MAP MODULE
+***************************************/
+#details_main #details_map #map {
+  border: 1px solid #fff;
+  width: 296px; 
+  height: 296px;
+}
+
+
+/***************************************
+EMAIL SIGNUP MODULE
+***************************************/
+#details_main #email_signup a.btn_sign_up {
+  background: url("http://images.trulia.com/images/buttons/btn_sign_up.gif") 0 0 no-repeat;
+}
+
+#details_main #email_signup a.btn_sign_up:hover {
+  background-position: 0 -26px;
+}
+
+
+/************************************************************************************************
+*************************************** FROM MEMBER_SEARCH.CSS ******************************************
+************************************************************************************************/
+#member_search_landing
+{
+  border: 1px solid #aaa;
+}
+
+hr.member_search_rule
+{
+  border: 0;
+  border-top:1px dashed #ccc;
+}
+
+ul.member_search_type li
+{
+  border: 1px solid #fff;
+}
+#member_search_feedback
+{
+  background-color: #fefbc3;
+}
+
+#right_content_header
+{
+  background-color: #eef7dd;
+}
+#member_search_paging_container
+{
+  background-color: #efefef;
+  padding: 5px 0;
+  clear: both;
+}
+
+
+/************************************************************************************************
+**************************************** SCHOOL PAGE ********************************************
+************************************************************************************************/
+#school_profile_page #more_links_table {
+  border: 1px solid #ccc;
+}
+
+#school_profile_page .disabled_txt {
+  color: #515151;
+  font-weight: normal;
+}
+
+#school_profile_page #test_scores .legend_box.school {
+  background-color: #619900;
+}
+
+#school_profile_page  #test_scores .legend_box.district {
+  background-color: #c8e891;
+}
+
+#school_profile_page  #test_scores .legend_box.state {
+  background-color: #c7c7c7;
+}
+
+#school_profile_page .graph_toggle {
+  border: 1px solid #ccc;
+}
+
+#school_profile_page .graph_toggle.top_down_gradient {
+  background-position: left top;
+  height: auto;
+  width: auto;
+}
+
+#school_profile_page .graph_toggle_title {
+  border-bottom: 1px dotted #ccc;
+}
+
+#school_profile_page #programs .color_1 {
+  background-color: #ebf7fd;
+}
+
+#school_profile_page #programs .color_2 {
+  background-color: #fff;
+}
+
+.nav_link_box {
+  background: url('http://sofia.utah.trulia.com/~laurence/cobrand_merge/images/flair/side_nav_box.png') top left no-repeat;
+  padding-top: 7px;
+}
+
+.nav_link_box p.section_header {
+  margin: 0;
+  padding: 0px 0px 16px 12px;
+}
+
+.inner_nav_link_box {
+  background: #fff url('http://sofia.utah.trulia.com/~laurence/cobrand_merge/images/flair/side_nav_box.png') bottom left no-repeat;
+  font-size: 11px;
+  padding: 0 24px 18px;
+}
+
+
+
+/************************************************************************************************
+*************************************** IMAGE SHEET ******************************************
+************************************************************************************************/
+.refresh {
+  background-position: 0 -559px;
+  font-size: 10px;
+  padding-left: 17px;
+}
+
+/***************************************
+TRIANGLE
+***************************************/
+.triangle {
+  height: 20px;
+  line-height: 20px;
+  padding-left: 12px;
+}
+
+.triangle.down {
+  background-position: 0 -52px;
+}
+.triangle.up {
+  background-position: 0 4px;
+}
+.triangle.right {
+  background-position: 0 -24px;
+}
+.triangle.left {
+  background-position: 0 -85px;
+}
+
+#srp_content .page_header .triangle {
+  line-height: 23px;
+  height: 23px;
+}
+
+#srp_content .page_header .triangle.down {
+  background-position: 0 -51px;
+}
+
+#srp_content .page_header .triangle.up {
+  background-position: 0 6px;
+}
+
+#srp_content .page_header .triangle.right {
+  background-position: 0 -23px;
+}
+
+#srp_content .page_header .triangle.left {
+  background-position: 0 -84px;
+}
+
+/***************************************
+EMAIL ALERT
+***************************************/
+a.email_alerts, #email_property_alert_form .module_header{
+  background-position: 0 -440px;
+}
+
+a.email_alerts {
+  float: left;
+  font-weight: bold;
+  height: 15px;
+  padding-left: 25px;
+  text-decoration: underline;
+}
+
+#email_property_alert_form .module_header {
+  clear: both;
+  line-height: 15px;
+  padding-left: 25px;
+  height: 15px;
+}
+
+
+/***************************************
+CALLS TO ACTION
+***************************************/
+a.action {
+  float: left;
+  line-height: 20px;
+  padding-left: 30px;
+  height: 20px;
+}
+
+a.action:hover {
+  text-decoration: none;
+}
+
+a.action {
+  padding: 0 15px 0 17px;
+}
+
+a.action.save {
+  background-position: 0 -358px;
+  padding-left: 15px;
+}
+
+a.action.rss {
+  background-position: 0 -317px;
+}
+
+a.action.alerts {
+  background-position: 0 -474px;
+}
+
+a.action.share {
+  background-position: 0 -520px;
+  padding-left: 20px;
+}
+
+a.action.print {
+  background-position: 0 -397px;
+}
+
+a.report_error {
+  height: 15px;
+  line-height: 15px;
+  margin-left: 10px;
+  padding: 0 15px 10px 16px;
+}
+
+#details_page a.action, .row_actions a.action {
+  padding: 0 20px 0 16px;
+}
+
+#details_page a.action.save, #school_main a.action.save {
+  background-position: 0 -359px;
+  padding-left: 18px;
+}
+
+#details_page a.action.alerts, #school_main a.action.alerts {
+  background-position: 0 -475px;
+}
+
+#details_page a.action.share, #school_main a.action.share {
+  background-position: 0 -521px;
+  padding-left: 20px;
+}
+
+a.action.info {
+  background-position: 0 -1030px;
+  height: 15px;
+  padding-right: 0;
+  margin-top: 2px;
+}
+
+/***************************************
+RSS
+***************************************/
+.google {
+  background-position: 0 -160px;
+  display: block;
+  width: 104px;
+  height: 17px;
+}
+.newsgator {
+  background-position: 0 -200px;
+  display: block;
+  width: 91px;
+  height: 17px;
+}
+.yahoo {
+  background-position: 0 -240px;
+  display: block;
+  width: 91px;
+  height: 17px;
+}
+.google_earth {
+  background-position: 0 -280px;
+  display: block;
+  width: 91px;
+  height: 17px;
+}
+
+/***************************************
+MAP CONTROL IMAGES
+***************************************/
+.mapView_G_MAP_TYPE_off {
+  background-position: 0 -660px;
+  width:40px;
+  height:16px;
+}
+.mapView_G_MAP_TYPE_on {
+  background-position: 0 -690px;
+  width:40px;
+  height:16px;
+}
+.mapView_G_SATELLITE_TYPE_off {
+  background-position: 0 -720px;
+  width:43px;
+  height:16px;
+}
+.mapView_G_SATELLITE_TYPE_on {
+  background-position: 0 -750px;
+  width:43px;
+  height:16px;
+}
+.mapView_G_HYBRID_TYPE_off {
+  background-position: 0 -780px;
+  width:41px;
+  height:16px;
+}
+.mapView_G_HYBRID_TYPE_on {
+  background-position: 0 -810px;
+  width:41px;
+  height:16px;
+}
+.map_ctrl_zoom_in {
+  cursor: pointer;
+  background-position: 0 -600px;
+  width: 17px;
+  height: 17px;
+}
+.map_ctrl_zoom_out {
+  cursor: pointer;
+  margin-top: 2px;
+  background-position: 0 -630px;
+  width: 17px;
+  height: 17px;
+}
+
+/***************************************
+FAKE BUTTONS
+***************************************/
+.blank_button {
+  cursor: pointer;
+  background-position: 0 -119px;
+  font-size: 11px;
+  padding: 4px 0 5px;
+  *padding: 0;
+}
+
+.blank_button .blank_button_right {
+  background-position: 100% -119px;
+  line-height: 23px;
+  margin-left: 8px;
+  padding: 4px 9px 5px 0;
+  *padding-top: 3px;
+}
+
+.blank_button a, .blank_button_green a, .blank_button_pink a {
+  text-decoration: none;
+}
+/** green **/
+.blank_button_green {
+  cursor: pointer;
+  background-position: 0 -960px;
+  font-size: 11px;
+  padding: 4px 0 5px;
+  *padding: 0;
+}
+
+.blank_button_green .blank_button_right {
+  background-position: 100% -960px;
+  line-height: 23px;
+  margin-left: 8px;
+  padding: 4px 9px 5px 0;
+  *padding-top: 3px;
+}
+
+/** pink **/
+.blank_button_pink {
+  cursor: pointer;
+  background-position: 0 -1000px;
+  font-size: 11px;
+  padding: 4px 0 5px;
+  *padding: 0;
+}
+
+.blank_button_pink .blank_button_right {
+  background-position: 100% -1000px;
+  line-height: 23px;
+  margin-left: 8px;
+  padding: 4px 9px 5px 0;
+  *padding-top: 3px;
+}
+
+
+/***************************************
+SINGLE SUBMIT LISTING
+***************************************/
+.sls_intro_page_orange_color
+{
+  color:#FF6600;
+}
+
+
+/***************************************
+STARS RATING
+***************************************/
+.rating {
+  background: url('/~jeff/cobrand_merge/images/flair/rating_stars.png?v=20080215') no-repeat;
+}
+
+.stars_ { background-position: 0 -330px; }
+.stars_0 { background-position: 0 0; }
+.stars_0_5 { background-position: 0 -30px; }
+.stars_1 { background-position: 0 -60px; }
+.stars_1_5 { background-position: 0 -90px; }
+.stars_2 { background-position: 0 -120px; }
+.stars_2_5 { background-position: 0 -150px; }
+.stars_3 { background-position: 0 -180px; }
+.stars_3_5 { background-position: 0 -210px; }
+.stars_4 { background-position: 0 -240px; }
+.stars_4_5 { background-position: 0 -270px; }
+.stars_5 { background-position: 0 -300px; }

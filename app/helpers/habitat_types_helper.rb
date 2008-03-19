@@ -1,0 +1,2 @@
+module HabitatTypesHelper
+end

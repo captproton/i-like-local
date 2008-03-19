@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+    map.resources :habitat_types
+
+    map.resources :start_me_up
+
   map.resources :advertisers
 
 

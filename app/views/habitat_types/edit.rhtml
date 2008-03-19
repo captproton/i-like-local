@@ -1,0 +1,27 @@
+<h1>Editing habitat_type</h1>
+
+<%= error_messages_for :habitat_type %>
+
+<% form_for(:habitat_type, :url => habitat_type_path(@habitat_type), :html => { :method => :put }) do |f| %>
+  <p>
+    <b>Description</b><br />
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <b>Created on</b><br />
+    <%= f.datetime_select :created_on %>
+  </p>
+
+  <p>
+    <b>Updated on</b><br />
+    <%= f.datetime_select :updated_on %>
+  </p>
+
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', habitat_type_path(@habitat_type) %> |
+<%= link_to 'Back', habitat_types_path %>
