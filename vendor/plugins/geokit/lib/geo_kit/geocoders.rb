@@ -21,8 +21,8 @@ module GeoKit
     @@proxy_user = nil
     @@proxy_pass = nil
     @@timeout = nil    
-    @@yahoo = 'REPLACE_WITH_YOUR_YAHOO_KEY'
-    @@google = 'REPLACE_WITH_YOUR_GOOGLE_KEY'
+    @@yahoo = 'wxFG0qnV34HQbKUP7NWEANeUgmGU7MpSd8M5mI2dFypfQGZHH_TVJAiA3oOeNCDZkUUAf.QlU3coED2h'
+    @@google = 'ABQIAAAA4SWxtDIpMUKMLcot52tjZBTI5-tvbBWsHwYIwRzo5UHt-91tTRT7tDdX-dYVC8o_a3tLe_vdKzHHLw'
     @@geocoder_us = false
     @@geocoder_ca = false
     @@provider_order = [:google,:us]

@@ -1,4 +1,10 @@
 class Habitat < ActiveRecord::Base
+    ## Geokit help
+    validates_presence_of :lat, :lng 
+    
+    acts_as_mappable :auto_geocode => true 
+    
+    ## relationships
     belongs_to :city
     belongs_to :user
     has_many :sites
