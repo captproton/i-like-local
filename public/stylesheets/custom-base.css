@@ -177,3 +177,16 @@ FILTERS
 #left_content #built_form input {
   width: 40px;
 }
+
+/***************************************
+COLORS and STYLE
+***************************************/
+.homepage_green_bar {
+background-image:url(/images/flair/homepg_green_gradient.gif);
+background-repeat:repeat-x;
+}
+.homepage_green_bar {
+clear:both;
+float:left;
+width:100%;
+}

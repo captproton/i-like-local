@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>
+			I Like Utah.com - http://ilikeutah.com - Real Estate Search
+		</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<%= stylesheet_link_tag "reset-fonts-grids", :media => "all" %>
+		<%= stylesheet_link_tag "skin", :media => "all" %>
+		<%= stylesheet_link_tag "custom-base", :media => "all" %>
+		
+<style type="text/css">
+	p#compressor {margin-top:0.2em;} 
+	#index-main #promo li {list-style-type:disc; font-size:100%; margin-top:.2em; margin-left:1em;}
+	#index-main #promo ul {margin:0;}
+	#index-main #promo .yui-gb .yui-u {width:31%;}
+</style>
+	</head>
+	<body>
+		<div id="doc2" class="yui-t6">
+			<div id="hd">
+				<div id="ygunav">
+					<p>
+						<em><a href="http://real-estate.ilikeutah.com">Real Estate Search Home</a> <i>-</i> <a href="http://ilikeutah.com/help">Help</a></em>
+					</p>
+					<form action="http://search.yahoo.com/search">
+						<label for="ygsp">Site Search</label> <input name="vs" type="hidden" value="developer.yahoo.com"> <input name="fr" type="hidden" value="ush-myweb"> <input id="ygsp" name="va" size="22"> <input type="submit" value="Search" class="ygbt">
+					</form>
+				</div>
+				<div id="ygma">
+					<a href="http://ilikeutah.com">I Like Utah.com</a>
+				</div>
+				<div id="pagetitle">
+					<h1>
+						Home Search
+					</h1>
+				</div>
+				<div class="yui-g">
+					<a href="/">Main</a> <% if logged_in? %> <%= link_to "Logout", session_path, :method => :delete %> <% else %> <%= link_to "Login", new_session_path %> <% end %> <!-- header goes here -->
+					 <% if flash.any? %>
+					<div id="flash">
+						<%= flash[:notice] %>
+					</div><% flash.clear %><% end %>
+				</div>
+			</div>
+			<div id="bd">
+				<%= yield %>
+			</div>
+			<div id="ft">
+					<%= render :partial => "/shared/footer" %>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

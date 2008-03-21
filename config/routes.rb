@@ -43,7 +43,7 @@ ActionController::Routing::Routes.draw do |map|
       
       
   map.connect ':controller/service.wsdl', :action => 'wsdl'
-  map.connect '', :controller => 'users'
+  map.connect '', :controller => 'start_me_up'
 
   # Install the default route as the lowest priority.
   
