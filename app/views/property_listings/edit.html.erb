@@ -1,0 +1,25 @@
+<% form_for(@property_listing) do |f| -%>
+  <fieldset>
+    <%= render :partial => property_form_template(@property_listing.current_property_form),
+               :locals => {
+                 :property_form => @property_listing.current_property_form,
+                 :habitat   => @habitat
+               } %>
+  </fieldset>
+  <%= hidden_field_tag :direction, "next!" %>
+  <hr/>
+  <table class="controls">
+    <tr>
+      <td>
+        <%= button_to "&#8592; Previous", 
+              {:id => @property_listing, :action => "update"},
+              {:method => :put, 
+               :onclick => "$('direction').value = 'previous!';"} %> 
+      </td>
+
+      <td>
+        <%= submit_tag "Next &#8594;" %> 
+      </td>
+    </tr>
+  </table>
+<% end -%>

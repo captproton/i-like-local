@@ -1,0 +1,2 @@
+class FeatureLinksForm < PropertyForm
+end

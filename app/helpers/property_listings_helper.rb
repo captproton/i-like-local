@@ -1,0 +1,2 @@
+module PropertyListingsHelper
+end
