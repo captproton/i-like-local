@@ -17,7 +17,7 @@
     <td><%=h open_home.endtime %></td>
     <td><%=h open_home.details %></td>
     <td><%= link_to 'Show', habitat_open_home_path(open_home) %></td>
-    <td><%= link_to 'Edit', habitat_edit_open_home_path(open_home) %></td>
+    <td><%# link_to 'Edit', habitat_edit_open_home_path(open_home) %></td>
     <td><%= link_to 'Destroy', habitat_open_home_path(open_home), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -26,5 +26,5 @@
 <br />
 
 
-<%= link_to 'New open_home time', habitat_new_open_home_path(@habitat) %> | 
+<%# link_to 'New open_home time', habitat_new_open_home_path(@habitat) %> | 
 <%= link_to ("Back to details page for " + @habitat.street ), habitat_path(@habitat)%>

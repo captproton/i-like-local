@@ -9,7 +9,9 @@ config.cache_classes = false
 config.whiny_nils = true
 
 # Enable the breakpoint server that script/breakpointer connects to
-config.breakpoint_server = true
+## Disabling, since getting this message: config.breakpoint_server has been deprecated and has no effect
+
+## config.breakpoint_server = true
 
 # Show full error reports and disable caching
 config.action_controller.consider_all_requests_local = true

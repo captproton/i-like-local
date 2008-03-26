@@ -15,7 +15,7 @@
     <td><%=h office.email %></td>
     <td><%=h office.picture_url %></td>
     <td><%= link_to 'Show', habitat_office_path(office) %></td>
-    <td><%= link_to 'Edit', habitat_edit_office_path(office) %></td>
+    <td><%# link_to 'Edit', habitat_edit_office_path(office) %></td>
     <td><%= link_to 'Destroy', habitat_office_path(office), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -23,5 +23,5 @@
 
 <br />
 
-<%= link_to 'New office', habitat_new_office_path %> | 
+<%# link_to 'New office', habitat_new_office_path %> | 
 <%= link_to ("Back to details page for " + @habitat.street ), habitat_path(@habitat)%>

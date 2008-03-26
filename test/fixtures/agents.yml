@@ -4,11 +4,12 @@ one:
   name: MyString
   phone: 1
   email: MyText
-  picture_url: MyText
+  picture_url: MyText1.jpg
   habitat_id: 1
 two:
   id: 2
-  name: MyString
-  phone: 1
-  email: MyText
-  picture_url: MyText
+  name: MyString2
+  phone: 1342
+  email: MyText@mytext.com
+  picture_url: MyText.jpg
+  habitat_id: 2

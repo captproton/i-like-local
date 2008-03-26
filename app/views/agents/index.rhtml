@@ -15,7 +15,7 @@
     <td><%=h agent.email %></td>
     <td><%=h agent.picture_url %></td>
     <td><%= link_to 'Show', habitat_agent_path(agent) %></td>
-    <td><%= link_to 'Edit', habitat_edit_agent_path(agent) %></td>
+    <td><%# link_to 'Edit', habitat_edit_agent_path(agent) %></td>
     <td><%= link_to 'Destroy', habitat_agent_path(agent), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -23,4 +23,4 @@
 
 <br />
 
-<%= link_to 'New agent', habitat_new_agent_path %>
+<%# link_to 'New agent', habitat_new_agent_path %>

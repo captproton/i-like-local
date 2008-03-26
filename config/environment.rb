@@ -61,8 +61,10 @@ ASSET_IMAGE_PROCESSOR = :image_science || :rmagick || :none
 # Mime::Type.register "application/x-mobile", :mobile
 
 # Include your application configuration below
+## new rails requirement for sessions
+## config.action_controller.session = { :session_key => "_session", :secret => "some secret phrase more than 30 chars like Every good boy does fine OR Life is a dance your learn as you go"}
 
-ExceptionNotifier.exception_recipients = %w( your_email@test.com )
+ExceptionNotifier.exception_recipients = %w( re_listing@betterbilling.net )
 
 # cool AR logging hack
 require 'ar_extensions'

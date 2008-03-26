@@ -11,7 +11,7 @@ class AgentsControllerTest < Test::Unit::TestCase
     @request    = ActionController::TestRequest.new
     @response   = ActionController::TestResponse.new
     
-    @habitat      = habitats(:one)
+    @habitat    = habitats(:one)
     
   end
 

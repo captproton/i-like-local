@@ -15,7 +15,7 @@
     <td><%=h broker.email %></td>
     <td><%=h broker.picture_url %></td>
     <td><%= link_to 'Show', habitat_broker_path(broker) %></td>
-    <td><%= link_to 'Edit', habitat_edit_broker_path(broker) %></td>
+    <td><%# link_to 'Edit', habitat_edit_broker_path(broker) %></td>
     <td><%= link_to 'Destroy', habitat_broker_path(broker), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -23,5 +23,5 @@
 
 <br />
 
-<%= link_to 'New broker', habitat_new_broker_path %> | 
+<%# link_to 'New broker', habitat_new_broker_path %> | 
 <%= link_to ("Back to details page for " + @habitat.street ), habitat_path(@habitat)%>

@@ -9,7 +9,7 @@
   <tr>
     <td><%=h city.name %></td>
     <td><%= link_to 'Show', city_path(city) %></td>
-    <td><%= link_to 'Edit', state_edit_city_path(city) %></td>
+    <td><%# link_to 'Edit', state_edit_city_path(city) %></td>
     <td><%= link_to 'Destroy', state_city_path(city), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -17,4 +17,4 @@
 
 <br />
 
-<%= link_to 'New city', state_new_city_path %>
+<%# link_to 'New city', state_new_city_path %>
