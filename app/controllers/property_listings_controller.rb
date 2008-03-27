@@ -22,7 +22,8 @@ class PropertyListingsController < ApplicationController
       if @habitat
         @habitat.update_attribute(:street, params[:habitat][:street])
       else
-        @habitat = Habitat.new(:street)
+        @habitat = Habitat.new( :street         => params[:habitat][:street],
+                                :property_form  => @listing.current_form)
         
         @listing.habitats << @habitat
       end
@@ -32,43 +33,5 @@ class PropertyListingsController < ApplicationController
       redirect_to :action => :edit
   end
   
-  ########### p. 85
-#  def index
-#    @quizzes = Quiz.find(:all)
-#  end
-   
-  
-#  def new
-#    @answer = Answer.new
-#    @quiz   = Quiz.create
-#    render :action => :edit
-#  end
-  
-    
-  
-#  def edit
-#    @quiz   = Quiz.find(params[:id])
-#    @answer = @quiz.answers.
-#                find_by_question_id(@quiz.current_question.id) || Answer.new
-#  end
-  
-  
-  
-#  def update
-#    @quiz = Quiz.find(params[:id])
-#    @answer = @quiz.answers.find_by_question_id(@quiz.current_question) 
-    
-#    if @answer
-#      @answer.update_attribute(:value, params[:answer][:value])
-#    else
-#      @answer = Answer.new(:value    => params[:answer][:value],
-#                           :question => @quiz.current_question)
-#      @quiz.answers << @answer
-#    end
-    
-#    @quiz.send(params[:direction])
-    
-#    redirect_to :action => :edit
-#  end
   
 end

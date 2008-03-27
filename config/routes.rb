@@ -3,6 +3,8 @@ ActionController::Routing::Routes.draw do |map|
 
     map.resources :start_me_up
 
+    map.resources :property_listings
+        
   map.resources :advertisers
 
 

@@ -43,6 +43,9 @@ Rails::Initializer.run do |config|
   config.active_record.default_timezone = :utc
   
   # See Rails::Configuration for more options
+  ## new rails requirement for sessions
+  config.action_controller.session = { :session_key => "_session", :secret => "some secret phrase more than 30 chars like Every good boy does fine OR Life is a dance your learn as you go"}
+  
 end
 
 ASSET_IMAGE_PROCESSOR = :image_science || :rmagick || :none
@@ -61,8 +64,8 @@ ASSET_IMAGE_PROCESSOR = :image_science || :rmagick || :none
 # Mime::Type.register "application/x-mobile", :mobile
 
 # Include your application configuration below
-## new rails requirement for sessions
-## config.action_controller.session = { :session_key => "_session", :secret => "some secret phrase more than 30 chars like Every good boy does fine OR Life is a dance your learn as you go"}
+## new rails requirement for sessions but might be in wrong spot
+##config.action_controller.session = { :session_key => "_session", :secret => "some secret phrase more than 30 chars like Every good boy does fine OR Life is a dance your learn as you go"}
 
 ExceptionNotifier.exception_recipients = %w( re_listing@betterbilling.net )
 

@@ -17,6 +17,6 @@ class Habitat < ActiveRecord::Base
     has_many :franchises
     has_many :foreclosures
     ### postlet spawn
-    ## belongs_to :property_form
-    ## belongs_to :property_listing
+    belongs_to :property_form
+    belongs_to :property_listing
 end
