@@ -1,10 +1,8 @@
 <% form_for(@listing) do |f| -%>
   <fieldset>
     <%= render :partial => property_form_template(@listing.current_form),
-               :locals => {
-                 :property_form => @listing.current_form,
-                 :habitat   => @habitat
-               } %>
+               :locals => {	:property_form => @listing.current_form,
+                 					:real_estate   => @real_estate } %>
   </fieldset>
   <%= hidden_field_tag :direction, "next!" %>
   <hr/>

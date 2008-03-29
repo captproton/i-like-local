@@ -5,9 +5,11 @@ one:
   zip:  84404
   mlsId: 4356
   city_id: 1
+  address: 2555 Washington Blvd., Ogden, Utah
 two:
   id: 2
   street: 1234 Mayfarin Street
   zip:  84405
   mlsId: 435678
   city_id: 1
+  address: 2555 Washington Blvd., Ogden, Utah

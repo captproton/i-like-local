@@ -1,5 +1,5 @@
 class PropertyListing < ActiveRecord::Base
-    has_many :habitats, :dependent => :destroy
+    has_many :real_estates, :dependent => :destroy
     has_many :property_forms
     
     acts_as_state_machine :initial => :pf10 

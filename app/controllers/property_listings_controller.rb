@@ -5,33 +5,33 @@ class PropertyListingsController < ApplicationController
   end
 
   def new
-      @habitat  = Habitat.new
+      @real_estate  = RealEstate.new
       @listing  = PropertyListing.create
       render :action => :edit
   end
 
   def edit
-      @listing  = PropertyListing.find(params[:id])
-      @form     = @listing.habitats.find_by_property_form_id(@listing.current_form.id) || PropertyForm.new
+      @listing          = PropertyListing.find(params[:id])
+      @real_estate      = @listing.real_estates.
+                            find_by_property_form_id(@listing.current_form.id) || RealEstate.new
   end
 
   def update
-      @listing  = PropertyListing.find(params[:id])
-      @habitat  = @listing.habitats.find_by_property_form_id(@listing.current_form)
+      @listing      = PropertyListing.find(params[:id])
+      @real_estate  = @listing.real_estates.find_by_property_form_id(@listing.current_form)
       
-      if @habitat
-        @habitat.update_attribute(:street, params[:habitat][:street])
+      if @real_estate
+        @real_estate.update_attribute(:value, params[:real_estate][:value])
       else
-        @habitat = Habitat.new( :street         => params[:habitat][:street],
+        @real_estate = RealEstate.new( :value         => 
+                                params[:real_estate][:value],
                                 :property_form  => @listing.current_form)
-        
-        @listing.habitats << @habitat
+        @listing.real_estates << @real_estate
       end
       
       @listing.send(params[:direction])
       
       redirect_to :action => :edit
   end
-  
   
 end

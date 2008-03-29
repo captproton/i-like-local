@@ -45,8 +45,10 @@ class HabitatsController < ApplicationController
   # POST /habitats
   # POST /habitats.xml
   def create
-    @habitat = Habitat.new(params[:habitat])
-    @habitat.city_id=@city.id
+    @habitat            = Habitat.new(params[:habitat])
+    @habitat.city_id    = @city.id
+    @habitat.address    = "2555 Washington Blvd., Ogden, Utah"
+    
     
 
     respond_to do |format|
@@ -65,6 +67,8 @@ class HabitatsController < ApplicationController
   # PUT /habitats/1.xml
   def update
     @habitat = Habitat.find(params[:id])
+    @habitat.city_id    = @city.id
+    
 
     respond_to do |format|
       if @habitat.update_attributes(params[:habitat])

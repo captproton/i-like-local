@@ -1,3 +1,4 @@
-<label for="habitat_street"><%= property_form.text %></label> 
-<%= select :habitat, :property_type, 
-{"Yes" => "true", "No" => "false"} %> 
+<label for="real_estate_value"><%= property_form.text %></label> 
+<%= select :real_estate, :value, 
+{"Yes" => "true", "No" => "false"},
+:prompt => "Select a payment method"  %> 
