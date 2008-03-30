@@ -13,15 +13,15 @@ class PropertyListingsController < ApplicationController
   def edit
       @listing          = PropertyListing.find(params[:id])
       @real_estate      = @listing.real_estates.
-                            find_by_property_form_id(@listing.current_form.id) || RealEstate.new
+                            find_by_property_listing_id(@listing.id) || RealEstate.new
   end
 
   def update
       @listing      = PropertyListing.find(params[:id])
-      @real_estate  = @listing.real_estates.find_by_property_form_id(@listing.current_form)
+      @real_estate  = @listing.real_estates.find_by_property_listing_id(@listing.id)
       
       if @real_estate
-        @real_estate.update_attribute(:value, params[:real_estate][:value])
+        @real_estate.update_attributes(params[:real_estate])
       else
         @real_estate = RealEstate.new( :value         => 
                                 params[:real_estate][:value],

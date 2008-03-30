@@ -1,7 +1,7 @@
 class CreateRealEstates < ActiveRecord::Migration
   def self.up
     create_table :real_estates do |t|
-        t.string    :value
+        t.string    :value, :value02, :value03
         t.integer   :property_listing_id, :property_form_id
 
       t.timestamps
