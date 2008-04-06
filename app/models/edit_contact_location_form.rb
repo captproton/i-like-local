@@ -1,0 +1,2 @@
+class EditContactLocationForm < PropertyForm
+end

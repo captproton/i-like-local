@@ -1,0 +1,2 @@
+class DisplayDistributionForm < PropertyForm
+end

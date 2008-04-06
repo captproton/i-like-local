@@ -1,0 +1,594 @@
+			<table bgcolor="#FFFFFF" border="0" cellpadding="5" cellspacing="1" width="100%">
+				<tbody>
+					<tr valign="bottom">
+						<td colspan="2" align="center">
+							<div align="left">
+								<strong>Contact and Listing Info</strong> <font color="#666666">[<a href="http://www.postlets.com/edit/edit31.php?epid=550260&amp;p=chg">edit</a>]</font><br>
+								<% form_for(@listing) do |f| -%>
+								  <%= hidden_field_tag :direction, "edit_10!" %>
+								  <hr/>
+								  <table class="controls">
+								    <tr>
+								      <td>&nbsp;
+								      </td>
+
+								      <td>
+								        <%= submit_tag "Edit Contact and Listing Info" %> 
+								      </td>
+								    </tr>
+								  </table>
+								<% end -%>
+								<hr align="left" color="#CCCCCC" size="1" width="99%">
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" width="175">
+							<div align="left">
+								Name
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.contact_name %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Phone
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.contact_phone %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Email address
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.contact_email %> <font color="#666666" size="-2">(this address will be anonymized)</font>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Company
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left"><%= real_estate.contact_company %></div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Street
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.contact_street %>&nbsp; &nbsp; will be mapped
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								City
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.contact_city %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								State
+							</div>
+						</td>
+						<td colspan="1">
+							UT
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Zip code
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.contact_zip_code %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Metro area
+							</div>
+						</td>
+						<td colspan="1">
+							<%= real_estate.contact_metro %>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td align="center" valign="middle">
+							<div align="left">
+								Category
+							</div>
+						</td>
+						<td colspan="1" valign="middle">
+							<div align="left">
+								<%= real_estate.category %>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table><br>
+			<table bgcolor="#FFFFFF" border="0" cellpadding="5" cellspacing="1" width="100%">
+				<tbody>
+					<tr valign="middle">
+						<td colspan="2" align="center">
+							<div align="left">
+								<strong>Real Estate Description</strong> <font color="#666666">[<a href="http://www.postlets.com/edit/edit32.php?epid=550260&amp;p=chg">edit</a>]</font>
+								<% form_for(@listing) do |f| -%>
+								  <%= hidden_field_tag :direction, "edit_20!" %>
+								  <hr/>
+								  <table class="controls">
+								    <tr>
+								      <td>&nbsp;
+								      </td>
+
+								      <td>
+								        <%= submit_tag "Edit Real Estate Description" %> 
+								      </td>
+								    </tr>
+								  </table>
+								<% end -%>
+								
+							</div>
+							<hr align="left" color="#CCCCCC" size="1" width="99%">
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" width="175">
+							<div align="left">
+								Property type
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.property_type %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								MLS number
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left"><%= real_estate.contact_MLS %></div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Year built
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left"><%= real_estate.year_built %></div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Asking price
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								$<%= real_estate.price %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								HOA/ Maintenance
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								$<%= real_estate.hoa %> per month
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Bedrooms
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.bedrooms %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Bathrooms
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.bathrooms %> full &nbsp;0 <%= real_estate.partial_bathrooms %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Number of floors
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.floors %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Square footage
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.living_space %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Lot size
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.lot_size %> sqft or acres
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Parking spaces
+							</div>
+						</td>
+						<td colspan="1">
+							<%= real_estate.parking_spaces %> <%= real_estate.parking_type %>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" valign="top">
+							<div align="left">
+								Subtitle
+							</div>
+						</td>
+						<td colspan="1">
+							<%= real_estate.headline %>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" valign="top">
+							<div align="left">
+								For sale by
+							</div>
+						</td>
+						<td colspan="1">
+							Agent/broker
+						</td>
+					</tr>
+				</tbody>
+			</table><br>
+			<table bgcolor="#FFFFFF" border="0" cellpadding="5" cellspacing="1" width="100%">
+				<tbody>
+					<tr valign="bottom">
+						<td colspan="5" align="center" valign="middle">
+							<div align="left">
+								<strong>Property Features</strong> <font color="#666666">[<a href="http://www.postlets.com/edit/edit33.php?epid=550260&amp;p=chg">edit</a>]</font>
+								<% form_for(@listing) do |f| -%>
+								  <%= hidden_field_tag :direction, "edit_30!" %>
+								  <hr/>
+								  <table class="controls">
+								    <tr>
+								      <td>&nbsp;
+								      </td>
+
+								      <td>
+								        <%= submit_tag "Edit Property Features" %> 
+								      </td>
+								    </tr>
+								  </table>
+								<% end -%>
+								
+							</div>
+							<hr align="left" color="#CCCCCC" size="1" width="99%">
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td colspan="5" align="center" valign="middle">
+							<br>
+							<div align="left">
+								<strong>Community Features</strong> <font color="#666666">[<a href="http://www.postlets.com/edit/edit33.php?epid=550260&amp;p=chg">edit</a>]</font>
+								
+							</div>
+							<hr align="left" color="#CCCCCC" size="1" width="99%">
+						</td>
+					</tr>
+				</tbody>
+			</table><br>
+			<table bgcolor="#FFFFFF" border="0" cellpadding="5" cellspacing="1" width="100%">
+				<tbody>
+					<tr valign="bottom">
+						<td align="center" height="35">
+							<div align="left">
+								<strong>Other Special Features</strong> <font color="#666666">[<a href="http://www.postlets.com/edit/edit33.php?epid=550260&amp;p=chg">edit</a>]</font>
+								<hr align="left" color="#CCCCCC" size="1" width="99%">
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table><br>
+			<table bgcolor="#FFFFFF" border="0" cellpadding="5" cellspacing="1" width="100%">
+				<tbody>
+					<tr valign="bottom">
+						<td align="center" height="35">
+							<div align="left">
+								<strong>Property Description</strong> <font color="#666666">[<a href="http://www.postlets.com/edit/edit33.php?epid=550260&amp;p=chg">edit</a>]</font>
+								<hr align="left" color="#CCCCCC" size="1" width="99%">
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" valign="top">
+							<div align="left">
+								<%= real_estate.additional_msg %>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table><br>
+			<table bgcolor="#FFFFFF" border="0" cellpadding="5" cellspacing="1" width="100%">
+				<tbody>
+					<tr valign="bottom">
+						<td colspan="2" height="35">
+							<div align="left">
+								<strong>Additional Links</strong> <font color="#666666">[<a href="http://www.postlets.com/edit/edit33.php?epid=550260&amp;p=chg">edit</a>]</font>
+								<hr align="left" color="#CCCCCC" size="1" width="99%">
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" width="175">
+							<div align="left">
+								Virtual Tour
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.virtual_tour %>
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" width="175">
+							<div align="left">
+								Embedded Video
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left"><%= real_estate.embedded_video %></div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center">
+							<div align="left">
+								Additional Property Info
+							</div>
+						</td>
+						<td colspan="1">
+							<div align="left">
+								<%= real_estate.property_url %>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table><br>
+			<table bgcolor="#FFFFFF" border="0" cellpadding="5" cellspacing="1" width="100%">
+				<tbody>
+					<tr valign="bottom">
+						<td colspan="5" align="center" height="35">
+							<div align="left">
+								<strong>Photos</strong> <font color="#666666">[<a href="http://www.postlets.com/edit/edit34.php?epid=550260&amp;p=chg&amp;ph=add">add</a>] [<a href="http://www.postlets.com/edit/edit34.php?epid=550260&amp;p=chg&amp;ph=del">edit/delete</a>]</font><strong><br></strong>
+								<% form_for(@listing) do |f| -%>
+								  <%= hidden_field_tag :direction, "edit_40!" %>
+								  <hr/>
+								  <table class="controls">
+								    <tr>
+								      <td>&nbsp;
+								      </td>
+
+								      <td>
+								        <%= submit_tag "Edit Photos" %> 
+								      </td>
+								    </tr>
+								  </table>
+								<% end -%>
+								
+								<hr align="left" color="#CCCCCC" size="1" width="99%">
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" width="25">
+							<div align="center">
+								1<br>
+							</div>
+						</td>
+						<td align="center" width="125">
+							<img src="create35.php_files/082238_120644_755486.jpg">
+						</td>
+						<td align="center" width="150">
+							<div align="left">
+								120644_755486.jpg
+							</div>
+						</td>
+						<td align="center" width="170">
+							<div align="left">
+								Looks great from outside!
+							</div>
+						</td>
+						<td align="center">
+							<div align="left">
+								Main
+							</div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" width="25">
+							<div align="center">
+								2<br>
+							</div>
+						</td>
+						<td align="center" width="125">
+							<img src="create35.php_files/082238_120645_755486_1.jpg">
+						</td>
+						<td align="center" width="150">
+							<div align="left">
+								120645_755486_1.jpg
+							</div>
+						</td>
+						<td align="center" width="170">
+							<div align="left">
+								Photo 2
+							</div>
+						</td>
+						<td align="center">
+							<div align="left"></div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" width="25">
+							<div align="center">
+								3<br>
+							</div>
+						</td>
+						<td align="center" width="125">
+							<img src="create35.php_files/082238_120645_755486_2.jpg">
+						</td>
+						<td align="center" width="150">
+							<div align="left">
+								120645_755486_2.jpg
+							</div>
+						</td>
+						<td align="center" width="170">
+							<div align="left">
+								Photo 3
+							</div>
+						</td>
+						<td align="center">
+							<div align="left"></div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" width="25">
+							<div align="center">
+								4<br>
+							</div>
+						</td>
+						<td align="center" width="125">
+							<img src="create35.php_files/082238_120646_755486_3.jpg">
+						</td>
+						<td align="center" width="150">
+							<div align="left">
+								120646_755486_3.jpg
+							</div>
+						</td>
+						<td align="center" width="170">
+							<div align="left">
+								Photo 4
+							</div>
+						</td>
+						<td align="center">
+							<div align="left"></div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" width="25">
+							<div align="center">
+								5<br>
+							</div>
+						</td>
+						<td align="center" width="125">
+							<img src="create35.php_files/082238_120646_755486_4.jpg">
+						</td>
+						<td align="center" width="150">
+							<div align="left">
+								120646_755486_4.jpg
+							</div>
+						</td>
+						<td align="center" width="170">
+							<div align="left">
+								Photo 5
+							</div>
+						</td>
+						<td align="center">
+							<div align="left"></div>
+						</td>
+					</tr>
+					<tr valign="middle">
+						<td align="center" width="25">
+							<div align="center">
+								6<br>
+							</div>
+						</td>
+						<td align="center" width="125">
+							<img src="create35.php_files/082238_120647_755486_5.jpg">
+						</td>
+						<td align="center" width="150">
+							<div align="left">
+								120647_755486_5.jpg
+							</div>
+						</td>
+						<td align="center" width="170">
+							<div align="left">
+								kitchen
+							</div>
+						</td>
+						<td align="center">
+							<div align="left"></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>

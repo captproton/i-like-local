@@ -1,0 +1,2 @@
+class EditRealEstateDescriptionForm < PropertyForm
+end

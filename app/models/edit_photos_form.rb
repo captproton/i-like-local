@@ -1,0 +1,2 @@
+class EditPhotosForm < PropertyForm
+end
