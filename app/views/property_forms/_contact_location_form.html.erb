@@ -48,7 +48,7 @@
                   <td align="center" height="35"><div align="left">Email address <img src="/images/icons/req_tri.gif"></div></td>
                   <td height="35"><div align="left">
 							<%= text_field :real_estate, :contact_email,   :size => "30", :maxlength => "100"%> 
-							    <%= check_box(:real_estate, :anonymous, {}, "yes", "no") %>
+							    [checkbox]<%= check_box("real_estate", "anonymous") %>
                     make anonymous </div></td>
                 </tr>
                 <tr valign="middle">
@@ -78,7 +78,7 @@
                   <td align="center" height="35"><div align="left">Street <img src="/images/icons/req_tri.gif"></div></td>
                   <td colspan="2" height="35">
 							<%= text_field :real_estate, :contact_street,   :size => "30", :maxlength => "30" %> 
-							    <%= check_box(:real_estate, :include_map, {}, "yes", "no") %>
+							    [checkbox]<%= check_box("real_estate", "include_map") %>
                     include map
 						</td>
                 </tr>
@@ -102,7 +102,7 @@
                 <tr valign="middle">
                   <td align="center" height="35" width="150"><div align="left">Metro area <img src="/images/icons/req_tri.gif" width="8" height="8" alt="Req Tri"></div></td>
                   <td height="35">
-							<%= select :real_estate, :category, 
+							<%= select :real_estate, :contact_metro, 
 							 %w{ Logan Ogden-Clearfield Provo Salt_Lake_City St._George } ,
 							:prompt => "Select Metro Area" %> 
 						</td>
@@ -112,7 +112,7 @@
                                 <tr valign="bottom">
                   <td align="center" height="35"><div align="left"></div></td>
                   <td colspan="2" height="35">
-							    <%= check_box(:real_estate, :prepop_post, {}, "yes", "no") %>
+							    <%= check_box("real_estate", "prepop_post") %>
                     Fill out this form with my account info next time</td>
                 </tr>
                                 <tr valign="top">

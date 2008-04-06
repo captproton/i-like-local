@@ -1,3 +1,114 @@
 <label for="real_estate_value02
 "><%= property_form.text %></label> 
 <%= text_field :real_estate, :value02 %> 
+
+        <table bgcolor="#ffffff" border="0" cellpadding="5" cellspacing="1" width="100%">
+          <tbody><tr valign="middle">
+            <td align="center" height="35"><div align="left">Property type <img src="/images/icons/req_tri.gif"></div></td>
+            <td height="35"><div align="left">
+						<%= select :real_estate, :property_type, 
+						 %w{ Condo Townhouse Multi-Family Co-Op TIC Manufactured Vacant_Land } ,
+						:prompt => "Select a real estate category" %> 
+                    &nbsp;&nbsp;units:
+							<%= text_field :real_estate, :units,   :size => "2", :maxlength => "2" %> 
+              &nbsp; <font color="#666666" size="-2">(for multi-family)</font> </div></td>
+          </tr>
+          <tr id="mls_row" valign="middle">
+            <td align="center" height="35"><div align="left">MLS number</div></td>
+            <td height="35"><div align="left">
+					<%= text_field :real_estate, :contact_MLS,   :size => "11", :maxlength => "11" %> 
+              &nbsp; <font color="#666666" size="-2">will not be displayed on postlet</font></div></td>
+          </tr>
+          <tr id="built_row" valign="middle">
+            <td align="center" height="35"><div align="left">Year built</div></td>
+            <td height="35"><div align="left">
+					<%= text_field :real_estate, :year_built,   :size => "4", :maxlength => "4" %> 
+            </div></td>
+          </tr>
+          <tr valign="middle">
+            <td align="center" height="35"><div align="left">Asking price <img src="/images/icons/req_tri.gif"></div></td>
+                              <td height="35"><div align="left">$
+											<%= text_field :real_estate, :price,   :size => "15", :maxlength => "15" %> 
+                                      </div></td>
+          </tr>
+          <tr id="hoa_row" valign="middle">
+            <td align="center" height="35"><div align="left">
+              HOA/                    Maintenance</div></td>
+            <td height="35"><div align="left">$
+					<%= text_field :real_estate, :hoa,   :size => "6", :maxlength => "6" %> 
+              per month</div></td>
+          </tr>
+                          <tr id="bedroom_row" valign="middle">
+            <td align="center" height="35"><div align="left">Bedrooms <img src="/images/icons/req_tri.gif"></div></td>
+            <td height="35"><div align="left">
+						<%= select :real_estate, :bedrooms, 
+						 %w{ 1 2 3 4 5 6 7 8 9 more_than_9 } ,
+						:prompt => "Select the number of bedrooms" %> 
+
+            </div></td>
+          </tr>
+          <tr id="bathroom_row" valign="middle">
+            <td align="center" height="35"><div align="left">Bathrooms <img src="/images/icons/req_tri.gif"></div></td>
+            <td height="35"> full:
+							<%= select :real_estate, :bedrooms, 
+							 %w{ 1 2 3 4 5 6 7 8 9 more_than_9 } ,
+							:prompt => "Number of Bathrooms" %> 
+	
+              &nbsp;partial:
+					<%= select :real_estate, :bedrooms, 
+					 %w{ 1 2 3 4 5 6 7 8 9 more_than_9 } ,
+					:prompt => "Number of 1/2 Bathrooms" %> 
+            </td>
+          </tr>
+                          <tr id="floor_row" valign="middle">
+            <td align="center" height="35"><div align="left">Number of floors</div></td>
+            <td height="35">
+					<%= select :real_estate, :floors, 
+					 %w{ 1 2 3 4 5 6 7 8 9 more_than_9 } ,
+					:prompt => "Number of Floors" %> 
+          </tr>
+          <tr id="sqft_row" valign="middle">
+            <td align="center" height="35"><div align="left">Square footage</div></td>
+            <td height="35">
+					<%= text_field :real_estate, :living_space,   :size => "10", :maxlength => "10" %> 
+            </td>
+          </tr>
+          <tr valign="middle">
+            <td align="center" height="35"><div align="left">Lot size <img src="/images/icons/req_tri.gif"><font color="#ff6600" size="-2">land</font></div></td>
+            <td height="35">
+					<%= text_field :real_estate, :lot_size,   :size => "10", :maxlength => "10" %> 
+					<%= select :real_estate, :floors, 
+					 %w{ sqft acres } ,
+					:prompt => "lot_type" %> 
+					
+            </td>
+          </tr>
+          <tr id="parking_row" valign="middle">
+            <td align="center" height="35"><div align="left">Parking
+              spaces                  </div></td>
+            <td height="35">                      
+					<%= select :real_estate, :floors, 
+					 %w{ 1 2 3 4 5 6 7 8 9 more_than_9 } ,
+					:prompt => "Number of Parking Spaces" %> 
+					
+              &nbsp;
+					<%= radio_button("real_estate", "parking_type", "Car garage") %>
+              Garage &nbsp;
+					<%= radio_button("real_estate", "parking_type", "Covered spaces") %>
+              Covered &nbsp;
+					<%= radio_button("real_estate", "parking_type", "Uncovered spaces") %>
+              Uncovered</td>
+          </tr>
+          <tr valign="middle">
+            <td align="center" height="35" valign="top"><div align="left">Subtitle<br>
+                    <font color="#666666" size="-2">max 120 characters</font></div></td>
+            <td height="35">
+					<%= text_area (:real_estate, :headline,  :rows => "3", :cols => "50", :wrap => "physical", :maxlength => "120" ) %>
+                <br>
+                <font color="#666666" size="-2"><u>Briefly</u> highlight 
+                  your property's best features, e.g. SOMA loft with<br>
+                  bay views, walking distance to SBC. You will have an opportunity<br>
+                  to write a full description later.<br>
+                  (you have <span id="myCounter">120</span> characters remaining)</font></td>
+          </tr>
+        </tbody></table>

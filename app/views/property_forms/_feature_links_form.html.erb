@@ -1,9 +1,70 @@
 <label for="property_listing_feature_links"><%= property_form.text %></label> 
-<table>
-<tr>
-<td><label for ="real_estate_value03">zip</label> 
-<%= text_field :real_estate, :value03 %> 
 
-</td></tr></table>
+                    <table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="1" width="100%">
+        <tbody><tr valign="bottom">
+          <td align="center" height="25"><div align="left"><strong>Other Special Features <br>
+              </strong>
+                  <hr align="left" color="#cccccc" size="1" width="99%">
+          </div></td>
+        </tr>
+        <tr valign="middle">
+          <td><input value="1" id="sValue" type="hidden">
+            1.
+            <input class="text" name="special_features[]" size="50" maxlength="100" type="text">
+            <br>
+<div id="special_list"></div>
+            &nbsp; &nbsp; <a href="javascript:;" onclick="addTextField('sValue','special_list','special_features');">more</a> </td>
+        </tr>
+      </tbody></table>
+      <br>
+      <table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="1" width="100%">
+        <tbody><tr valign="bottom">
+          <td align="center" height="25"><div align="left"><strong>Property Description</strong>
+                  <hr align="left" color="#cccccc" size="1" width="99%">
+          </div></td>
+        </tr>
+        <tr valign="middle">
+          <td align="center" height="25"><div align="left">
+              <textarea name="additional_msg" cols="50" rows="6" id="additional_msg"></textarea>
+              <br>
+              <font color="#666666" size="-2">Optional area to further 
+                describe your property in your own words.</font> </div></td>
+        </tr>
+      </tbody></table>
+      <br>
+      <table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="1" width="100%">
+        <tbody><tr valign="bottom">
+          <td colspan="2" height="25"><div align="left"><strong>Additional Links</strong>
+                  <hr align="left" color="#cccccc" size="1" width="99%">
+          </div></td>
+        </tr>
+        <tr valign="middle">
+          <td valign="baseline" width="175"><div align="left">Virtual Tour</div></td>
+          <td valign="middle"><div align="left"> http://
+					<%= text_field :real_estate, :virtual_tour,   :size => "50", :maxlength => "150"%> 
+
+          </div></td>
+        </tr>
+        <tr valign="middle">
+          <td valign="top" width="175"><div align="left">Embedded Video<br>
+                  <font color="#666666">(for Plus only)</font><br>
+                  <font size="-3"><a href="javascript:popUp('../info/video.php')">what's 
+                    this?</a></font></div></td>
+          <td valign="middle"><div align="left">
+					<%= text_area :real_estate, :embedded_video,   :cols => "55", :rows => "3" %> 
+          </div></td>
+        </tr>
+        <tr valign="middle">
+          <td valign="baseline" width="150"><div align="left">Additional Property Info</div></td>
+          <td><div align="left"> http://
+					<%= text_field :real_estate, :property_url,   :size => "50", :maxlength => "200"%> 
+          </div></td>
+        </tr>
+        <tr valign="middle">
+          <td align="center" valign="baseline">&nbsp;</td>
+          <td><font color="#cc0000" size="-2">Note:</font><font color="#666666" size="-2"> These fields are to be used for <u>external virtual/video tour</u> and <u>additional information specific to this property only</u>. Listings that link to other promotional information risk being removed from the site.</font></td>
+        </tr>
+      </tbody></table>
+
 
 

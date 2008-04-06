@@ -23,8 +23,7 @@ class PropertyListingsController < ApplicationController
       if @real_estate
         @real_estate.update_attributes(params[:real_estate])
       else
-        @real_estate = RealEstate.new( params[:real_estate],
-                                :property_form  => @listing.current_form)
+        @real_estate = RealEstate.new( params[:real_estate])
         @listing.real_estates << @real_estate
       end
       

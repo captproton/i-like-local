@@ -1,3 +1,15 @@
+<h1><%= @listing.state %></h1>
+<%# There are three kinds of pages.  First, pf10-pf40 are plain forms. 
+Second, pf50 is just an editing hub, used after 10-40 are gone through at least once.  
+Third, some of pf60's form elements exist only for the registered guest to 
+easily copy and paste into other webpages.  To keep this edit page clean, 
+I have nested one unless clause inside another.  The first is to check for pf60 state 
+and the next checks for pf50.  Putting this logic in the view is not very MVC, 
+but as of 4/4/08, I don't have another way. %>
+<% unless @listing.state == ("pf60") %>
+
+<% unless @listing.state == ("pf50") %>
+<h2>UNLESS pf50</h2>
 <% form_for(@listing) do |f| -%>
   <fieldset>
     <%= render :partial => property_form_template(@listing.current_form),
@@ -22,4 +34,72 @@
   </table>
 <% end -%>
 
-#########
+<% else %>
+
+<%= render :partial => property_form_template(@listing.current_form),
+           :locals => {	:property_form => @listing.current_form,
+             				:real_estate   => @real_estate } %>
+	now
+
+	<% form_for(@listing) do |f| -%>
+	  <fieldset>
+	  <%= hidden_field_tag :direction, "next!" %>
+	  <hr/>
+	  <table class="controls">
+	    <tr>
+	      <td>
+				&nbsp;
+	      </td>
+
+	      <td>
+	        <%= submit_tag "Next &#8594;" %> 
+	      </td>
+	    </tr>
+	  </table>
+	<% end -%>
+	
+	
+<% end %>
+
+<% else %>
+	<%= render :partial => property_form_template(@listing.current_form),
+	           :locals => {	:property_form => @listing.current_form,
+	             				:real_estate   => @real_estate } %>
+									<% form_for(@listing) do |f| -%>
+									  <fieldset>
+									  <%= hidden_field_tag :direction, "previous!" %>
+									  <hr/>
+									  <table class="controls">
+									    <tr>
+									      <td>
+												&nbsp;
+									      </td>
+
+									      <td>
+									        <%= submit_tag "&#8592; Previous" %> 
+									      </td>
+									    </tr>
+									  </table>
+									<% end -%>
+	whoa
+	<% form_for(@listing) do |f| -%>
+	  <%= hidden_field_tag :direction, "previous!" %>
+	  <hr/>
+	  <table class="controls">
+	    <tr>
+	      <td>
+	        <%= submit_tag "&#8592; Previous" %> 
+		
+	      </td>
+
+	      <td>
+	        <%= link_to "Go to My Listings", 
+	              {:action => "index"} %> 
+	      </td>
+	    </tr>
+	  </table>
+	<% end -%>
+	
+		
+	
+<% end %>
