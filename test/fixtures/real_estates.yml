@@ -1,7 +1,30 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+
+pro_rails_re_listing:
+  contact_name: Family Home
+  lot_type: 1
+  contact_street: 199-199-199-1
+  price: 20
+  tags: washer, dryer
+
+pro_rails_re_listing_2:
+  contact_name: condo
+  lot_type: 1
+  contact_street: 199-199-199-2
+  price: 20
+  tags: washer, dryer
+
+pro_rails_re_listing_3:
+  contact_name: townhouse
+  lot_type: 2
+  contact_street: 199-199-199-2
+  price: 20
+  tags: washer, dryer
+
+pro_rails_re_listing_4:
+  contact_name: Ranch
+  lot_type: 2
+  contact_street: 199-199-199-2
+  price: 20
+  tags: driveway, poster

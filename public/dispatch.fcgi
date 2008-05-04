@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/Applications/Locomotive2/Bundles/rmagickRailsMar2007_ppc.locobundle/framework/bin/ruby
 #
 # You may specify the path to the FastCGI crash log (a log of unhandled
 # exceptions which forced the FastCGI instance to exit, great for debugging)

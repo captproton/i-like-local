@@ -1,4 +1,4 @@
-log
-tmp
+log/*.log
+tmp/**/*
 db/schema.rb
 .DS_Store

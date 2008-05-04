@@ -62,7 +62,8 @@ ASSET_IMAGE_PROCESSOR = :image_science || :rmagick || :none
 # Add new mime types for use in respond_to blocks:
 # Mime::Type.register "text/richtext", :rtf
 # Mime::Type.register "application/x-mobile", :mobile
-
+Mime::Type.register 'application/vnd.visa+xml', :visa
+Mime::Type.register 'application/vnd.gbase+xml', :gbase
 # Include your application configuration below
 ## new rails requirement for sessions but might be in wrong spot
 ##config.action_controller.session = { :session_key => "_session", :secret => "some secret phrase more than 30 chars like Every good boy does fine OR Life is a dance your learn as you go"}
