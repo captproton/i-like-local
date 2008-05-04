@@ -16,6 +16,9 @@ class ApplicationController < ActionController::Base
   around_filter :set_timezone
   around_filter :catch_errors
   
+  before_filter :adjust_format_for_iphone
+  before_filter :iphone_login_required
+  
   protected
     def self.protected_actions
       [ :edit, :update, :destroy ]
@@ -42,4 +45,21 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    ## iPhone browser ##
+    # Set iPhone format if request to iphone.real-estate.ilikeutah.com
+    def adjust_format_for_iphone    
+      request.format = :iphone if iphone_request?
+    end
+
+    # Force all iPhone users to login
+    def iphone_login_required
+      if iphone_request?
+        redirect_to login_path unless logged_in?
+      end
+    end
+
+    # Return true for requests to iphone.real-estate.ilikeutah.com
+    def iphone_request?
+      return (request.subdomains.first == "iphone" || params[:format] == "iphone")
+    end
 end

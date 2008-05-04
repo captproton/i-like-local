@@ -7,6 +7,7 @@ class StatesController < ApplicationController
     respond_to do |format|
       format.html # index.rhtml
       format.xml  { render :xml => @states.to_xml }
+      format.gbase  # index.gbase.erb
     end
   end
 

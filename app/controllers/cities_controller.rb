@@ -15,7 +15,12 @@ class CitiesController < ApplicationController
       format.xml    { render :xml => @cities.to_xml }
       format.rss    # --> index.rss.erb
       format.atom   # --> index.atom.erb
-      format.gbase  { render :action => "index-gbase", :layout => false } ## google base atom format
+      format.iphone do  # action.iphone.erb
+        render :layout => false
+      end
+      format.gbase do  # action.gbase.erb
+        render :layout => false
+      end
     end
   end
 
