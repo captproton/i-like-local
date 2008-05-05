@@ -1,0 +1,11 @@
+<h2>User: <%=h @user.login %></h2>
+
+<p>Joined on: <%= @user.created_at.to_s(:long) %></p>
+<p>Email: <%=h @user.email %></p>
+<p>Timezone: <%=h @user.time_zone %></p>
+
+<%# link_to 'Assets', assets_path() %> |
+<%#link_to 'Edit', edit_user_path(@user) %> |
+<%# link_to 'Back', users_path %>
+
+
