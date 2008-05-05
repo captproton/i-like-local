@@ -13,6 +13,14 @@ class CreateUsers < ActiveRecord::Migration
       t.column :visits_count,              :integer, :default => 0
       t.column :time_zone,                 :string,  :default => 'Etc/UTC'
       t.column :permalink,                 :string
+      ## restful_authentication update
+      t.string :activation_code, :limit => 40
+      t.datetime :activated_at
+      t.string :password_reset_code, :limit => 40
+      t.boolean :enabled, :default => true
+      t.integer :updated_by
+      t.timestamps
+      
     end
   end
 

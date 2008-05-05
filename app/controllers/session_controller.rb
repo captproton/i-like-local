@@ -1,23 +1,18 @@
 # This controller handles the login/logout function of the site.  
 class SessionController < ApplicationController
+    layout 'application'
+    before_filter :login_required, :only => :destroy
+    before_filter :not_logged_in_required, :only => [:new, :create]
+    
   # If you want "remember me" functionality, add this before_filter to Application Controller
   before_filter :login_from_cookie
 
+  # render new.rhtml
   def new
   end
   
   def create
-    self.current_user = User.authenticate(params[:login], params[:password])
-    if logged_in?
-      if params[:remember_me] == "1"
-        self.current_user.remember_me
-        cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
-      end
-      redirect_back_or_default('/')
-      flash[:notice] = "Logged in successfully"
-    else
-      render :action => 'new'
-    end
+      password_authentication(params[:login], params[:password])
   end
 
   def destroy
@@ -25,6 +20,45 @@ class SessionController < ApplicationController
     cookies.delete :auth_token
     reset_session
     flash[:notice] = "You have been logged out."
-    redirect_back_or_default('/')
+    redirect_to login_path
   end
+
+  protected
+
+  def password_authentication(login, password)
+      user = User.authenticate(login, password)
+      if user == nil
+          failed_login("Your username or password is incorrect.")
+      elsif user.activated_at.blank?
+          failed_login("Your account is not active, please check your email for the activation code.")
+      elsif user.enabled == false
+          failed_login("Your account has been disabled.")
+      else
+          self.current_user = user
+          successful_login
+      end
+  end
+
+  private
+
+  def failed_login(message)
+      flash.now[:error] = message
+      render :action => 'new'
+  end
+
+  def successful_login
+      if params[:remember_me] == "1"
+          self.current_user.remember_me
+          cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
+      end
+      flash[:notice] = "Logged in successfully"
+      return_to = session[:return_to]
+      if return_to.nil?
+          redirect_to user_path(self.current_user)
+      else
+          redirect_to return_to
+      end
+  end
+
+
 end

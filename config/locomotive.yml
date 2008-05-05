@@ -2,5 +2,5 @@
 mode: development
 runs_at_launch: 1
 identifier: re_listing
-port: 3000
-bundle: /Applications/Locomotive2/Bundles/standardRailsMar2007.locobundle
+port: 3003
+bundle: /Applications/Locomotive2/Bundles/rmagickRailsMar2007_ppc.locobundle
