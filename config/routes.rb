@@ -30,7 +30,7 @@ ActionController::Routing::Routes.draw do |map|
     
 
   ### start 2008-05-04 restful_authentication update ##
-  map.root :controller => "start_me_up", :action => "index"
+  map.root :controller => "session", :action => "new"
   
   # begin restful_authentication routes …
   map.login  '/login',  :controller => 'sessions', :action => 'new'
@@ -69,7 +69,7 @@ ActionController::Routing::Routes.draw do |map|
   ### finish 2008-05-04 restful_authentication update ##
       
   map.connect ':controller/service.wsdl', :action => 'wsdl'
-  map.connect '', :controller => 'start_me_up'
+  ## map.connect '', :controller => 'start_me_up'
 
   # Install the default route as the lowest priority.
   

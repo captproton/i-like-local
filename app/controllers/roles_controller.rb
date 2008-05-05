@@ -23,6 +23,7 @@ class RolesController < ApplicationController
             @user.roles.delete(@role)
         else
             redirect_to :action => 'index'
+        end
     end
 
 end

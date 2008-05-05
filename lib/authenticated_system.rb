@@ -110,7 +110,7 @@ module AuthenticatedSystem
                     store_referer
                     http_referer = ( session[:refer_to] || domain_name )
                 end
-                flash[:error] = “You don’t have permission to complete that action.”
+                flash[:error] = "You don't have permission to complete that action."
                 #The [0..20] represents the 21 characters in http://localhost:3003
                 #You have to set that to the number of characters in your domain name
                 if http_referer[0..20] != domain_name
@@ -121,9 +121,9 @@ module AuthenticatedSystem
                 end
             end
             format.xml do
-                headers[”Status”]           = “Unauthorized”
-                headers[”WWW-Authenticate”] = %(Basic realm=”Web Password”)
-                render :text => “You don’t have permission to complete this action.”, :status => ‘401 Unauthorized’
+                headers["Status"]           = "Unauthorized"
+                headers["WWW-Authenticate"] = %(Basic realm="Web Password")
+                render :text => "You don't have permission to complete this action.", :status => '401 Unauthorized'
             end
         end
     end
@@ -137,7 +137,7 @@ module AuthenticatedSystem
     
     # added CBT
     def store_referer
-        session[:refer_to] = request.env[”HTTP_REFERER”]
+        session[:refer_to] = request.env["HTTP_REFERER"]
     end
     
     # Redirect to the URI stored by the most recent store_location call or
