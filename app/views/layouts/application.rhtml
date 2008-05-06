@@ -6,6 +6,15 @@
 
 	<%= stylesheet_link_tag "reset-fonts-grids", :media => "all" %> 
 	<%= stylesheet_link_tag "custom-base-yui", :media => "all" %> 
+	<style type="text/css" media="screen">
+		#notice { 
+		border: 2px solid red; 
+		padding: 1em; 
+		margin-bottom: 2em; 
+		background-color: #f0f0f0; 
+		font: bold smaller sans-serif; 
+		}
+	</style>
 	
   	<%= javascript_include_tag :defaults %>
 
@@ -41,9 +50,16 @@ p#compressor {margin-top:0.2em;}
 			<% end %>
 		</ul>      
     <!-- header goes here -->
-      <% if flash.any? %>
-        <div id="flash"><%= flash[:notice] %></div><% flash.clear %>
-      <% end %>
+		<div id="flash">Flash message here: 
+			<p style="color: green"><%= flash[:notice] %></p> 
+			 
+      	<% if flash[:notice] -%> 
+			<div id="notice"><%= flash[:notice] %></div> 
+			<% end -%>
+      	<% if flash[:error] -%> 
+			<div id="error"><%= flash[:error] %></div> 
+			<% end -%>
+		</div>
     </div>
   
     <div class="yui-gc"><!-- 2 columns, 66%/33% -->

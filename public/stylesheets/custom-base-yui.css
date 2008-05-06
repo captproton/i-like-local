@@ -1,0 +1,192 @@
+/* base.css, part of YUI's CSS Foundation */
+h1 {
+	/*18px via YUI Fonts CSS foundation*/
+	font-size:138.5%;  
+}
+h2 {
+	/*16px via YUI Fonts CSS foundation*/
+	font-size:123.1%; 
+}
+h3 {
+	/*14px via YUI Fonts CSS foundation*/
+	font-size:108%;  
+}
+h1,h2,h3 {
+	/* top & bottom margin based on font size */
+	margin:1em 0;
+}
+h1,h2,h3,h4,h5,h6,strong {
+	/*bringing boldness back to headers and the strong element*/
+	font-weight:bold; 
+}
+
+/***************************************
+FILTERS SUMMARY
+***************************************/
+#filter_rail_summary {
+  font-size: 77%;
+  margin-bottom: 10px;
+}
+
+#left_content .dash_on_bottom {
+  padding: 10px 0;
+}
+
+#left_content .lite_hilite_bkg {
+  padding: 7px 10px;
+  margin: 5px 0;
+}
+
+#left_content .lite_hilite_bkg p {
+  margin: 0;
+  padding: 0 0 1px;
+}
+
+#left_content .lite_hilite_bkg p.filter_rail_title {
+  font-size: 85%;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+
+#filter_rail_summary .trulia_frm {
+  font-size: 85%;
+  height: 244px;
+}
+
+#filter_rail_summary .trulia_frm label {
+  float: left;
+  margin-bottom: 2px;
+}
+
+#filter_rail_summary label.side_lbl {
+  line-height: 17px;
+  height: 17px;
+  width: 57px;
+}
+
+#filter_rail_summary  select.tru_price {
+  margin-bottom: 10px;
+}
+
+
+#filter_rail_summary select.tru_bed, 
+#filter_rail_summary select.tru_ba
+{
+  clear: both;
+  float: left;
+}
+
+
+/***************************************
+FILTERS
+***************************************/
+#left_content .filter {
+  font-size: 85%;
+  padding: 3px 0;
+}
+
+#filter_rail .triangle {
+  display: block;
+  font-size: 100%;
+  font-weight: bold;
+  /*padding-left: 3px;*/
+}
+
+#filter_rail #filter_rail_summary .triangle {
+  font-size: 93%;
+}
+
+#left_content .filter_title {
+  line-height: 13px;
+
+}
+
+#left_content .filter_content {
+  font-size: 85%;
+  margin-top: 3px;
+  padding-left: 12px;
+}
+
+#left_content .filter_content input {
+  margin: 1px 2px 1px 0;
+}
+
+.filter_right {
+  float: right;
+  font-size: 9px;
+}
+
+#filter_rail .filter_city {
+  font-size: 93%;
+  font-weight: normal;
+}
+
+.filter a.popup_opener {
+  display: block;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  text-decoration: underline;
+}
+
+#left_content  #filter_price_section_content input, #left_content #filter_sqft_section_content input {
+  margin-bottom: 5px;
+}
+
+#left_content #filter_lt_section_content .filter_content {
+  margin: 0;
+}
+
+.checkbox_w {
+  cursor: pointer;
+}
+
+#left_content #filter_beds_section_content .checkbox_w {
+  float: left;
+  padding-right: 5px;
+}
+
+#left_content #filter_baths_section_content .checkbox_w {
+  cursor: pointer;
+  float: left;
+  width: 45px;
+}
+
+#left_content #filter_type_section_content input, 
+#left_content #filter_lt_section_content input, 
+#left_content #location_filters input, 
+#left_content #filter_baths_section_content input, 
+#left_content #filter_beds_section_content input,
+#left_content #filter_other_features_section_content input {
+  height: 13px;
+  width: 14px;
+}
+#left_content #sqft_form input,
+#left_content #price_form input
+{
+  height: 14px;
+  width: 45px;
+}
+#left_content #location_filters input {
+  height: auto;
+  width: auto;
+}
+#left_content #lot_size_filter {
+  padding: 5px 0px;
+}
+
+#left_content #built_form input {
+  width: 40px;
+}
+
+/***************************************
+COLORS and STYLE
+***************************************/
+.homepage_green_bar {
+background-image:url(/images/flair/homepg_green_gradient.gif);
+background-repeat:repeat-x;
+}
+.homepage_green_bar {
+clear:both;
+float:left;
+width:100%;
+}
