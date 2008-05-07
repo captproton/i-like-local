@@ -1,6 +1,6 @@
 ---
 mode: development
-runs_at_launch: 1
-identifier: re_listing
+runs_at_launch: 0
+identifier: i_like_local
 port: 3003
 bundle: /Applications/Locomotive2/Bundles/rmagickRailsMar2007_ppc.locobundle
