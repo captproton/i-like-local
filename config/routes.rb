@@ -30,7 +30,7 @@ ActionController::Routing::Routes.draw do |map|
     
 
   ### start 2008-05-04 restful_authentication update ##
-  map.root :controller => "session", :action => "new"
+  map.root :controller => "sessions", :action => "new"
   
   # begin restful_authentication routes …
   map.login  '/login',  :controller => 'sessions', :action => 'new'

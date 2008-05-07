@@ -43,6 +43,27 @@ task :remove_git_directories, :roles => [:app] do
   run "rm -rfd #{release_path}/.git"
   run "rm #{release_path}/.gitignore"
 end
+
+desc "Deploy a shared Rails version"
+task :deploy_rails do
+  ENV['RAILS_TAG'] ||= 'rel_2-0-2'
+  checkout_path = "#{shared_path}/rails"
+  symlink_path  = "#{release_path}/vendor/rails"
+
+  run <<-CMD
+    if [ ! -d #{checkout_path} ];
+    then
+     echo "Checking out Rails #{ENV['RAILS_TAG']}...";
+     svn checkout --quiet http://dev.rubyonrails.org/svn/rails/tags/#{ENV['RAILS_TAG']} \     
+                          #{checkout_path};
+    fi
+  CMD
+  
+  puts 'Linking Rails...'
+  run "rm -rf #{symlink_path}"
+  run "ln -nfs #{checkout_path} #{symlink_path}"
+end
+
 # this lets us keep the system_stopped files in project
 ## task :copy_system_stopped_files, :roles => [:app] do
 ##  run "cp -f #{release_path}/public/system_stopped/* #{shared_path}/system_stopped/"
@@ -51,11 +72,12 @@ end
 after "deploy:update_code", :update_public
 ## after "deploy:update_code", :copy_system_stopped_files
 after "deploy:update_code", :remove_git_directories
+# get and link shared rails 
+after "deploy:update_code", :deploy_rails
 
 # create a symlink from the current/public to ~/public_html
 task :create_public_html, :roles => [:app] do
     run "ln -fs #{current_path}/public /home/#{user}/public_html"
-    /home/#{user}/apps/#{application}
 end
 after "deploy:cold", :create_public_html
 
